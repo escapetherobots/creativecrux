@@ -1,3 +1,6 @@
 <h2><%= @project.title %></h2>
 <h3><%= @project.description %></h3>
 <p><%= @project.designer %></p>
+
+<%= link_to "Edit Projet", edit_project_path(@project) %>
+<%= link_to "Delete Project", project_path(@project), method: :delete, data: { confirm: "Are you sure?"} %>

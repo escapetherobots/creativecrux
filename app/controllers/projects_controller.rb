@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
 	end
 
 	def show
-		#runs the before_action
+		#runs the before_action >> find_project
 	end
 
 	def new
@@ -22,6 +22,34 @@ class ProjectsController < ApplicationController
 			render 'new' #render does not refresh the page
 		end
 	end
+
+	def edit
+		#runs before_action >> find_project
+
+
+	end
+
+	def update
+		#runs before_action >> find_project
+		#@project should then be available
+		#but check just to make sure
+		if @project.update(project_params)
+			# redirect back to the project[:id]
+			redirect_to project_path(@project) #@play has a project id as part of the object
+		else
+			render 'edit'
+		end
+	end
+
+	def destroy
+		#runs before_action >> find_project
+		if @project.destroy
+			redirect_to root_path
+		else
+			render 'edit'
+		end
+	end
+
 
 	private
 
