@@ -1,0 +1,6 @@
+<%= simple_form_for @project do |f| %>
+  <%= f.input :title, label: "Project Title:" %>
+  <%= f.input :description, label: "Project Description:" %>
+  <%= f.input :designer, label: "Project Designer:" %>
+  <%= f.button :submit %>
+<% end %>

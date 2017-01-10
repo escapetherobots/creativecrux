@@ -1,0 +1,13 @@
+/* Important */
+/* Be sure to include "include 'susy' in the config-application file after 'rails all'" */
+@import 'susy';
+
+/*.nav {
+	@include span(6 of 12);
+	height:300px;
+	border: purple 1px solid;
+}*/
+
+.container {
+	border: 1px solid red;
+}
