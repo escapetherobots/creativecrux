@@ -1,6 +1,19 @@
-<h2><%= @project.title %></h2>
-<h3><%= @project.description %></h3>
-<p><%= @project.designer %></p>
+<div class="col-md-4">
+	<h2><%= @project.title %></h2>
+	<h3><%= @project.description %></h3>
+	<button id="toggle-project-detail">Show Detail</button>
+	<div id="project-detail">
+		<p><%= @project.designer %></p>
+		<p><%= @project.category.name %></p>
+	</div>
+</div>
+
+<% if @project_images %>
+	<%#= @project_images[0].name %>
+	<% @project_images.each do |image| %>
+		<%= image_tag(image.urlpath) %>
+	<% end %>
+<% end %>
 
 <div class="links btn-group">
 <% if user_signed_in? %>

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   root 'projects#index'
 
   resources :projects
-
+  resources :project_images
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

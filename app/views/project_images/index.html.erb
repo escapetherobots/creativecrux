@@ -1,0 +1,13 @@
+<div class="container">
+	<div class="jumbotron">
+		<h1>My Project Images Index Page</h1>
+	</div>
+
+	<% @project_images.each do |p| %>
+		<h2><%= link_to p.name, project_image_path(p) %></h2>
+		<%= image_tag(p.urlpath, width: '100') %>
+		<br>
+	<% end %>
+
+	<%= link_to "Add Image", new_project_image_path %>
+</div>

@@ -1,0 +1,7 @@
+<%= simple_form_for @project_image do |f| %>
+  <%= f.input :name, label: "Image Name:", placeholder: "Image Name" %>
+  <%= f.input :urlpath, label: "Image Url Path:", placeholder: "Image Url Path" %>
+  <%= select_tag(:project_id, options_for_select(@projects), :prompt => "Select Project") %>
+  
+  <%= f.button :submit %>
+<% end %>
