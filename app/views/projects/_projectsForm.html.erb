@@ -5,21 +5,25 @@
     <%= error_message if @project.errors.full_messages.first == error_message %> <br />
   <% end %>
 <% end %>
-	<div class="panel-bod">
+	<div class="panel-body">
 		<%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select Category") %>
 	  <%= f.input :title, label: "Project Title:", placeholder: "Project Title", input_html: { class: 'form-control'} %>
 	  <%= f.input :description, label: "Project Description:", placeholder: "Project Description" %>
 	  <%= f.input :designer, label: "Project Designer:", placeholder: "Project Designer" %>
 	 </div>
 	  <hr />
-	  <div id="#projects">
-	  	<%= f.simple_fields_for :project_image do |img| %>
-  			<%= render "image_fields", f: img %>
-  			<div class="links">
-  				<%= link_to_add_association("Add Image", f, :project_image) %>
-  			</div>
-  		<% end %>
-  	</div>
+    <div id="tasks">
+      <%= f.simple_fields_for :project_images do |image| %>
+        <%= render 'image_fields', f: image %>
+      <% end %>
+      <div class="links">
+        <%= link_to_add_association 'add image', f, :project_images %>
+      </div>
+    </div>
   	<hr />
   <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
+
+
+
+

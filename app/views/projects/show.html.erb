@@ -8,9 +8,9 @@
 	</div>
 </div>
 
-<% if defined?(@project_images) %>
+<% if @project.project_image %>
 	<%#= @project_images[0].name %>
-	<% @project_images.each do |image| %>
+	<% @project.project_image.each do |image| %>
 		<%= image_tag(image.urlpath) %>
 	<% end %>
 <% end %>
