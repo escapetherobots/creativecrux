@@ -7,7 +7,7 @@ class ProjectsController < ApplicationController
 
 	def show
 		#runs the before_action >> find_project
-		@project_images = ProjectImage.where(project_id: @project.id)
+		#@project_images = ProjectImage.where(project_id: @project.id)
 	end
 
 	def new

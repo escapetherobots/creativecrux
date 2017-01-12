@@ -11,7 +11,7 @@
 				<h2><%= link_to p.title, project_path(p), class: "project--detail-link" %></h2>
 			</div>
 			
-			<% if p.project_image[0] %>
+			<% if defined?(p.project_image[0]) %>
 			<div class="project--img-wrapper">
 				<%= image_tag(p.project_image[0]["urlpath"], class: "project--img")%>
 				<%#= image_tag(p.project_image[0].urlpath) %>
