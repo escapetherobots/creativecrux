@@ -41,11 +41,9 @@ class ProjectImagesController < ApplicationController
 
 	def destroy
 		#runs before_action >> find_project
-		if @project_image.destroy
-			redirect_to project_image_path
-		else
-			render 'edit'
-		end
+		@project_image.destroy
+		redirect_to project_images_path, notice: "Successfully deleted project"
+		
 	end
 
 	private

@@ -13,3 +13,10 @@
 				])
 
 		categories = Category.create([{name: 'Design'}, {name: 'Illustration'}, {name: 'UX'}])
+
+		project_images = ProjectImage.create([
+				{name: 'awesome image1', urlpath: 'http://webdesignsurvivalist.com/wp-content/uploads/2011/11/modern-propaganda-poster-21.jpeg', project_id: 1},
+				{name: 'weird image1', urlpath: 'https://s-media-cache-ak0.pinimg.com/564x/54/49/9c/54499cc9181b5b4feacf3e935c1a9d73.jpg', project_id: 2},
+				{name: 'Cool image1', urlpath: 'http://www.topdesignmag.com/wp-content/uploads/2011/01/propoganda_political_poster24.jpg', project_id: 3},
+				{name: 'super image1', urlpath: 'http://previews.123rf.com/images/tribalium123/tribalium1231208/tribalium123120800405/14974426-worker-holding-a-hammer-poster-for-labor-day-male-worker-with-hammer-workers-design-Stock-Vector.jpg', project_id: 4}
+			])

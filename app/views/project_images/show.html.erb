@@ -1,13 +1,19 @@
-<h2><%= @project_image.name %></h2>
-<%= image_tag(@project_image.urlpath) %>
-<br>
+<div class="col-md-7">
+	<h2><%= @project_image.name %></h2>
+	<%= image_tag(@project_image.urlpath) %>
+	<br>
+</div>
 
-<div class="links btn-group">
-<% if user_signed_in? %>
-	<%# if @project.user_id == current_user.id %>
-		<%= link_to "Edit Project", edit_project_image_path(@project_image) %>
-		<%= link_to "Delete Project", project_image_path(@project_image), method: :delete, data: { confirm: "Are you sure?"} %>
-	<%# end %>
-<% end %>
+<div class="col-md-4">
+	<div class="links btn-group">
+		<%= link_to "Back to Images", project_images_path, class: "btn btn-info" %>
+	<% if user_signed_in? %>
+		<%# if @project.user_id == current_user.id %>
+			<%= link_to "Edit Project", edit_project_image_path(@project_image), class: "btn btn-warning" %>
+			<%= link_to "Delete Project", project_image_path(@project_image), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-danger" %>
+		<%# end %>
+	<% end %>
+
+	</div>
 
 </div>
