@@ -11,8 +11,15 @@
 	  <%= f.input :description, label: "Project Description:", placeholder: "Project Description" %>
 	  <%= f.input :designer, label: "Project Designer:", placeholder: "Project Designer" %>
 	 </div>
-	  <hr>
-  <%#= f.input :name, label: "Image Name:", placeholder: "Image Name" %>
-  <%#= f.input :urlpath, label: "Image URL:", placeholder: "Image URL" %>
+	  <hr />
+	  <div id="#projects">
+	  	<%= f.simple_fields_for :project_image do |img| %>
+  			<%= render "image_fields", f: img %>
+  			<div class="links">
+  				<%= link_to_add_association("Add Image", f, :project_image) %>
+  			</div>
+  		<% end %>
+  	</div>
+  	<hr />
   <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>

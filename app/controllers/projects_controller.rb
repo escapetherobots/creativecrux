@@ -60,7 +60,7 @@ class ProjectsController < ApplicationController
 	private
 
 	def project_params
-		params.require(:project).permit(:title, :description, :designer, :category_id, :name, :urlpath)
+		params.require(:project).permit(:title, :description, :designer, :category_id, project_image_attributes: [:id, :name, :urlpath])
 	end
 
 	def find_project

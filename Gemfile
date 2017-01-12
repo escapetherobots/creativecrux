@@ -28,6 +28,7 @@ gem 'hirb'
 gem 'simple_form', '~> 3.4'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'susy'
+gem 'cocoon', '~> 1.2', '>= 1.2.9'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
