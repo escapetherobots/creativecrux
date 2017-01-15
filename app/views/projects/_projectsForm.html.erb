@@ -6,23 +6,40 @@
   <% end %>
 <% end %>
 	<div class="panel-body">
-		<%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select Category") %>
 	  <%= f.input :title, label: "Project Title:", placeholder: "Project Title", input_html: { class: 'form-control'} %>
 	  <%= f.input :description, label: "Project Description:", placeholder: "Project Description" %>
 	  <%= f.input :designer, label: "Project Designer:", placeholder: "Project Designer" %>
+    <hr />
+    <%= f.select :category_id, @categories unless @project.new_record? %>
+    <%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select Category") if @project.new_record? %>
 	 </div>
-	  <hr />
-    <div id="tasks">
-      <%= f.simple_fields_for :project_images do |image| %>
-        <%= render 'image_fields', f: image %>
+	  
+   <div class="panel-body"> 
+    <div id="images">
+      
+
+
+      <%= f.simple_fields_for :project_image do |img| %>
+        <%= render 'projects/image_fields', :f => img %>
       <% end %>
       <div class="links">
-        <%= link_to_add_association 'add image', f, :project_images %>
+        <hr>
+        <%= link_to_add_association 'Add', f, :project_image, :partial => 'projects/image_fields' , class: 'btn btn-primary' %>
       </div>
+
+        <%#= img_form.input :name %>
+        <%#= img_form.input :urlpath %>
+        
+      
+
+      
     </div>
+  </div>
   	<hr />
   <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
+
+
 
 
 

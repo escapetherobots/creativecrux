@@ -1,6 +1,9 @@
 /* Important */
 /* Be sure to include "include 'susy' in the config-application file after 'rails all'" */
 @import 'susy';
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,700');
+
+
 
 /*.nav {
 	@include span(6 of 12);
@@ -13,8 +16,6 @@
 }
 
 .project-slice {
-	
-    border: red 1px solid;
     min-height: 600px;
     width: 100%;
     clear: both;
@@ -34,9 +35,10 @@
 
 	&--detail-link {
 		color: black;
-		opacity: 0.8;
+		opacity: 0.2;
 		text-transform: uppercase;
-		font-size: 4rem;
+		font-size: 6rem;
+		font-weight: 700;
 		-webkit-transition: all .3s ease-out;
 			-moz-transition: all .3s ease-out;
 			-o-transition: all .3s ease-out;
@@ -46,6 +48,7 @@
 			color: white;
 			text-decoration: none;
 			transition:font 0.3s ease;
+			opacity: 0;
 		}
 	}
 
@@ -70,11 +73,16 @@
 		
 		-webkit-filter: grayscale(100%);
 		filter: grayscale(100%);
+		opacity: 0.4;
 		
 		&:hover {
 			transform:scale(1.075);
 			-webkit-filter: grayscale(0%);
 			filter: grayscale(0%);
+			opacity: 1;
 		};
 	}
 }
+
+/*=====PARALLAX=====*/
+

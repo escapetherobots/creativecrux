@@ -15,6 +15,7 @@ class ProjectImagesController < ApplicationController
 	end
 
 	def create
+		@projects = Project.all.map{ |p| [p.title, p.id] }
 		@project_image = ProjectImage.new(project_image_params)
 		@project_image.project_id = params[:project_id]
 

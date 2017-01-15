@@ -16,6 +16,7 @@ class ProjectsController < ApplicationController
 	end
 
 	def create
+		@categories = Category.all.map{ |c| [c.name, c.id] }
 		# the BUILD METHOD works with this relationship type
 		@project = current_user.projects.build(project_params)
 		@project.category_id = params[:category_id]
@@ -35,6 +36,7 @@ class ProjectsController < ApplicationController
 	end
 
 	def update
+		#binding.pry
 		@project.category_id = params[:category_id]
 		#runs before_action >> find_project
 		#@project should then be available

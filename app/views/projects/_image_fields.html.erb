@@ -1,15 +1,12 @@
-<div class="nested-fields">
-    <%= f.input :name, label: "Image Name:", placeholder: "Image Name" %>
-		<%= f.input :urlpath, label: "Image URL:", placeholder: "Image URL" %>
-    <%= link_to_remove_association "remove task", f %>
+<div class='nested-fields'>
+		<br>
+    <%= f.input :name %>
+		<%= f.input :urlpath %>
+    <%= link_to_remove_association "remove task", f, class: "btn btn-warning" %>
+    <br>
 
 </div>
 
 
 	
-<!-- <div class="nested-fields">
-  <%#= f.input :description %>
-  <%#= f.input :done, as: :boolean %>
-  <%#= link_to_remove_association "remove task", f %>
-</div> -->
 

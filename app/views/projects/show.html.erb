@@ -4,11 +4,11 @@
 	<button id="toggle-project-detail">Show Detail</button>
 	<div id="project-detail">
 		<p><%= @project.designer %></p>
-		<p><%= @project.category.name %></p>
+		<p><%#= @project.category.name %></p>
 	</div>
 </div>
 
-<% if @project.project_image %>
+<% if @project.project_image.present? %>
 	<%#= @project_images[0].name %>
 	<% @project.project_image.each do |image| %>
 		<%= image_tag(image.urlpath) %>

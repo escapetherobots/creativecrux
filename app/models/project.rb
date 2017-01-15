@@ -4,4 +4,6 @@ class Project < ActiveRecord::Base
 	
 	has_many :project_image
 	accepts_nested_attributes_for :project_image, reject_if: :all_blank, allow_destroy: false
+
+	validates :title, :description, presence: true
 end
