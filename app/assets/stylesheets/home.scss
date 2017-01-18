@@ -11,6 +11,130 @@
 	border: purple 1px solid;
 }*/
 
+@keyframes dash {
+		to {
+			stroke-dashoffset: -1000;
+		}
+	}
+
+@keyframes dash-back {
+		to {
+			stroke-dashoffset: 0;
+		}
+	}
+
+@keyframes dash2 {
+		to {
+			stroke-dashoffset: 0;
+		}
+	}
+
+#crux-logo--cr-line1 {
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 0;
+	animation: 3s linear 0s forwards dash;
+}
+
+#crux-logo--c-mask1 {
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 0;
+	animation: 4s linear .5s forwards dash;
+}
+
+#crux-logo--c-mask2 {
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 0;
+	animation: 4s linear .5s forwards dash;
+}
+
+#crux-logo--c-mask3 {
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 0;
+	animation: 4s linear 0s forwards dash;
+}
+
+
+#crux-logo--r-mask1{
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 100;
+	animation: 4s linear 1s forwards dash-back;
+}
+
+#crux-logo--r-mask2{
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 0;
+	animation: 4s linear 1s forwards dash;
+}
+
+#crux-logo--r-mask3{
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 0;
+	animation: 4s linear 0s forwards dash;
+}
+
+#crux-logo--r-mask4{
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 0;
+	animation: 4s linear 0s forwards dash;
+}
+
+#crux-logo--r-mask5{
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 0;
+	animation: 4s linear 0s forwards dash;
+}
+
+#crux-logo--r-mask6{
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 0;
+	animation: 4s linear 0s forwards dash;
+}
+
+#crux-logo--r-mask7{
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 0;
+	animation: 4s linear 0s forwards dash;
+}
+
+#cruxlogo{position:relative; max-width:400px;}
+
+#test-tube {position:relative;	}
+
+#myclip {
+	z-index: 5;
+		stroke: red;
+		fill: none;
+		stroke-dasharray: 1200;
+		stroke-dashoffset: 1200;
+		animation: dash 8s linear forwards;
+
+	
+}
+
+.svgbox, .svgout {
+	height:1000px;
+}
+
+
+#crux-logo {
+	
+
+	&--cr {
+
+	}
+
+	
+
+	&--ux {
+
+	}
+}
+
+
+#Layer_1 polyline {
+  visibility: hidden;
+}
+
 .container {
 	
 }
@@ -85,4 +209,30 @@
 }
 
 /*=====PARALLAX=====*/
+
+
+#svgWrapper {
+  display:inline-block;
+  width:200px;
+  height:100px;
+  cursor:pointer;
+  
+  svg {
+    stroke-width:17;
+    width:400px;
+    height:200px;
+    transition:transform .5s ease-out;
+
+  }
+  
+  &:not(.clicked):hover {
+    svg {
+      transform:scale(.9);
+      transition:transform .3s cubic-bezier(.3,.86,.61,1.63);
+    }
+  }
+}
+
+
+
 

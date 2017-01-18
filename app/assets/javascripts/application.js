@@ -14,6 +14,12 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require cocoon
+//= require 'greensock/TweenMax'
+//= require 'greensock/TimelineMax' 
+//= require 'greensock/TweenLite'
+//= require 'greensock/easing/EasePack'
+//= require 'greensock/jquery.gsap.js'
+// require snapsvg
 //= require turbolinks
 //= require_tree .
 

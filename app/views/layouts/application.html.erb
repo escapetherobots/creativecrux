@@ -7,8 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<%= render 'shared/parallax03' %>
+	<%#= render 'shared/parallax03' %>
 	<%= render 'shared/navbar' %>
+	<div id="svgWrapper">
+		<%= render 'svg/cruxlogo' %>
+	</div>
+	<%#= render 'svg/testtube' %>
 
 	<p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
