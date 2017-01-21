@@ -24,9 +24,11 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# enable hirb to make rails console readable
 gem 'hirb'
 gem 'simple_form', '~> 3.4'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'autoprefixer-rails'
 gem 'susy'
 gem 'cocoon', '~> 1.2', '>= 1.2.9'
 gem 'greensock-rails'

@@ -6,12 +6,15 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= controller_name%> <%= action_name %>">
 	<%#= render 'shared/parallax03' %>
 	<%= render 'shared/navbar' %>
-	<div id="svgWrapper">
+		<div id="svgWrapper">
 		<%= render 'svg/cruxlogo' %>
+
+
 	</div>
+	<%= render 'svg/cruxlogo2' %>
 	<%#= render 'svg/testtube' %>
 
 	<p class="notice"><%= notice %></p>

@@ -189,6 +189,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
   bootstrap-sass (~> 3.3, >= 3.3.7)
   byebug
   cocoon (~> 1.2, >= 1.2.9)

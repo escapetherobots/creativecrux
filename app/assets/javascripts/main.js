@@ -9,10 +9,10 @@ gs = function(){
 
 
 ready = function() {
-
-  $('#toggle-project-detail').click(function(){
-  		console.log('click click boom');
-    	$('#project-detail').fadeToggle();
+  $(document).off('click', '[data-test="toggle"]').on('click', '[data-test="toggle"]', function(){
+  	$('[data-test="toggle-project-detail"]').fadeToggle();
+  	console.log($('[data-test="toggle-project-detail"]'));
+    	//$(this).fadeToggle();
     });
 
   $('#svgWrapper').mouseleave(function(){
@@ -55,5 +55,5 @@ ready = function() {
 
 }
 
-$(document).ready(ready);
-$(document).on('page:load', ready);
+
+$(document).on('turbolinks:load', ready);

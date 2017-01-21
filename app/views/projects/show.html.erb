@@ -1,9 +1,11 @@
-<div class="col-md-4">
+<div class="col-md-4 projects">
 	<h2><%= @project.title %></h2>
-	<h3><%= @project.description %></h3>
-	<button id="toggle-project-detail">Show Detail</button>
-	<div id="project-detail">
-		<p><%= @project.designer %></p>
+	
+	<button id="toggle-project-detail" data-test="toggle">Show Detail</button>
+	<div id="project-detail" data-test="toggle-project-detail">
+		<h3>Category: <%= @project.category.name %></h3>
+		<h3><%= @project.description %></h3>
+		<p>Designer: <%= @project.designer %></p>
 		<p><%#= @project.category.name %></p>
 	</div>
 </div>

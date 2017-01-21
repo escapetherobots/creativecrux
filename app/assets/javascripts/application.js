@@ -11,8 +11,10 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap-sprockets
 //= require jquery_ujs
+
+//= require turbolinks
+//= require bootstrap-sprockets
 //= require cocoon
 //= require 'greensock/TweenMax'
 //= require 'greensock/TimelineMax' 
@@ -20,8 +22,10 @@
 //= require 'greensock/easing/EasePack'
 //= require 'greensock/jquery.gsap.js'
 // require snapsvg
-//= require turbolinks
+
 //= require_tree .
+
+// require 'main'
 
 
 
