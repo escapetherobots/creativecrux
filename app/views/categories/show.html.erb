@@ -1,0 +1,18 @@
+<div class="col-md-7">
+	<h2><%= @category.name %></h2>
+	<br>
+</div>
+
+<div class="col-md-4">
+	<div class="links btn-group">
+		<%= link_to "Back to Categories", categories_path, class: "btn btn-info" %>
+	<% if user_signed_in? %>
+		<%# if @project.user_id == current_user.id %>
+			<%= link_to "Edit Category", edit_category_path(@category), class: "btn btn-warning" %>
+			<%= link_to "Delete Category", category_path(@category), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-danger" %>
+		<%# end %>
+	<% end %>
+
+	</div>
+
+</div>

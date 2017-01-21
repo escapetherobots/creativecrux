@@ -25,7 +25,6 @@ class ProjectsController < ApplicationController
 		# the BUILD METHOD works with this relationship type
 		@project = current_user.projects.build(project_params)
 		@project.category_id = params[:category_id]
-		
 
 		if @project.save
 			redirect_to root_path, notice: "Project Created Successfully!" #root path = projects

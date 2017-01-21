@@ -16,13 +16,18 @@
 		<%= image_tag(image.urlpath) %>
 	<% end %>
 <% end %>
-
-<div class="links btn-group">
-<% if user_signed_in? %>
-	<% if @project.user_id == current_user.id %>
-		<%= link_to "Edit Projet", edit_project_path(@project) %>
-		<%= link_to "Delete Project", project_path(@project), method: :delete, data: { confirm: "Are you sure?"} %>
+<div class="row">
+	<div class="col-md-4 projects">
+	<div class="links btn-group">
+	<% if user_signed_in? %>
+		<% if @project.user_id == current_user.id %>
+			<%= link_to "Edit Project", edit_project_path(@project), class: "btn btn-primary" %>
+			<%= link_to "Delete Project", project_path(@project), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-warning" %>
+		<% end %>
 	<% end %>
-<% end %>
 
+	</div>
+	<br>
+	<br><br>
+</div>
 </div>

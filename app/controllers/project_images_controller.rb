@@ -10,7 +10,7 @@ class ProjectImagesController < ApplicationController
 	end
 
 	def new
-		@project_image = ProjectImage.new
+		@project_image = ProjectImage.new()
 		@projects = Project.all.map{ |p| [p.title, p.id] }
 	end
 
