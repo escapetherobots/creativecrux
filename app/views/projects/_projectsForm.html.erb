@@ -24,6 +24,7 @@
       <% end %>
       <div class="links">
         <hr>
+        <%# !!!WARNING you must specify the partial with :partial => '' in order for cocoon to know what to load!!! %>
         <%= link_to_add_association 'Add', f, :project_image, :partial => 'projects/image_fields' , class: 'btn btn-primary' %>
       </div>
 

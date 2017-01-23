@@ -3,7 +3,8 @@
 	
 	<button id="toggle-project-detail" data-test="toggle">Show Detail</button>
 	<div id="project-detail" data-test="toggle-project-detail">
-		<h3>Category: <%= @project.category.name %></h3>
+
+		<h3>Category: <%= @project.category.nil? ? "There is no Category" : @project.category.name  %></h3>
 		<h3><%= @project.description %></h3>
 		<p>Designer: <%= @project.designer %></p>
 		<p><%#= @project.category.name %></p>
