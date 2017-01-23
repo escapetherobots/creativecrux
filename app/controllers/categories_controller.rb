@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
 	before_action :find_category, only: [:show, :edit, :update, :destroy]
-
+	before_action :authenticate_user!, except: [:index, :show]
 
 	def index
 		@categories = Category.all.order("created_at DESC")

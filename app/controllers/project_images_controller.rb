@@ -1,5 +1,6 @@
 class ProjectImagesController < ApplicationController
 	before_action :find_project_image, only: [:show, :edit, :update, :destroy]
+	before_action :authenticate_user!, except: [:index, :show]
 
 	def index
 		@project_images = ProjectImage.all.order("created_at DESC")
