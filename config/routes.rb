@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users
+  #Basic devise route resources
+  #devise_for :users
+  #Override the registrations controller and inherit from devise Prevent other users from signing up
+  devise_for :users, controllers: { registrations: "registrations"}
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
