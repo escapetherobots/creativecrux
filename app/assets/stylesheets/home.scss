@@ -1,7 +1,9 @@
+/* 
+*= require md_simple_editor
+*/
 /* Important */
 /* Be sure to include "include 'susy' in the config-application file after 'rails all'" */
-@import 'susy';
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,700');
+
 
 
 
@@ -10,6 +12,10 @@
 	height:300px;
 	border: purple 1px solid;
 }*/
+
+h1 {
+	@include font-size(30px);
+}
 
 @keyframes dash {
 		to {
@@ -161,7 +167,7 @@
 		color: black;
 		opacity: 0.2;
 		text-transform: uppercase;
-		font-size: 6rem;
+		@include font-size(50px);
 		font-weight: 700;
 		-webkit-transition: all .3s ease-out;
 			-moz-transition: all .3s ease-out;
@@ -230,6 +236,19 @@
       transform:scale(.9);
       transition:transform .3s cubic-bezier(.3,.86,.61,1.63);
     }
+  }
+}
+
+
+
+.sidebar {
+  width: 60%;
+  float: left;
+  margin: 0 2% 0 0;
+  @include bp-small {
+    width: 100%;
+    float: none;
+    margin: 0;
   }
 }
 

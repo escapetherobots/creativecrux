@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-
+// require md_simple_editor
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require cocoon
@@ -22,6 +22,7 @@
 //= require 'greensock/easing/EasePack'
 //= require 'greensock/jquery.gsap.js'
 // require snapsvg
+
 
 //= require_tree .
 

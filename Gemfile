@@ -34,6 +34,11 @@ gem 'cocoon', '~> 1.2', '>= 1.2.9'
 gem 'greensock-rails'
 gem 'snapsvg-rails'
 
+gem 'font-awesome-rails'
+gem 'md_simple_editor'
+gem 'redcarpet'
+gem 'coderay'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

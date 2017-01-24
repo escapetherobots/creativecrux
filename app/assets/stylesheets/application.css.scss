@@ -10,12 +10,22 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+
+ * require_tree .
  *= require_self
+ *= require main
+*= require font-awesome
+*= require md_simple_editor
+
+
+
 
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+
+
 
 .body {
 	font-family: 'Roboto', sans-serif;

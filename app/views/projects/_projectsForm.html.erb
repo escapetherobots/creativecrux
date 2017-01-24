@@ -7,7 +7,11 @@
 <% end %>
 	<div class="panel-body">
 	  <%= f.input :title, label: "Project Title:", placeholder: "Project Title", input_html: { class: 'form-control'} %>
-	  <%= f.input :description, label: "Project Description:", placeholder: "Project Description" %>
+
+    
+	   <%= f.text_area :description, cols: 100, rows: 15,  label: "Project Description:", placeholder: "Project Description"  %>
+    
+
 	  <%= f.input :designer, label: "Project Designer:", placeholder: "Project Designer" %>
     <hr />
     <%= f.select :category_id, @categories unless @project.new_record? %>

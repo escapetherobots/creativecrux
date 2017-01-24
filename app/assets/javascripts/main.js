@@ -9,9 +9,10 @@ gs = function(){
 
 
 ready = function() {
+	console.log("toggler");
   $(document).off('click', '[data-test="toggle"]').on('click', '[data-test="toggle"]', function(){
   	$('[data-test="toggle-project-detail"]').fadeToggle();
-  	console.log($('[data-test="toggle-project-detail"]'));
+  	
     	//$(this).fadeToggle();
     });
 
