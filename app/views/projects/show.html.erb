@@ -15,6 +15,12 @@
 	<%#= @project_images[0].name %>
 	<% @project.project_image.each do |image| %>
 		<%= image_tag(image.urlpath) %>
+		<% if image.urlpath.match(/_fullsize/).present? %>
+			<% modImage = image.urlpath.split( /_fullsize/ ) %>
+			<% modImagePath = "#{modImage[0]}_thumbs-184#{modImage[1]}" %>
+			<%= image_tag(modImagePath) %>
+		<% end %>
+		
 	<% end %>
 <% end %>
 <div class="row">

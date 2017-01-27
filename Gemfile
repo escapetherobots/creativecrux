@@ -39,6 +39,11 @@ gem 'md_simple_editor'
 gem 'redcarpet'
 gem 'coderay'
 
+gem 'picture_tag'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-picturefill'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -1,6 +1,11 @@
 <div class="container">
 	<div class="jumbotron">
-		<h1>My Projects Index Page</h1>
+		
+		<%= picture_tag 'http://creativecrux.s3.amazonaws.com/images/_fullsize/crux-computer-bk-small.jpg', image: {alt: 'CRUX Main Logo'} do %>
+			<%= source_tag srcset: 'http://creativecrux.s3.amazonaws.com/images/_fullsize/crux-computer-bk-large.jpg', media: '(min-width: 1200px)', sizes: '100vw' %>
+			<%= source_tag srcset: 'http://creativecrux.s3.amazonaws.com/images/_fullsize/crux-computer-bk-small.jpg', media: '(min-width: 720px)', sizes: '100vw' %>
+		<% end %>
+
 	</div>
 
 	<h1 class="current-category"><%= params[:category] %></h1>

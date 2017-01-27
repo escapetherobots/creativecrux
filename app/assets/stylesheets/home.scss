@@ -13,6 +13,10 @@
 	border: purple 1px solid;
 }*/
 
+.jumbotron {
+	background-color: #ffffff;
+}
+
 h1 {
 	@include font-size(30px);
 }
