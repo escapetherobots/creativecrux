@@ -162,6 +162,8 @@ GEM
     seed_dump (3.2.4)
       activerecord (>= 4)
       activesupport (>= 4)
+    sidr-rails (0.0.1.1)
+      railties (>= 3, < 5)
     simple_form (3.4.0)
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
@@ -227,6 +229,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   seed_dump
+  sidr-rails
   simple_form (~> 3.4)
   snapsvg-rails
   spring

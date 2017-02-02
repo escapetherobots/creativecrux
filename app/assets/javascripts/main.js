@@ -9,6 +9,8 @@ gs = function(){
 
 
 ready = function() {
+	$('#simple-menu').sidr();
+	
 	console.log("toggler");
   $(document).off('click', '[data-test="toggle"]').on('click', '[data-test="toggle"]', function(){
   	$('[data-test="toggle-project-detail"]').fadeToggle();
@@ -22,7 +24,7 @@ ready = function() {
     $(this).addClass('clicked').html($(this).html());
   });
 
-
+  $('#stage').addClass("svgLoaded");
 
 
 	// TweenMax.to("#cruxlogo", 2, {

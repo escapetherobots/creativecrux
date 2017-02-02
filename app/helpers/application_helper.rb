@@ -1,5 +1,7 @@
 module ApplicationHelper
 
+
+
 	class CodeRayify < Redcarpet::Render::HTML
 		
 		def block_code(code, language)
@@ -22,5 +24,12 @@ module ApplicationHelper
 		markdown_to_html.render(text).html_safe
 	end
 	
+	def s3link
+		@s3link = 'http://creativecrux.s3.amazonaws.com/'
+	end
+
+	def smallImage
+		
+	end
 
 end

@@ -39,6 +39,8 @@ gem 'md_simple_editor'
 gem 'redcarpet'
 gem 'coderay'
 
+gem 'sidr-rails'
+
 gem 'picture_tag'
 source 'https://rails-assets.org' do
   gem 'rails-assets-picturefill'

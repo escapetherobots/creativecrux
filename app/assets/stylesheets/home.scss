@@ -13,6 +13,39 @@
 	border: purple 1px solid;
 }*/
 
+.mask__shape {
+  fill: white;
+}
+
+#crux-logo-4 {
+	position:absolute;
+	z-index:999;
+	pointer-event: all;
+}
+
+#crux-logo-4--clipPath {
+	pointer-event: all;
+
+}
+
+.jumbo-pic1, .jumbo-pic1 img {
+	pointer-event:all;
+}
+.jumbo-pic1 img:hover  {
+	transform: scale(.8);
+}
+
+.jumbo-pic1 img {
+	clip-path: url(#crux-logo-4--clipPath);
+	pointer-event:all;
+
+}
+
+
+
+
+
+
 .jumbotron {
 	background-color: #ffffff;
 }
@@ -163,8 +196,10 @@ h1 {
 
 
 .project {
+
 	&--item {
-		margin-bottom: 40px;
+		max-width: 400px;
+		float: left;
 	}
 
 	&--detail-link {
@@ -194,7 +229,7 @@ h1 {
 
 	&--img-wrapper {
 		max-width: 100%;
-		border-radius: 5px 5px 0 0;
+		
 		overflow:hidden;
 	}
 

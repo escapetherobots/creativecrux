@@ -22,6 +22,7 @@
 //= require 'greensock/easing/EasePack'
 //= require 'greensock/jquery.gsap.js'
 //=require picture_tag
+//= require jquery.sidr
 
 // require snapsvg
 

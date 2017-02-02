@@ -1,13 +1,16 @@
 <div class="container">
-	<div class="jumbotron">
-		
-		<%= picture_tag 'http://creativecrux.s3.amazonaws.com/images/_fullsize/crux-computer-bk-small.jpg', image: {alt: 'CRUX Main Logo'} do %>
-			<%= source_tag srcset: 'http://creativecrux.s3.amazonaws.com/images/_fullsize/crux-computer-bk-large.jpg', media: '(min-width: 1200px)', sizes: '100vw' %>
-			<%= source_tag srcset: 'http://creativecrux.s3.amazonaws.com/images/_fullsize/crux-computer-bk-small.jpg', media: '(min-width: 720px)', sizes: '100vw' %>
+	<div class="row"> <!-- begin top row -->
+		<div class="logo-anim">
+		<%= render 'svg/cruxlogo4' %>
+		<%= picture_tag s3link + 'images/_fullsize/crux-computer-bk-small2.jpg', image: {alt: 'CRUX Main Logo'}, class: "jumbo-pic1" do %>
+			<%= source_tag srcset: s3link + 'images/_fullsize/crux-computer-bk-large2.jpg', media: '(min-width: 1200px)', sizes: '100vw' %>
+			<%= source_tag srcset: s3link + 'images/_fullsize/crux-computer-bk-small2.jpg', media: '(min-width: 720px)', sizes: '100vw' %>
 		<% end %>
+		</div>
+	</div> <!--end top row -->
+</div>
 
-	</div>
-
+<div class="full-width">
 	<h1 class="current-category"><%= params[:category] %></h1>
 <%#= debug @projects[4].project_image[0].name%>
 
@@ -19,7 +22,7 @@
 		<% @projects.each_slice(3) do |project| %>
 		<div class="project-slice">
 			<% project.each do |p| %>
-			<div class="col-md-4">
+			<div class="project--item">
 				<div class="project--detail">
 					<h2><%= link_to p.title, project_path(p), class: "project--detail-link" %></h2>
 				</div>

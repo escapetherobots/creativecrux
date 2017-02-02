@@ -7,21 +7,33 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= controller_name%> <%= action_name %>">
+
+	<a id="simple-menu" href="#sidr">Toggle menu</a>
+
+<div id="sidr">
+  <!-- Your content -->
+  <ul>
+    <li><a href="#">List 1</a></li>
+    <li class="active"><a href="#">List 2</a></li>
+    <li><a href="#">List 3</a></li>
+  </ul>
+</div>
 	<%#= render 'shared/parallax03' %>
 	<%= render 'shared/navbar' %>
-		<div id="svgWrapper">
-		<%= render 'svg/cruxlogo' %>
+	<div id="svgWrapper">
+		<% render 'svg/cruxlogo' %>
 
 
 	</div>
-	<%= render 'svg/cruxlogo2' %>
+	<% render 'svg/cruxlogo2' %>
+	
 	<%#= render 'svg/testtube' %>
 
 	<p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-	<div class="container">
 
-		<%= yield %>
-	</div>
+
+	<%= yield %>
+
 </body>
 </html>
