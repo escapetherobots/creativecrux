@@ -9,7 +9,22 @@ gs = function(){
 
 
 ready = function() {
-	$('#simple-menu').sidr();
+	var isLateralNavAnimating = false;
+	
+	//open/close lateral navigation
+	$('.cd-nav-trigger').on('click', function(event){
+		event.preventDefault();
+		//stop if nav animation is running 
+		if( !isLateralNavAnimating ) {
+			if($(this).parents('.csstransitions').length > 0 ) isLateralNavAnimating = true; 
+			
+			$('body').toggleClass('navigation-is-open');
+			$('.cd-navigation-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+				//animation is over
+				isLateralNavAnimating = false;
+			});
+		}
+	});
 	
 	console.log("toggler");
   $(document).off('click', '[data-test="toggle"]').on('click', '[data-test="toggle"]', function(){
@@ -23,6 +38,8 @@ ready = function() {
   }).click(function(){
     $(this).addClass('clicked').html($(this).html());
   });
+
+  $(document).off('click', '[data-resume="start"]').on('click', '[data-resume="start"]', function(){})
 
   $('#stage').addClass("svgLoaded");
 

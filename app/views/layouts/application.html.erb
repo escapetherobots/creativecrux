@@ -8,20 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="<%= controller_name%> <%= action_name %>">
-
-	<a id="simple-menu" href="#sidr">Toggle menu</a>
-
-<div id="sidr">
-  <!-- Your content -->
-  <ul>
-    <li><a href="#">List 1</a></li>
-    <li class="active"><a href="#">List 2</a></li>
-    <li><a href="#">List 3</a></li>
-  </ul>
-</div>
-	<%#= render 'shared/parallax03' %>
-	<%= render 'shared/navbar' %>
 	
+
+
+	
+
+	<%#= render 'shared/parallax03' %>
+	
+	<main>
+	<%= render 'shared/navbar' %>
 	<div id="svgWrapper">
 		<%# render 'svg/cruxlogo' %>
 
@@ -34,8 +29,17 @@
 	<p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
-
+  
 	<%= yield %>
+	</main>
 
+	<a href="#cd-nav" class="cd-nav-trigger">Menu 
+		<span class="cd-nav-icon"></span>
+
+		<svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
+			<circle fill="transparent" stroke="#656e79" stroke-width="1" cx="27" cy="27" r="25" stroke-dasharray="157 157" stroke-dashoffset="157"></circle>
+		</svg>
+	</a>
+	<%= render 'shared/pushnav' %>
 </body>
 </html>

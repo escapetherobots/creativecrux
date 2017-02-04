@@ -12,9 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-// require md_simple_editor
 //= require turbolinks
 //= require bootstrap-sprockets
+
+// Bower packages
+
 //= require cocoon
 //= require 'greensock/TweenMax'
 //= require 'greensock/TimelineMax' 
@@ -22,7 +24,7 @@
 //= require 'greensock/easing/EasePack'
 //= require 'greensock/jquery.gsap.js'
 //=require picture_tag
-//= require jquery.sidr
+// require jquery.sidr
 
 // require snapsvg
 
@@ -30,6 +32,7 @@
 //= require_tree .
 
 // require 'main'
+// require 'pushnav' js scripts
 
 
 

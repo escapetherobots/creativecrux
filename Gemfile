@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'bower'
 # enable hirb to make rails console readable
 gem 'hirb'
 gem 'simple_form', '~> 3.4'
@@ -35,11 +36,10 @@ gem 'greensock-rails'
 gem 'snapsvg-rails'
 
 gem 'font-awesome-rails'
-gem 'md_simple_editor'
 gem 'redcarpet'
 gem 'coderay'
 
-gem 'sidr-rails'
+#gem 'sidr-rails'
 
 gem 'picture_tag'
 source 'https://rails-assets.org' do

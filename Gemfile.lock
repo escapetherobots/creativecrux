@@ -46,6 +46,8 @@ GEM
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
+    bower (0.0.5)
+      multi_json
     builder (3.2.2)
     byebug (9.0.6)
     cocoon (1.2.9)
@@ -86,9 +88,6 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
-    md_simple_editor (0.2.3)
-      font-awesome-rails
-      redcarpet (~> 3.0)
     method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
@@ -162,8 +161,6 @@ GEM
     seed_dump (3.2.4)
       activerecord (>= 4)
       activesupport (>= 4)
-    sidr-rails (0.0.1.1)
-      railties (>= 3, < 5)
     simple_form (3.4.0)
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
@@ -206,6 +203,7 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   bootstrap-sass (~> 3.3, >= 3.3.7)
+  bower
   byebug
   cocoon (~> 1.2, >= 1.2.9)
   coderay
@@ -216,7 +214,6 @@ DEPENDENCIES
   hirb
   jbuilder (~> 2.0)
   jquery-rails
-  md_simple_editor
   pg
   picture_tag
   pry
@@ -229,7 +226,6 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   seed_dump
-  sidr-rails
   simple_form (~> 3.4)
   snapsvg-rails
   spring

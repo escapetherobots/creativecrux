@@ -15,8 +15,7 @@
  *= require_self
  *= require main
 *= require font-awesome
-*= require md_simple_editor
-*= require jquery.sidr.dark
+* require jquery.sidr.dark
 
 
 
@@ -28,14 +27,5 @@
 
 
 
-.body {
-	font-family: 'Roboto', sans-serif;
-}
 
-h1,h2,h3,p {
-	font-family: 'Roboto', sans-serif ;
-}
 
-body {
-
-}

@@ -2,7 +2,24 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,700');
 
 @import 'base/mixins';
+@import 'base/reset';
+
+@import 'nav-partials/layout';
+@import 'nav-partials/mixins';
+@import 'nav-partials/variables';
+@import 'nav/pushnav';
+
 @import 'home';
+
 @import 'parallax-test';
 @import 'svgtest/animated-text-fills';
 @import 'svgtest/animated-resume';
+
+body {
+	font-size: 1.6rem;
+	font-family: 'Roboto', sans-serif;
+}
+
+h1,h2,h3,p, li, li a {
+	font-family: 'Roboto', sans-serif ;
+}
