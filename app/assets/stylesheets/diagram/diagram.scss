@@ -1,0 +1,21 @@
+#crux-diagram {
+	width: 100%;
+
+	#main-bk {
+		fill: none;
+	}
+
+	.hex-bk {
+
+
+	}
+	.hex:hover {
+		.hex-bk {
+			fill: #f1c020;
+		}
+		.hex-icon {
+			fill: #ffffff;
+		}
+	}
+
+}
