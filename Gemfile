@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'modernizr-rails'
 gem 'bower'
 # enable hirb to make rails console readable
 gem 'hirb'

@@ -1,21 +1,58 @@
-#crux-diagram {
+.crux-diagram--default {
 	width: 100%;
+	.main-bk {
+		fill: none;
+	}
+}
 
+.crux-diagram {
+	display: none;
+
+	@media(min-width:768px) {
+		display: block;
+	}
+
+	#crux-diagram {
+		width: 100%;
+	}
+	
 	#main-bk {
 		fill: none;
 	}
 
 	.hex-bk {
-
-
 	}
+
 	.hex:hover {
 		.hex-bk {
+			transition: fill .4s ease;
 			fill: #f1c020;
 		}
 		.hex-icon {
+			transition: fill .4s ease;
 			fill: #ffffff;
 		}
 	}
+}
 
+.crux-diagram--mobile {
+	display: block;
+
+	@media(min-width:768px){
+		display: none;
+	}
+}
+
+.zzz {
+	transform: scale(1.2);
+	transition: all .5 ease;
+
+	.crux-diagram--default {
+		
+		.icon-bk {
+			fill: orange;
+		}
+
+		
+	}
 }
