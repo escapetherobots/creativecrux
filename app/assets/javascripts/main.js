@@ -26,11 +26,11 @@ var sceneBuilder = function(){
 
 ready = function() {
 	//load tetris code
-	// if ($("#tetris").length > 0){
- //  	tetris();
-	// }
+	if ($("#tetris").length > 0){
+  	tetris();
+	}
 	
-	// sceneBuilder();
+	sceneBuilder();
 	
 	
 
