@@ -14,69 +14,13 @@ var sceneBuilder = function(){
 	console.log('scene building');
 	myController = new ScrollMagic.Controller();
 
-	// $('.fade-in').each(function(){
-	// 	//build tween
-	// 	tween = TweenMax.from($(this), 0.3, {autoAlpha: 0, scale: 0.7, ease:Linear.easeNone});
-	// 	//build scene
-	// 		scene = new ScrollMagic.Scene({triggerElement: this})
-	// 		.setTween(tween)
-	// 		.addTo(myController);
-
 		scene = new ScrollMagic.Scene({
 			triggerElement: '#project03'
 		})
 		.setClassToggle('#project03', 'fade-inzzz')
 		.addTo(myController);
 
-		
-
-
-	// var animateElem = document.getElementById("animate2");
-	// var scene = new ScrollMagic.Scene({triggerElement: "#trigger2", duration: 200})
-	// 				.on("enter", function () {
-	// 					// trigger animation by changing inline style.
-	// 					animateElem.style.backgroundColor = "orange";
-	// 				})
-	// 				.on("leave", function () {
-	// 					// reset style
-	// 					animateElem.style.backgroundColor = "";
-	// 				})
-	// 				//.addIndicators({name: "2 - change inline style"}) // add indicators (requires plugin)
-	// 				.addTo(controller);
-};
-
-
-
-
-
-var runSceneBuilder = function(){
-	//check if mobile or not
-	// console.log('the mobile display prop is: ', $('.crux-diagram--mobile').css('display'));
-	// if ($('.crux-diagram--mobile').css('display') == 'block') {
-	// 	console.log('run builder');
-	// 	// this is the mobile
-	// 	//check if controller already exists
-	// 	if (typeof myController === 'undefined'){
-	// 		console.log('the controller has no object', myController);
-	// 		sceneBuilder();
-	// 		console.log('the controller now has an object', myController);
-	// 		console.log('status of scene: ', scene);
-	// 	} else {
-	// 		console.log('the controller already exists', myController);
-	// 		console.log('status of scene: ', scene);
-	// 	}
-		
-	// } else {
-	// 	if (typeof myController === 'undefined') {
-	// 		console.log('no need to run destroyer', myController);
-	// 		console.log('status of scene: ', scene);
-	// 	} else {
-	// 		console.log('need to run the destroyer', myController);
-	// 		sceneDestroyer();
-	// 		console.log('status of scene: ', scene);
-	// 		console.log('status of myController: ', myController);
-	// 	}
-	// }
+	
 };
 
 
@@ -87,10 +31,6 @@ ready = function() {
 	}
 	
 	sceneBuilder();
-	// build scene
-	// runSceneBuilder();
-	// $window.on('resize', runSceneBuilder);
-	//$window.trigger('scroll');
 	
 	
 
