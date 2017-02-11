@@ -1,0 +1,17 @@
+{
+  "name": "blogtest",
+  "version": "1.0.0",
+  "description": "rails blog",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "postinstall": "./node_modules/bower/bin/bower install"
+  },
+  "author": "zt",
+  "license": "ISC",
+  "dependencies": {
+    "bower": "^1.8.0",
+    "scrollmagic": "^2.0.5"
+  }
+}

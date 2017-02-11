@@ -46,8 +46,6 @@ GEM
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
-    bower (0.0.5)
-      multi_json
     builder (3.2.2)
     byebug (9.0.6)
     cocoon (1.2.9)
@@ -204,7 +202,6 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   bootstrap-sass (~> 3.3, >= 3.3.7)
-  bower
   byebug
   cocoon (~> 1.2, >= 1.2.9)
   coderay
