@@ -1,6 +1,10 @@
 var tetris;
 var ready;
-var gs;
+
+
+var App.init = function() {
+	//$("a, span, i, div").tooltip();
+}
 
 var $animation_elements = $(".animation-element");
 var $window = $(window);
@@ -52,11 +56,7 @@ ready = function() {
 		}
 	});
 	
-  $(document).off('click', '[data-test="toggle"]').on('click', '[data-test="toggle"]', function(){
-  	$('[data-test="toggle-project-detail"]').fadeToggle();
-  	
-    	//$(this).fadeToggle();
-    });
+  
 
   $('#svgWrapper').mouseleave(function(){
     $(this).removeClass('clicked');
@@ -95,4 +95,6 @@ ready = function() {
 }
 
 
-$(document).on('turbolinks:load', ready);
+$(document).on('turbolinks:load', function(){
+	return App.init
+});

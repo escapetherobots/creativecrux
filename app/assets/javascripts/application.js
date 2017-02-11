@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require init
 
 //= require 'greensock/TweenMax'
 //= require 'greensock/TimelineMax' 
@@ -27,15 +28,12 @@
 //= require scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js
 
 //= require cocoon
-
 //=require picture_tag
+
+
+
 // require jquery.sidr
-
 // require snapsvg
-
-
-//= require_tree .
-
 // require 'main'
 // require 'pushnav' js scripts
 
