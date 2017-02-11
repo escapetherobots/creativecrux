@@ -3,15 +3,27 @@
 		<div class="crux-diagram">
 			<%= render 'svg/crux_diagram' %>
 		</div>
-		<div class="crux-diagram--mobile" data-animation="flipInX" data-timeout="400">
-			<div class="revealOnScroll">
+		<div class="crux-diagram--mobile">
+			<div class="crux-diagram--item animation-element" >
+				1
+			</div>
+			<div class="crux-diagram--item" >
+				2
+			</div>
+			<div class="crux-diagram--item projectzzz" id="project03">
 				<%= render 'svg/diagram_mobile/research' %>
 			</div>
-			<div class="revealOnScroll">
-				<%= render 'svg/diagram_mobile/strategy' %>
+			<div class="crux-diagram--item" >
+				
 			</div>
-			<div class="revealOnScroll">
-				<%= render 'svg/diagram_mobile/prototype' %>
+			<div class="spacer s2"></div>
+			<div id="trigger2" class="spacer s0"></div>
+			<div class="crux-diagram--item animated box1 green" id="animate2">
+				2
+			</div>
+			<div id="trigger2" class="spacer s0"></div>
+			<div class="crux-diagram--item" id="animate2" >
+				3
 			</div>
 		</div>
 	</div>

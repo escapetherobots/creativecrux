@@ -1,45 +1,98 @@
+var tetris;
 var ready;
 var gs;
-var $window = $(window),
-	win_height_padded = $window.height() *1.1,
-	isTouch = Modernizr.touch;
 
-var allTheBindings = 'DOMMouseScroll MouseScrollEvent MozMousePixelScroll wheel scroll';
+var $animation_elements = $(".animation-element");
+var $window = $(window);
 
-var	checkScroll = function(elem) {
+var all_listeners = "DOMMouseScroll MouseScrollEvent MozMousePixelScroll wheel scroll resize";
 
-		var docViewTop = $window.scrollTop();
-		var docViewBottom = docViewTop + $window.height();
+var myController, tween, scene;
+console.log('first instance of scene', scene);
 
-		var elemTop = $(elem).offset().top;
-		var elemBottom = elemTop + $(elem).height();
-		var elemMiddle = elemBottom * 2;
-		console.log('scrolling' + ' scrolltop: ' + docViewTop + ' window height: ' + docViewBottom);
-		console.log(elemMiddle);
-		return ((elemMiddle <= docViewBottom) && (elemTop >= docViewTop));
-	};
+var sceneBuilder = function(){
+	console.log('scene building');
+	myController = new ScrollMagic.Controller();
 
-var scrollify = function() {
-	$(".revealOnScroll").each(function(){
-		if (checkScroll(this) === true) {
-			$(this).addClass('zzz');
-		} else {
-			$(this).removeClass('zzz');
-		}
-	})
-}
+	// $('.fade-in').each(function(){
+	// 	//build tween
+	// 	tween = TweenMax.from($(this), 0.3, {autoAlpha: 0, scale: 0.7, ease:Linear.easeNone});
+	// 	//build scene
+	// 		scene = new ScrollMagic.Scene({triggerElement: this})
+	// 		.setTween(tween)
+	// 		.addTo(myController);
+
+		scene = new ScrollMagic.Scene({
+			triggerElement: '#project03'
+		})
+		.setClassToggle('#project03', 'fade-inzzz')
+		.addTo(myController);
+
+		
 
 
+	// var animateElem = document.getElementById("animate2");
+	// var scene = new ScrollMagic.Scene({triggerElement: "#trigger2", duration: 200})
+	// 				.on("enter", function () {
+	// 					// trigger animation by changing inline style.
+	// 					animateElem.style.backgroundColor = "orange";
+	// 				})
+	// 				.on("leave", function () {
+	// 					// reset style
+	// 					animateElem.style.backgroundColor = "";
+	// 				})
+	// 				//.addIndicators({name: "2 - change inline style"}) // add indicators (requires plugin)
+	// 				.addTo(controller);
+};
+
+
+
+
+
+var runSceneBuilder = function(){
+	//check if mobile or not
+	// console.log('the mobile display prop is: ', $('.crux-diagram--mobile').css('display'));
+	// if ($('.crux-diagram--mobile').css('display') == 'block') {
+	// 	console.log('run builder');
+	// 	// this is the mobile
+	// 	//check if controller already exists
+	// 	if (typeof myController === 'undefined'){
+	// 		console.log('the controller has no object', myController);
+	// 		sceneBuilder();
+	// 		console.log('the controller now has an object', myController);
+	// 		console.log('status of scene: ', scene);
+	// 	} else {
+	// 		console.log('the controller already exists', myController);
+	// 		console.log('status of scene: ', scene);
+	// 	}
+		
+	// } else {
+	// 	if (typeof myController === 'undefined') {
+	// 		console.log('no need to run destroyer', myController);
+	// 		console.log('status of scene: ', scene);
+	// 	} else {
+	// 		console.log('need to run the destroyer', myController);
+	// 		sceneDestroyer();
+	// 		console.log('status of scene: ', scene);
+	// 		console.log('status of myController: ', myController);
+	// 	}
+	// }
+};
 
 
 ready = function() {
-	// Effect on scroll
-
-
-	$('html, body').bind(allTheBindings, scrollify);
-
+	//load tetris code
+	if ($("#tetris").length > 0){
+  	tetris();
+	}
 	
-
+	sceneBuilder();
+	// build scene
+	// runSceneBuilder();
+	// $window.on('resize', runSceneBuilder);
+	//$window.trigger('scroll');
+	
+	
 
 	// Side Menu
 	var isLateralNavAnimating = false;

@@ -15,14 +15,21 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 
-// Bower packages
-
-//= require cocoon
 //= require 'greensock/TweenMax'
 //= require 'greensock/TimelineMax' 
 //= require 'greensock/TweenLite'
 //= require 'greensock/easing/EasePack'
 //= require 'greensock/jquery.gsap.js'
+
+// Bower packages
+// require aos/dist/aos.js
+//= require scrollmagic/scrollmagic/uncompressed/ScrollMagic.js
+//= require scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js
+//= require scrollmagic/scrollmagic/uncompressed/plugins/jquery.ScrollMagic.js
+//= require scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js
+
+//= require cocoon
+
 //=require picture_tag
 // require jquery.sidr
 

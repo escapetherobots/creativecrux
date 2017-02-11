@@ -1,4 +1,7 @@
 {
-  "name": "bower-rails generated vendor assets",
-  "dependencies": {}
+  "name": "crux blog bower components",
+  "dependencies": {
+    "aos": "^2.1.1",
+    "scrollmagic": "^2.0.5"
+  }
 }
