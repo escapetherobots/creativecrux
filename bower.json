@@ -1,16 +1,5 @@
 {
   "name": "blogtest",
-  "description": "rails blog",
-  "license": "ISC",
-  "homepage": "",
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
   "dependencies": {
     "scrollmagic": "^2.0.5"
   }
