@@ -22,10 +22,11 @@
 //= require 'greensock/easing/EasePack'
 //= require 'greensock/jquery.gsap.js'
 
-//= require ScrollMagic.js
-//= require animation.gsap.js
-//= require jquery.ScrollMagic.js
-//= require debug.addIndicators.js
+//= require scrollmagic/scrollmagic/uncompressed/ScrollMagic.js
+//= require scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js
+//= require scrollmagic/scrollmagic/uncompressed/plugins/animation.velocity.js
+//= require scrollmagic/scrollmagic/uncompressed/plugins/jquery.ScrollMagic.js
+//= require scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js
 
 //= require cocoon
 //=require picture_tag
