@@ -36,16 +36,17 @@ CruxApp.sceneBuilder = function(){
 				// this => indicates that each element of class svg-project
 				// self.children[0] this will reference the svg inside each svg-project node
 				triggerElement: self.children[0], 
-				duration: 100,
+				duration: 180,
+				offset: 100
 				
 				//triggerHook
 			})
-			.addIndicators({
-				// options object for addIndicators
-				name: 'fade scene',
-				colorTrigger: 'red',
-				colorStart: '#75c695'
-			})
+			// .addIndicators({
+			// 	// options object for addIndicators
+			// 	name: 'fade scene',
+			// 	colorTrigger: 'red',
+			// 	colorStart: '#75c695'
+			// })
 			.setClassToggle(self, 'fade-inzzz') // add class to #project03
 			.addTo(myController);
 		});

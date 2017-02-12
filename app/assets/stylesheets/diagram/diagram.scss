@@ -59,16 +59,28 @@
 
 }
 .svg-project {
-
-
+	svg {
+		.icon-bk{
+			fill: #E2E2E2 ;
+			transition: all .5s ease-out;
+		}
+	}
 	transition: all 1s ease-out;
+
+	
 }
 
 
 .fade-inzzz {
 			svg {
+				.hex-icon {
+					fill: #ffffff;
+					transition: all .2s ease-out;
+				}
+
 				.icon-bk {
-					fill: orange;
+					fill: #f1c020;
+					transition: all .2s ease-out;
 				}
 			}
 			/*transform: translateY(50px);*/
