@@ -2,31 +2,6 @@ var tetris;
 var ready;
 
 
-var App.init = function() {
-	//$("a, span, i, div").tooltip();
-}
-
-var $animation_elements = $(".animation-element");
-var $window = $(window);
-
-var all_listeners = "DOMMouseScroll MouseScrollEvent MozMousePixelScroll wheel scroll resize";
-
-var myController, tween, scene;
-console.log('first instance of scene', scene);
-
-var sceneBuilder = function(){
-	console.log('scene building');
-	myController = new ScrollMagic.Controller();
-
-		scene = new ScrollMagic.Scene({
-			triggerElement: '#project03'
-		})
-		.setClassToggle('#project03', 'fade-inzzz')
-		.addTo(myController);
-
-	
-};
-
 
 ready = function() {
 	//load tetris code
@@ -34,27 +9,10 @@ ready = function() {
   	tetris();
 	}
 	
-	sceneBuilder();
 	
 	
 
-	// Side Menu
-	var isLateralNavAnimating = false;
 	
-	//open/close lateral navigation
-	$('.cd-nav-trigger').on('click', function(event){
-		event.preventDefault();
-		//stop if nav animation is running 
-		if( !isLateralNavAnimating ) {
-			if($(this).parents('.csstransitions').length > 0 ) isLateralNavAnimating = true; 
-			
-			$('body').toggleClass('navigation-is-open');
-			$('.cd-navigation-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-				//animation is over
-				isLateralNavAnimating = false;
-			});
-		}
-	});
 	
   
 

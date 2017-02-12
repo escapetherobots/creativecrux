@@ -200,6 +200,11 @@ h1 {
 	&--item {
 		max-width: 400px;
 		float: left;
+		border: 1px solid red;
+		display: block;
+		clear: both;
+		float: left;
+		height: 200px;
 	}
 
 	&--detail-link {
@@ -225,6 +230,12 @@ h1 {
 		position:absolute;
 		z-index:99999;
 		padding: 20px;
+
+	}
+
+	&--i-detail {
+		width: 600px;
+		border: 1px solid green;
 	}
 
 	&--img-wrapper {

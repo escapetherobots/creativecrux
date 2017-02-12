@@ -4,7 +4,11 @@ class ProjectsController < ApplicationController
 
 	def index
 		if params[:category].blank?
-			@projects = Project.where.not(category: 8).order("created_at DESC")
+			@projects = Project
+						.where.not(category: 8)
+						.where.not(category: 9)
+						.where.not(category: 10)
+						.order("created_at DESC")
 		else
 			@category_id = Category.find_by(name: params[:category]).id
 			@projects = Project.where(:category_id => @category_id).order("created_at Desc")
