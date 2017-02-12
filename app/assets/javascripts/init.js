@@ -20,13 +20,35 @@ CruxApp.sceneBuilder = function(){
 	var myController, tween, scene;
 	var $animation_elements = $(".animation-element");
 	var $window = $(window);
+	var $mysvg = $('.svg-project');
+	// Init Scroll Magic
+	// Controller
 	myController = new ScrollMagic.Controller();
+	// Scene
+	
 
-	scene = new ScrollMagic.Scene({
-		triggerElement: '#project03'
-	})
-		.setClassToggle('#project03', 'fade-inzzz')
-		.addTo(myController);
+		//loop through each project
+		$mysvg.each(function(){
+			var self = this;
+			
+			scene = new ScrollMagic.Scene({
+				//options for scene settings
+				// this => indicates that each element of class svg-project
+				// self.children[0] this will reference the svg inside each svg-project node
+				triggerElement: self.children[0], 
+				duration: 100,
+				
+				//triggerHook
+			})
+			.addIndicators({
+				// options object for addIndicators
+				name: 'fade scene',
+				colorTrigger: 'red',
+				colorStart: '#75c695'
+			})
+			.setClassToggle(self, 'fade-inzzz') // add class to #project03
+			.addTo(myController);
+		});
 }
 
 // Side Menu

@@ -50,7 +50,6 @@
 		box-sizing: border-box;
 		width:300px;
 		height:300px;
-		background: #ccc;
 		margin: 50px auto;
 		padding-top: 30px;
 	
@@ -59,29 +58,18 @@
 
 
 }
+.svg-project {
 
-
-.in-view {
-	border: 2px solid red;
-}
-
-#animate2 {
-	transition: background-color .5s ease;
-}
-
-#project03 {
-
-
-
-}
-
-.projectzzz {
-	opacity: 0;
 
 	transition: all 1s ease-out;
 }
 
+
 .fade-inzzz {
-			opacity:1;
-			transform: translateY(50px);
+			svg {
+				.icon-bk {
+					fill: orange;
+				}
+			}
+			/*transform: translateY(50px);*/
 		}
