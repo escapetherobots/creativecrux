@@ -1,3 +1,20 @@
+<div class="main-bg">
+	<%= render "svg/crux_hero" %>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div id="svgWrapper">
+		<%# render 'svg/cruxlogo' %>
+
+
+	</div>
+	<%# render 'svg/cruxlogo2' %>
+	
+	<%#= render 'svg/testtube' %>
+	</div>
+</div>
+
 <div class="container">
 	<div class="row">
 		<div class="crux-diagram">
@@ -12,9 +29,13 @@
 				<%= render 'svg/diagram_mobile/research' %>
 			</div>
 			
-			<div class="crux-diagram--item svg-project" id="project03">
+			<div class="crux-diagram--item svg-project" data-test="toggle-diagram">
 				<%= render 'svg/diagram_mobile/research' %>
 			</div>
+			<div class="crux-diagram--item-info" data-test="toggle-diagram-info">
+				When training in UX design you'll quickly conclude that although the aesthetics of a product make a huge difference to its appeal, if it doesn’t work well, the look of it is of little consequence to the user. However, bear in mind that the ultimate success of a product depends not just on your design, but on the implementation of it by developers and the management of the project. This is where another key UX design skill - communication within the team - comes to the fore, but we’ll talk more about that in finer detail in the last section.
+			</div>
+
 			
 			<div class="crux-diagram--item svg-project" >
 				<%= render 'svg/diagram_mobile/research' %>	

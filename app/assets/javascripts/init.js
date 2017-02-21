@@ -8,10 +8,12 @@ CruxApp.init = function(){
 
 //toggle effect
 CruxApp.toggler = function(){
-	$(document).off('click', '[data-test="toggle"]').on('click', '[data-test="toggle"]', function(){
-  	$('[data-test="toggle-project-detail"]').fadeToggle();
+	$(document)
+		.off('click', '[data-test]')
+		.on('click', '[data-test]', function(){
+  		console.log($(this).next());
   	
-    	//$(this).fadeToggle();
+    	$(this).next().fadeToggle();
     });
 }
 

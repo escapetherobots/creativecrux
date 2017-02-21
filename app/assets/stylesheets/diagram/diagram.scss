@@ -38,7 +38,6 @@
 .crux-diagram--mobile {
 	display: block;
 	margin-bottom: 20px;
-	border: 1px solid red;
 
 	@media(min-width:768px){
 		display: none;
@@ -49,20 +48,26 @@
 	.crux-diagram--item {
 		box-sizing: border-box;
 		width:300px;
-		height:300px;
-		margin: 50px auto;
-		padding-top: 30px;
+		height:100%;
+		margin: 140px auto;
+		padding: 30px 0 30px 0;
+		border:1px solid red;
 	
 		
+	}
+	.crux-diagram--item-info {
+		display: none;
 	}
 
 
 }
 .svg-project {
+	
+
 	svg {
 		.icon-bk{
 			fill: #E2E2E2 ;
-			transition: all .5s ease-out;
+			transition: all .4s ease-out;
 		}
 	}
 	transition: all 1s ease-out;
@@ -73,14 +78,17 @@
 
 .fade-inzzz {
 			svg {
+				transform: scale(1.2);
+				transition: all .4s ease-out;
+
 				.hex-icon {
 					fill: #ffffff;
-					transition: all .2s ease-out;
+					transition: all .4s ease-out;
 				}
 
 				.icon-bk {
 					fill: #f1c020;
-					transition: all .2s ease-out;
+					transition: all .4s ease-out;
 				}
 			}
 			/*transform: translateY(50px);*/

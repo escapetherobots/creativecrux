@@ -4,7 +4,7 @@
 /* Important */
 /* Be sure to include "include 'susy' in the config-application file after 'rails all'" */
 
-
+$aws: 'http://creativecrux.s3.amazonaws.com/images/';
 
 
 /*.nav {
@@ -12,6 +12,66 @@
 	height:300px;
 	border: purple 1px solid;
 }*/
+.navbar {
+	margin-bottom: 0;
+}
+
+.main-bg {
+	background-image: url($aws + '_small/crux-bg01.jpg');
+	background-size: cover;
+	height: 500px;
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+
+
+	@media(min-width: 600px) {
+		background-image: url($aws + '_fullsize/crux-bg01.jpg');
+	}
+
+	#crux-hero {
+		transform: scale(1.8);
+		width: 100%;
+	}
+
+	#crux-hero-logo {
+		transition: 1s all ease;
+		opacity: .7;
+	}
+	#crux-hero-logo:hover {
+		opacity: 1;
+		transform: scale(.96, .96) translate(25px, 15px) ;
+		transition: 1s all ease;
+
+	}
+}
+
+@keyframes flickerAnimation {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:.5; }
+}
+@-o-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+.animate-flicker {
+   -webkit-animation: flickerAnimation 1s infinite ease-in-out;
+   -moz-animation: flickerAnimation 1s infinite;
+   -o-animation: flickerAnimation 1s infinite;
+    animation: flickerAnimation 3s infinite ease-in-out;
+}
 
 .mask__shape {
   fill: white;
