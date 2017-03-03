@@ -23,14 +23,25 @@
 	.hex-bk {
 	}
 
+	.hex-label path {
+		opacity: 0;
+		transition: all .1s ease;
+		
+	}
+
 	.hex:hover {
 		.hex-bk {
-			transition: fill .4s ease;
-			fill: #f1c020;
+			transition: all .4s ease;
+			fill: #9a9d9d;
+			opacity: .2;
 		}
 		.hex-icon {
-			transition: fill .4s ease;
-			fill: #ffffff;
+			transition: all .4s ease;
+			opacity: 0;
+		}
+		.hex-label path {
+			transition: all .4s ease;
+			opacity: 1;
 		}
 	}
 }

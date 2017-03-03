@@ -1,42 +1,51 @@
-<div class="container">
-<div class="col-md-4 projects">
-	<h2><%= @project.title %></h2>
-	
-	<button id="toggle-project-detail" data-test="toggle">Show Detail</button>
-	<div id="project-detail" data-test="toggle-project-detail" class="project--i-detail">
+<div class="project-item">
 
-		<h3>Category: <%= @project.category.nil? ? "There is no Category" : @project.category.name  %></h3>
-		<h3><%= markdown(@project.description) %></h3>
-		<p>Designer: <%= @project.designer %></p>
-		<p><%#= @project.category.name %></p>
-	</div>
-</div>
-
+<div class="project-item-images">
 <% if @project.project_image.present? %>
 	<%#= @project_images[0].name %>
 	<% @project.project_image.each do |image| %>
-		<%= image_tag(image.urlpath) %>
+		<%= image_tag(image.urlpath, :class => "project-item--image-full") %>
 		<% if image.urlpath.match(/_fullsize/).present? %>
 			<% modImage = image.urlpath.split( /_fullsize/ ) %>
 			<% modImagePath = "#{modImage[0]}_thumbs-184#{modImage[1]}" %>
-			<%= image_tag(modImagePath) %>
+			<% image_tag(modImagePath, :class => "project-item--image-small") %>
 		<% end %>
 		
 	<% end %>
+
 <% end %>
-<div class="row">
-	<div class="col-md-4 projects">
+</div>
+
+<div class="project-item-content">
+	<div class="project-item-content-wrapper">
+<%= debug @project.getMyId %>
+<%= link_to "Prev Post" %>
+	<h2 class="project-item--title"><%= @project.title %></h2>
+	<p class="project-item--description"><%= markdown(@project.description) %></p>
+		<button id="toggle-project-detail" data-test="toggle">Show Detail</button>
+	<div id="project-detail" data-test="toggle-project-detail" class="project--i-detail">
+
+			<h3>Category: <%= @project.category.nil? ? "There is no Category" : @project.category.name  %></h3>
+			
+			<p>Designer: <%= @project.designer %></p>
+			<p><%#= @project.category.name %></p>
+	</div>
+
 	<div class="links btn-group">
-	<% if user_signed_in? %>
+		<% if user_signed_in? %>
 		<% if @project.user_id == current_user.id %>
 			<%= link_to "Edit Project", edit_project_path(@project), class: "btn btn-primary" %>
 			<%= link_to "Delete Project", project_path(@project), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-warning" %>
 		<% end %>
-	<% end %>
+		<% end %>
 
 	</div>
-	<br>
-	<br><br>
+	<svg class="project-item--svg-bk" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+    
+     <polygon class="svg--sm" fill="white" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100"/>
+    
+  </svg>
+	</div><!--end description-wrapper-->
 </div>
-</div>
-</div>
+
+</div><!--end project-item-->
