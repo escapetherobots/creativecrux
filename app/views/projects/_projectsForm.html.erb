@@ -13,6 +13,8 @@
     
 
 	  <%= f.input :designer, label: "Project Designer:", placeholder: "Project Designer" %>
+    <%= f.input :slug, label: "URL Slug:", placeholder: "URL Slug" %>
+
     <hr />
     <%= f.select :category_id, @categories unless @project.new_record? %>
     <%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select Category") if @project.new_record? %>

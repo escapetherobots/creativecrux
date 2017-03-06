@@ -18,10 +18,36 @@
 
 <div class="project-item-content">
 	<div class="project-item-content-wrapper">
-<%= debug @project.getMyId %>
-<%= link_to "Prev Post" %>
+		<h3>Category: <%= @project.category.nil? ? "There is no Category" : @project.category.name  %></h3>
+<%= debug @project.getMyId(@project) %>
+<%= "the first project id = " %><%= debug Project.first.id %>
+<% unless @project.id == Project.where(:category => @project.category_id).first.id %>
+	<%#Hide 'Previous' link once we reach to first record %>
+	  <%= link_to Project.get_previous_project(@project), class: "project-btn" do %>
+	  	<div class="project-btn-bottom"></div>
+	  	<div class="icon">
+				<span>previous</span><i class="fa fa-arrow-left"></i>
+				<i class="fa fa-check"></i>
+			</div>
+			
+		<% end %>
+<% end %>
+<% unless  @project.id == Project.where(:category => @project.category_id).last.id %>
+	<%#Hide 'Next' link once we reach to last record %>
+	<%= link_to Project.get_next_project(@project), class: "project-btn" do %>
+		
+		<div class="icon">
+				<span>next</span><i class="fa fa-arrow-right"></i>
+				<i class="fa fa-check"></i>
+			</div>
+	<% end %>
+<% end %>
+
+
+
+
 	<h2 class="project-item--title"><%= @project.title %></h2>
-	<p class="project-item--description"><%= markdown(@project.description) %></p>
+	<div class="project-item-description"><%= markdown(@project.description) %></div>
 		<button id="toggle-project-detail" data-test="toggle">Show Detail</button>
 	<div id="project-detail" data-test="toggle-project-detail" class="project--i-detail">
 

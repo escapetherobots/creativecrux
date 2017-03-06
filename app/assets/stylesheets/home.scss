@@ -258,6 +258,26 @@ h1 {
 	display: none;
 }
 
+.project-btn {
+	background: #555555;
+	height:40px;
+	width: 160px;
+	display: block;
+	line-height: 40px;
+	float: left;
+	text-align: center;
+
+	
+}
+
+.project-btn-bottom {
+	height:6px;
+		width:100%;
+		position: absolute;
+		bottom:0;
+		background: red;
+}
+
 
 .project {
 
@@ -265,7 +285,19 @@ h1 {
 		height: 200px;
 	}
 
-	
+	&-item-description {
+		font-family: "Roboto";
+		text-align: left;
+		padding-right: 20px;
+
+		& p, h1, h2, h3, a, li, ul {
+			font-family: "Roboto";
+			color: #3c3c3c;
+			text-align: left;
+		}
+	}
+
+
 
 	&--detail-link {
 		color: black;
@@ -353,7 +385,7 @@ h1 {
 	}
 
 
-	&-item-description {
+	&-item-content {
 		
 		@include span(4 of 12 last);
 		/*background-image: linear-gradient(#ff9d2f, #ff6126);*/
