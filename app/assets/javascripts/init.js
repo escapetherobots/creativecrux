@@ -4,6 +4,7 @@ CruxApp.init = function(){
 	this.toggler();
 	this.sceneBuilder();
 	this.sideNav();
+	this.particleBg();
 }
 
 //toggle effect
@@ -15,6 +16,22 @@ CruxApp.toggler = function(){
   	
     	$(this).next().fadeToggle();
     });
+}
+
+
+CruxApp.particleBg = function(){
+	particleground(document.getElementById('particles'), {
+    dotColor: '#ffffff',
+    lineColor: '#ffffff',
+    directionX: 'center',
+    directionY: 'center',
+    density: 6000,
+    particleRadius: 3,
+    lineWidth: 1.5
+  });
+  var intro = document.getElementById('intro');
+  intro.style.marginTop = - intro.offsetHeight / 2 + 'px';
+
 }
 
 //Scene Builder - Image Magic

@@ -30,7 +30,7 @@ $susy: (
 }
 
 .main-bg {
-	background-image: url($aws + '_small/crux-bg01.jpg');
+	background-image: url($aws + '_fullsize/crux-bg05.jpg');
 	background-size: cover;
 	height: 500px;
 	width: 100%;
@@ -39,25 +39,31 @@ $susy: (
 
 
 	@media(min-width: 600px) {
-		background-image: url($aws + '_fullsize/crux-bg01.jpg');
+		background-image: url($aws + '_fullsize/crux-bg05.jpg');
 	}
 
 	#crux-hero {
-		transform: scale(1.8);
+		transform: scale(2);
 		width: 200%;
 		margin-left: -200px;
-		margin-top: -50px;
+		margin-top: -600px;
+
 
 		@media(min-width: 500px){
+			transform: scale(2);
 			width: 100%;
 			margin-left: 0;
-			margin-top: 0;
 		}
 	}
 
 	#crux-hero-logo {
 		transition: 1s all ease;
-		opacity: .7;
+		opacity: .5;
+
+		
+		path {
+			fill: #ffffff;
+		}
 	}
 	#crux-hero-logo:hover {
 		opacity: 1;
