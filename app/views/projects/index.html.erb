@@ -1,27 +1,32 @@
 <div class="main-bg">
 		
 		<!--begin particle generator-->
-		<div id="particles">
+	<%= render 'svg/cruxlogo' %>
   		<div id="intro">
     		<!--particle generator-->
+    		
   		</div>
-		</div>
+
 		<!--end particle gen-->
 
-	<%= render "svg/crux_hero" %>
+	<%#= render "svg/crux_hero" %>
 </div>
 
 <div class="container">
 	<div class="row">
-		<div id="svgWrapper">
-		<%# render 'svg/cruxlogo' %>
+
+		<div class="full-width">
+			<%= render 'shared/hex_grid' %>
+
+		</div>
+		
 
 
 	</div>
-	<%# render 'svg/cruxlogo2' %>
+
 	
 	<%#= render 'svg/testtube' %>
-	</div>
+
 </div>
 
 <div class="container">
@@ -71,7 +76,8 @@
 	</div> <!--end top row -->
 </div>
 
-<div class="full-width">
+
+
 	<h1 class="current-category"><%= params[:category] %></h1>
 <%#= debug @projects[4].project_image[0].name%>
 

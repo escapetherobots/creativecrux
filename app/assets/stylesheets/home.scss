@@ -11,6 +11,10 @@ $susy: (
   gutters: 0, 
 );
 
+.full-width {
+	width:100%;
+}
+
 .projects {@include container(100%)}
 
 @media (min-width: 500px) {
@@ -39,7 +43,7 @@ $susy: (
 
 
 	@media(min-width: 600px) {
-		background-image: url($aws + '_fullsize/crux-bg05.jpg');
+		background-image: url($aws + '_fullsize/crux-bg-scaffold.jpg');
 	}
 
 	#crux-hero {
@@ -248,170 +252,7 @@ h1 {
   visibility: hidden;
 }
 
-.container {
-	
-}
 
-.project-slice {
-    min-height: 600px;
-    width: 100%;
-    clear: both;
-    overflow: hidden;
-
-}
-
-#project-detail {
-	display: none;
-}
-
-.project-btn {
-	background: #555555;
-	height:40px;
-	width: 160px;
-	display: block;
-	line-height: 40px;
-	float: left;
-	text-align: center;
-
-	
-}
-
-.project-btn-bottom {
-	height:6px;
-		width:100%;
-		position: absolute;
-		bottom:0;
-		background: red;
-}
-
-
-.project {
-
-	&--item {
-		height: 200px;
-	}
-
-	&-item-description {
-		font-family: "Roboto";
-		text-align: left;
-		padding-right: 20px;
-
-		& p, h1, h2, h3, a, li, ul {
-			font-family: "Roboto";
-			color: #3c3c3c;
-			text-align: left;
-		}
-	}
-
-
-
-	&--detail-link {
-		color: black;
-		opacity: 0.2;
-		text-transform: uppercase;
-		@include font-size(80px);
-		font-weight: 700;
-		transition: all .3s ease-out;
-
-		&:hover {
-			color: white;
-			text-decoration: none;
-			transition:font 0.3s ease;
-			opacity: 0;
-		}
-	}
-
-	&--detail{
-		position:absolute;
-		z-index:9;
-		padding: 40px;
-		width:inherit;
-		word-spacing: inherit; 
-
-	}
-
-	&--i-detail {
-		width: 600px;
-		
-	}
-
-	&--img-wrapper {
-		max-width: 100%;
-		
-		overflow:hidden;
-	}
-
-	&--img {
-		width: 100%;
-		-webkit-transition: all .3s ease-out;
-		-moz-transition: all .3s ease-out;
-		-o-transition: all .3s ease-out;
-		transition: all .3s ease-out;
-		
-		-webkit-filter: grayscale(100%);
-		filter: grayscale(100%);
-		opacity: 0.4;
-		
-		&:hover {
-			transform:scale(1.075);
-			-webkit-filter: grayscale(0%);
-			filter: grayscale(0%);
-			opacity: 1;
-		};
-	}
-
-	&-item {
-		@include container(100%);
-		/*background: #cc3333;*/
-	}
-
-
-
-	&-item-images {
-		@include span(8 of 12);
-		background: #ffffff;
-	}
-
-	&-item--image {
-		&-full{
-			@include span(12);
-		}
-
-		&-small{
-			@include span(4);
-		}
-	}
-
-	&-item--svg-bk {
-		display:none;
-		position: absolute;
-  	bottom: 0;
-  	width: 100%;
-  	height: 100px;
-	}
-
-
-	&-item-content {
-		
-		@include span(4 of 12 last);
-		/*background-image: linear-gradient(#ff9d2f, #ff6126);*/
-
-		height: 600px;
-		position: relative;
-
-		&-wrapper {
-			padding: 30px 20px 20px 20px;
-		}
-	}
-
-	&-item--title {
-		@include font-size(80px);
-		text-transform: uppercase;
-		font-family: "Roboto";
-		font-weight: 700;
-		color: #cccccc;
-	}
-}
 
 /*=====PARALLAX=====*/
 

@@ -4,7 +4,7 @@ CruxApp.init = function(){
 	this.toggler();
 	this.sceneBuilder();
 	this.sideNav();
-	this.particleBg();
+	//this.particleBg();
 }
 
 //toggle effect
@@ -21,8 +21,8 @@ CruxApp.toggler = function(){
 
 CruxApp.particleBg = function(){
 	particleground(document.getElementById('particles'), {
-    dotColor: '#ffffff',
-    lineColor: '#ffffff',
+    dotColor: '#666666',
+    lineColor: '#666666',
     directionX: 'center',
     directionY: 'center',
     density: 6000,
