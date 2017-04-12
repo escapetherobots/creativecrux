@@ -3,6 +3,11 @@
   @return $remSize * 1rem;
 }
 
+@mixin line-height($size) {
+  line-height: $size;
+  line-height: calculateRem($size);
+}
+
 @mixin font-size($size) {
   font-size: $size;
   font-size: calculateRem($size);

@@ -33,18 +33,44 @@ $susy: (
 	margin-bottom: 0;
 }
 
+@keyframes colorchange
+    {
+      0%   {background: #89c53f;}
+      25%  {background: #63cecb;}
+      50%  {background: #00a5a5;}
+      75%  {background: #1da048;}
+      100% {background: #89c53f;}
+    }
+
+@keyframes bg-reveal
+    {
+      0%   {opacity: 0;}
+      100% {opacity: .3;}
+    }
+
+
+
+.main-bg-gradient {
+	  background-image: url($aws + '_fullsize/crux-bg-scaffold.jpg');
+	  position: absolute;
+	  height: 500px;
+	  width: 100%;
+	  opacity: .3;
+	  background-size: cover;
+	  animation: bg-reveal 6s;
+		@media(min-width: 600px) {
+			background-image: url($aws + '_fullsize/crux-bg-scaffold.jpg');
+		}
+
+}
+
 .main-bg {
-	background-image: url($aws + '_fullsize/crux-bg05.jpg');
-	background-size: cover;
+	
+	animation: colorchange 10s infinite;
 	height: 500px;
 	width: 100%;
 	text-align: center;
 	overflow: hidden;
-
-
-	@media(min-width: 600px) {
-		background-image: url($aws + '_fullsize/crux-bg-scaffold.jpg');
-	}
 
 	#crux-hero {
 		transform: scale(2);
@@ -97,10 +123,36 @@ $susy: (
 	pointer-event: all;
 }
 
+#crux-logo-5 {
+	margin-top:80px;
+	transform: scale(1.2);
+	transform-origin: 50% 0%;
+	transition: all .2s ease-out;
+
+	path:nth-child(1){
+		fill: #ffffff;
+	}
+	path:nth-child(2){
+		fill: #333333;
+	}
+	path:nth-child(3){
+		fill: #ffffff;
+	}
+}
+
+#crux-logo-5:hover {
+	transform: scale(1.3);
+	transition: all .2s ease-out;
+}
+
 #crux-logo-4--clipPath {
 	pointer-event: all;
 
 }
+
+
+
+
 
 .jumbo-pic1, .jumbo-pic1 img {
 	pointer-event:all;
@@ -115,7 +167,27 @@ $susy: (
 
 }
 
+.intro {
+	margin-top: 70px;
+	text-align: center;
 
+	h1 {
+		@include font-size(70px);
+		@include line-height(72px);
+		color: #ffffff;
+		text-transform: uppercase;
+
+		span {
+
+			@media(min-width: 700px) {
+				display: block;
+			}
+
+		}
+	}
+	
+	
+}
 
 
 
@@ -293,5 +365,10 @@ h1 {
 }
 
 
+
+
+.zhexer {
+	margin-top: 60px;
+}
 
 
