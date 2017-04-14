@@ -30,12 +30,13 @@
 
 //= require cocoon
 //= require picture_tag
+//= require snap
 //= require init
 
 
 
 // require jquery.sidr
-// require snapsvg
+//= require snapsvg
 // require 'main'
 // require 'pushnav' js scripts
 

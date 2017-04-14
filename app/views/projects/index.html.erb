@@ -1,27 +1,61 @@
 
 <div class="main-bg-gradient"></div>
 <div class="main-bg">
-		
-	<!--logo title-->
-	<%= render 'svg/cruxlogo5' %>
-  	<div class="container intro">
+		<div class="container intro">
 		<!--particle generator-->
 		<div class="row">
-			<h1>Crafting Exceptional User Experiences <span>With Code and Design</span></h1>
+			<h1><span>Crafting Exceptional User Experiences </span>Through Coding and Design</h1>
+			<%= render 'svg/cruxlogo5' %>
 		</div>
 		
 	</div>
+	<!--logo title-->
+	
+  	
 
 	<!--logo title-->
 
 	<%#= render "svg/crux_hero" %>
 </div>
 
-<div class="container zhexer">
+<div class="container z-hexContainer">
 	<div class="row">
 		<%= render 'shared/hex_grid' %>
 	</div>
 	<%#= render 'svg/testtube' %>
+
+</div>
+
+<div class="container-fluid z-uxContainer">
+	<div class="row">
+		<div class="z-ux-left">
+			<%= render 'svg/robot' %>
+		</div>
+		<div class="z-ux-right">
+			<h2>DEV BLOG</h2>
+			<p>Although not much of a blogger, I figured this would be a good way to document my journey through the coding trenches.</p>
+			
+			<h3>Currently Learning:</h3>
+			<ul>
+				<li>Rails Weather API App</li>
+				<li>Microservices with Angular and Rails</li>
+				<li>Rails 5</li>
+				<li>Angular and Firebase</li>
+				<li>Snap.svg &amp; GSAP Animations</li>
+				<li>Angular &amp; D3</li>
+
+			</ul>
+		</div>
+
+	</div>
+
+</div>
+
+<div class="container-fluid z-uxContainer2">
+	<div class="row">
+		<svg id="svg-area"></svg>
+
+	</div>
 
 </div>
 

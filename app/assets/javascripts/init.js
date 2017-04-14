@@ -4,6 +4,8 @@ CruxApp.init = function(){
 	this.toggler();
 	this.sceneBuilder();
 	this.sideNav();
+	this.snap();
+	//this.snap2();
 	//this.particleBg();
 }
 

@@ -2,8 +2,12 @@
 
 
 #zhexWrapper {
-    padding:10px;
+    padding:20px;
     overflow:hidden;
+
+    @media(min-width: 768px) {
+      padding: 10px;
+    }
 
 }
 
@@ -23,6 +27,7 @@
   outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
 
   padding-bottom: 30%;
+  outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
 }
 .zhex::after{
   content:'';
@@ -66,9 +71,9 @@
   height: 100%;
   margin: 0 auto;
   filter: grayscale(1);
-  -webkit-transform: rotate3d(0,0,0,0deg);
-      -ms-transform: rotate3d(0,0,0,0deg);
-          transform: rotate3d(0,0,0,0deg);
+  -webkit-transform: rotate3d(0,0,0,-45deg);
+      -ms-transform: rotate3d(0,0,0,-45deg);
+          transform: rotate3d(0,0,0,-45deg);
 }
 
 .zhex h1, .zhex p {
@@ -133,45 +138,87 @@
   }
 
 
-@media(min-width: 600px) { 
+@media(min-width: 500px) { 
 
   #zhexGrid{
     padding-bottom: 7.4%;
   }
 
   .zhex {
-    width: 33.333%; 
+    width: 50%; 
     padding-bottom: 0%;
   }
 
-  .zhex:nth-child(5n+4) { 
-    /* first zhexagon of even rows */
-    margin-left:16.666%;  
-    /* = width of .zhex / 2  to indent even rows */
+  .zhex:first-child {
+    margin-left: 25%;
   }
+  .zhex:nth-child(2) {
+    
+  }
+
+  .zhex:nth-child(4) {
+    margin-left: 25%;
+  }
+
+  
   .zhex:last-child{
-    display: none !important;
+    margin-left: 25%;
   }
+
 
 
 }
 
-@media (min-width:900px) { /* <- 5-4  hexagons per row */
+@media (min-width:768px) { /* <- 5-4  hexagons per row */
   #zhexGrid{
-    padding-bottom: 4.4%;
+    padding-bottom: 7.4%;
     
   }
   .zhex {
-    width: 25%; /* = 100 / 5 */
+    width: 33.333%; /* = 100 / 3 */
+    padding-bottom: 0%;
     
   }
+  .zhex:first-child {
+    margin-left: 16.666%;
+  }
+  .zhex:nth-child(3) {
+    
+  }
+
   .zhex:nth-child(5n+4) { 
     /* first zhexagon of even rows */
     margin-left:0%;  
     /* = width of .zhex / 2  to indent even rows */
   }
-  .zhex:nth-child(7n+5){ /* first hexagon of even rows */
-    margin-left:12.5%;  /* = width of .hex / 2  to indent even rows */
+
+  .zhex:nth-child(6){ /* first hexagon of even rows */
+    margin-left:8.333%;  /* = width of .hex / 2  to indent even rows */
+  }
+  .zhex:last-child {
+    margin-left: 0;
+  }
+  .zhex:nth-child(6) {
+    margin-left:16.666%;
+  }
+}
+
+/*@media (min-width:900px) { 
+  #zhexGrid{
+    padding-bottom: 4.4%;
+    
+  }
+  .zhex {
+    width: 25%; 
+    
+  }
+  .zhex:nth-child(5n+4) { 
+
+    margin-left:0%;  
+
+  }
+  .zhex:nth-child(7n+5){ 
+    margin-left:12.5%;  
   }
   .zhex:last-child {
     display: block !important;
@@ -179,7 +226,7 @@
   .zhex:nth-child(8) {
     margin-left:25%;
   }
-}
+}*/
 
 
 
