@@ -71,17 +71,35 @@ CruxApp.snap = function(){
 
 	g.drag();
 	
-	s.click( function() {
-		bodyFunc();
-		eyeFunc();
-		armsFunc();
-	});
+	// s.click( function() {
+	// 	bodyFunc();
+	// 	eyeFunc();
+	// 	armsFunc();
+	// });
 
 	s.hover( function() {
 		bodyFunc();
 		eyeFunc();
 		armsFunc();
 	});
+
+	s.mouseup(function(e){
+
+        if (e.type === 'touchend') {
+            // Stop propagation : on touch devices the first click will be used and not the second.
+            e.stopPropagation();
+            e.preventDefault();
+
+            bodyFunc();
+			eyeFunc();
+			armsFunc();
+
+        }
+        
+        bodyFunc();
+		eyeFunc();
+		armsFunc();
+    });
 
 
 	//robotFunc(armBack, bodyGroup, arm)
