@@ -95,7 +95,7 @@ CruxApp.snap = function(){
 			armsFunc();
 
         }
-        
+
         bodyFunc();
 		eyeFunc();
 		armsFunc();
@@ -117,6 +117,122 @@ CruxApp.snap = function(){
 }
 
 CruxApp.snap2 = function(){
+	var theRobot = '#robot2-svg';
+	var s = Snap(theRobot);
+
+	var armBack = s.select("#arm-left"),
+		armFront = s.select("#arm-right"),
+		body = s.select("#body"),
+		brain = s.select("#brain"),
+		eye1 = s.select("#eye1"),
+		eye2 = s.select("#eye2"),
+		legs = s.select("#legs"),
+		shadow = s.select("#shadow");
+		
+	eye1.transform('t0,12');
+	eye2.transform('t0,8');
+	armBack.transform('t8 -50r20 116 170');
+	armFront.transform('t2 0r-10 116 170');
+
+	var eyeGroup = s.group(eye1, eye2);
+	var bodyGroup = s.group(body, armBack, armFront, eyeGroup, brain);
+	var g = s.group(shadow, legs, bodyGroup );
+
+	var bodyFunc = function() {
+		bodyGroup.animate({transform: 't0 2r1 0 0'}, 200, mina.linear, function(){
+			bodyGroup.animate({transform: 't0 0r-.5 0 0'}, 300, mina.linear, function(){
+				bodyGroup.animate({transform: 't0 0r0 0 0'}, 200, mina.linear);
+			});
+		} );
+	}
+
+	var brainFunc = function() {
+		brain.animate({transform: 't11 -3r10 200 66'}, 500, mina.linear, function(){
+			brain.animate({transform: 't-15 -2r-9 200 66'}, 600, mina.linear, function(){
+				brain.animate({transform: 't0 0, r12 200 66'}, 700, mina.linear, function(){
+					brain.animate({transform: 't0 0, r0 200 66'}, 800, mina.linear);
+				});
+			})
+		})
+	}
+
+
+	var armsFunc = function() {
+		var zArmFront = $('#arm-front'), zArmBack = $('#arm-back');
+		var armFrontx = zArmFront.attr('x'),
+			armFronty = zArmFront.attr('y'),
+			armBackx = zArmBack.attr('x'),
+			armBacky = zArmBack.attr('y');
+
+		armBack.animate({transform: 't0 7 r-4 116 170'}, 200, mina.linear);
+		armFront.animate({transform: 't1 2 r11 116 160'}, 200, mina.linear);
+		setTimeout(function() {
+			armFront.animate({transform: 't2 0r-10 116 170'}, 200, mina.linear);
+			armBack.animate({transform: 't8 -50r20 116 170'}, 200, mina.linear);
+		}, 1400, mina.backout);
+
+
+		// var city_w = Snap('#path119');
+		 //  setTimeout(function() {
+		 //    city_w.animate({
+		 //      opacity: 0
+		 //    }, 3000, mina.backout);
+		 //  }, 3000);
+		
+	}
+
+	var eyeFunc = function() {
+		eye1.animate({transform: 't0 0 s1.2 180 180'}, 500, mina.easein);
+		eye2.animate({transform: 't0 0 s1.1 221 176'}, 500, mina.easein);
+		setTimeout(function() {
+			eye1.animate({transform: 't0 12 s1'}, 400, mina.easein);
+			eye2.animate({transform: 't0 8 s1'}, 400, mina.easein);
+		}, 800, mina.linear);
+	}
+
+
+
+	g.drag();
+	
+	// s.click( function() {
+	// 	bodyFunc();
+	// 	eyeFunc();
+	// 	armsFunc();
+	// });
+
+	s.hover( function() {
+		bodyFunc();
+		eyeFunc();
+		armsFunc();
+		brainFunc();
+	});
+
+	s.mouseup(function(e){
+
+        if (e.type === 'touchend') {
+            // Stop propagation : on touch devices the first click will be used and not the second.
+            e.stopPropagation();
+            e.preventDefault();
+
+            bodyFunc();
+			eyeFunc();
+			armsFunc();
+			brainFunc();
+        }
+
+        bodyFunc();
+		eyeFunc();
+		armsFunc();
+		brainFunc();
+    });
+
+
+
+}
+
+
+
+CruxApp.snap3 = function(){
 	var s = Snap("#svg-area");
 	
 	

@@ -51,50 +51,56 @@
 
 </div>
 
-<div class="container-fluid z-uxContainer2">
+
+
+<!-- <div class="container">
 	<div class="row">
-		<svg id="svg-area"></svg>
+		
+	</div>
+</div> -->
+
+<div class="hexagon">
+	<div class="hexagon-inner">
+  		HEXAGON
+  	</div>
+  <div class="face1"></div>
+  <div class="face2"></div>
+</div>
+
+
+
+
+<div class="container-fluid z-uxContainer">
+	<div class="row">
+		<!-- <svg id="svg-area"></svg> -->
+
+		<div class="z-ux-left">
+			<%= render 'svg/robot2' %>
+		</div>
+		<div class="z-ux-right">
+			<h2>DEV BLOG</h2>
+			<p>Although not much of a blogger, I figured this would be a good way to document my journey through the coding trenches.</p>
+			
+			<h3>Currently Learning:</h3>
+			<ul>
+				<li>Rails Weather API App</li>
+				<li>Microservices with Angular and Rails</li>
+				<li>Rails 5</li>
+				<li>Angular and Firebase</li>
+				<li>Snap.svg &amp; GSAP Animations</li>
+				<li>Angular &amp; D3</li>
+
+			</ul>
+		</div>
+
 
 	</div>
 
 </div>
 
-<div class="container">
-	<div class="row">
-		<div class="crux-diagram">
-			<%= render 'svg/crux_diagram' %>
-		</div>
-		<div class="crux-diagram--mobile">
-			<div class="crux-diagram--item svg-project" >
-				<%= render 'svg/diagram_mobile/research' %>
-			</div>
 
-			<div class="crux-diagram--item svg-project" >
-				<%= render 'svg/diagram_mobile/research' %>
-			</div>
-			
-			<div class="crux-diagram--item svg-project" data-test="toggle-diagram">
-				<%= render 'svg/diagram_mobile/research' %>
-			</div>
-			<div class="crux-diagram--item-info" data-test="toggle-diagram-info">
-				When training in UX design you'll quickly conclude that although the aesthetics of a product make a huge difference to its appeal, if it doesn’t work well, the look of it is of little consequence to the user. However, bear in mind that the ultimate success of a product depends not just on your design, but on the implementation of it by developers and the management of the project. This is where another key UX design skill - communication within the team - comes to the fore, but we’ll talk more about that in finer detail in the last section.
-			</div>
 
-			
-			<div class="crux-diagram--item svg-project" >
-				<%= render 'svg/diagram_mobile/research' %>	
-			</div>
 
-			<div class="crux-diagram--item svg-project">
-				<%= render 'svg/diagram_mobile/research' %>
-			</div>
-
-			<div class="crux-diagram--item svg-project">
-				<%= render 'svg/diagram_mobile/research' %>
-			</div>
-		</div>
-	</div>
-</div>
 
 
 <div class="container">

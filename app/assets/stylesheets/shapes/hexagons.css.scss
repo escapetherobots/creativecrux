@@ -1,6 +1,3 @@
-
-
-
 #zhexWrapper {
     padding:20px;
     overflow:hidden;
@@ -27,13 +24,15 @@
   outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
 
   padding-bottom: 30%;
-  outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
 }
 .zhex::after{
   content:'';
   display:block;
   padding-bottom: 86.602%;  /* =  100 / tan(60) * 1.5 */
 }
+
+
+
 .zhexIn{
   position: absolute;
   width:96%;
@@ -51,6 +50,19 @@
   visibility: visible;
   outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
 }
+
+/*.zhexInner {
+    display:block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    -webkit-transform: skewY(-60deg) rotate3d(0,0,1,30deg);
+        -ms-transform: skewY(-60deg) rotate3d(0,0,1,30deg);
+            transform: skewY(-60deg) rotate3d(0,0,1,30deg);
+}*/
+
 .zhexLink {
     display:block;
     width: 100%;
@@ -62,6 +74,7 @@
         -ms-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
             transform: skewY(-30deg) rotate3d(0,0,1,60deg);
 }
+
 
 /*** zHEX CONTENT **********************************************************************/
 .zhex img {
