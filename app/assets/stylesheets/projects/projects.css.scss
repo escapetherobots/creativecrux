@@ -38,12 +38,13 @@
 	}
 
 	&-item-description {
-		font-family: "Roboto";
+		font-family: "bebas_neuebold";
 		text-align: left;
 		padding-right: 20px;
 
 		& p, h1, h2, h3, a, li, ul {
-			font-family: "Roboto";
+			font-family: "roboto";
+			font-weight: 300;
 			color: #3c3c3c;
 			text-align: left;
 		}
@@ -120,7 +121,7 @@
 
 	&-item--image {
 		&-full{
-			@include span(12);
+			
 		}
 
 		&-small{
@@ -153,7 +154,7 @@
 	&-item--title {
 		@include font-size(80px);
 		text-transform: uppercase;
-		font-family: "Roboto";
+		font-family: "bebas_neuebold";
 		font-weight: 700;
 		color: #cccccc;
 	}
