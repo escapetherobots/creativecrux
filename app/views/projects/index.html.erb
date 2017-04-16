@@ -1,7 +1,7 @@
 
 <div class="main-bg-gradient"></div>
 <div class="main-bg">
-		<div class="container intro">
+	<div class="container intro">
 		<!--particle generator-->
 		<div class="row">
 			<h1><span>Crafting Exceptional User Experiences </span>Through Coding and Design</h1>
@@ -26,7 +26,69 @@
 
 </div>
 
+<div class="container-fluid z-uxContainer">
+	<div class="row">
+		<div class="z-ux-left">
+			<%= render 'svg/robot' %>
+		</div>
+		<div class="z-ux-right">
+			<h2>DEV BLOG</h2>
+			<p>Although not much of a blogger, I figured this would be a good way to document my journey through the coding trenches.</p>
+			
+			<h3>Currently Learning:</h3>
+			<ul>
+				<li>Rails Weather API App</li>
+				<li>Microservices with Angular and Rails</li>
+				<li>Rails 5</li>
+				<li>Angular and Firebase</li>
+				<li>Snap.svg &amp; GSAP Animations</li>
+				<li>Angular &amp; D3</li>
 
+			</ul>
+		</div>
+
+	</div>
+
+</div>
+
+
+
+<!-- <div class="container">
+	<div class="row">
+		
+	</div>
+</div> -->
+
+
+
+
+<div class="container-fluid z-uxContainer">
+	<div class="row">
+		<!-- <svg id="svg-area"></svg> -->
+
+		<div class="z-ux-left">
+			<%= render 'svg/robot2' %>
+		</div>
+		<div class="z-ux-right">
+			<h2>DEV BLOG</h2>
+			<p>Although not much of a blogger, I figured this would be a good way to document my journey through the coding trenches.</p>
+			
+			<h3>Currently Learning:</h3>
+			<ul>
+				<li>Rails Weather API App</li>
+				<li>Microservices with Angular and Rails</li>
+				<li>Rails 5</li>
+				<li>Angular and Firebase</li>
+				<li>Snap.svg &amp; GSAP Animations</li>
+				<li>Angular &amp; D3</li>
+
+			</ul>
+		</div>
+
+
+	</div>
+
+</div>
 
 
 
@@ -44,33 +106,5 @@
 
 
 
-	<h1 class="current-category"><%= params[:category] %></h1>
-<%#= debug @projects[4].project_image[0].name%>
-
-	<% if @projects.count == 0 #if there are no projects in the current category then... %>
-		<h3>Check Back Later. Please and Thanks!</h3>
-	<% else %>
 
 
-		<% @projects.each_slice(3) do |project| %>
-		<div class="project-slice">
-			<% project.each do |p| %>
-			<div class="project--item">
-				<div class="project--detail">
-					<h2><%= link_to p.title, project_path(p), class: "project--detail-link" %></h2>
-				</div>
-				
-				<% if p.project_image[0].present? %>
-				<div class="project--img-wrapper">
-					<%= image_tag(p.project_image[0]["urlpath"], class: "project--img")%>
-					<%#= image_tag(p.project_image[0].urlpath) %>
-				</div>
-				<% end %>
-			</div>
-			<% end %>
-		</div>	
-		<% end %> <%# End of @projects.each_slice %>
-	<% end %> <%# End of Else statement for @projects.count == 0 %>
-	<br>
-
-</div>
