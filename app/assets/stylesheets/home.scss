@@ -200,9 +200,6 @@ $susy: (
 	margin-bottom: 100px;
 }
 
-.z-uxContainer2 {
-	background-color: #006360;
-}
 
 .z-uxContainer {
 	padding: 40px;
@@ -224,7 +221,6 @@ $susy: (
 	}
 
 	h3 {
-		color: white;
 		font-family: 'bebas_neueregular';
 		@include font-size(60px);
 		@include line-height(62px);
@@ -275,6 +271,11 @@ $susy: (
 
 	}
 
+}
+
+
+.z-uxContainer--bg-gray {
+	background-color: #708090;
 }
 
 

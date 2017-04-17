@@ -69,7 +69,7 @@ CruxApp.snap = function(){
 		eye2.animate({transform: transformString2}, 500, mina.easein);
 	}
 
-	g.drag();
+	//g.drag();
 	
 	// s.click( function() {
 	// 	bodyFunc();
@@ -192,7 +192,7 @@ CruxApp.snap2 = function(){
 
 
 
-	g.drag();
+	//g.drag();
 	
 	// s.click( function() {
 	// 	bodyFunc();
@@ -230,9 +230,61 @@ CruxApp.snap2 = function(){
 
 }
 
-
-
 CruxApp.snap3 = function(){
+	console.log('snap3');
+	var s = Snap("#ux-icons");
+
+	// iconDesign = s.select('#ux-icons #design path');
+	
+	// iconDesign.transform('t8 -50r20 0 0');
+	// s.click(function(e){
+	// 	console.log(e);
+	// });
+
+	//iconDesign.animate({ transform: 'r40 0 0' }, 400, mina.bounce);
+
+	$('#z-hexContainer--diagram .zhexLink').on('click', function(e){
+		e.preventDefault();
+
+		var el = $(this);
+		if( el.find('.ux-icon-btn').css('display') != 'none' ) {
+			el.find('.ux-icon-btn').hide(500, 'swing', function(){
+				el.find('.zhex-content-info-text').show(500, 'swing');
+			});
+		} else {
+			el.find('.zhex-content-info-text').hide(500, 'swing', function(){
+				el.find('.ux-icon-btn').show(500, 'swing');
+			});
+		}
+
+		
+		
+		
+		
+		//iconDesign.animate({transform: 't0 12 s1 0 0'}, 400, mina.easein);
+		// var myBtn = $(this).find('.ux-icon-btn path');
+		// console.log($(myBtn));
+		// iconBtn = s.select( myBtn.selector);
+		// console.log(iconBtn);
+		// iconBtn.animate({ transform: 'r40 0 0' });
+
+		
+		
+
+	});
+
+	
+		
+	
+	
+	
+	
+
+}
+
+
+
+CruxApp.snap4 = function(){
 	var s = Snap("#svg-area");
 	
 	

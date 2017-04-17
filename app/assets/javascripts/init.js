@@ -6,6 +6,7 @@ CruxApp.init = function(){
 	this.sideNav();
 	this.snap();
 	this.snap2();
+	this.snap3();
 	//this.particleBg();
 }
 

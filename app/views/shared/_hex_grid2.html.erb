@@ -1,7 +1,113 @@
-<div class="ahexagon ahexagon1">
-		<div class="ahexagon-in1">
-			<div class="ahexagon-in2">
-				
-			</div>
-		</div>
-	</div>
+<% hexArrayDesktop = [
+	{name: 'microscope', num: '01', title: 'Research', description: '• Set vision
+• Brand & product immersion
+• Competitive analysis'},
+	{name: 'tools', num: '06', title: 'Enhance', description: 'Some text'},
+	{name: 'strategy', num: '02', title: 'Strategy', description: 'Some text'},
+	{name: 'process', num: '00', title: 'UX Process', description: 'Some text'},
+	
+	
+	{name: 'stats', num: '05', title: 'Evaluate', description: 'Some text'},
+	{name: 'design', num: '03', title: 'Design', description: 'Some text'},
+	{name: 'rocket', num: '04', title: 'Build', description: 'Some text'}
+	
+	
+] %>
+
+<% hexArray = [
+	{name: 'design', num: '00', title: 'UX Process', description: 'Some text'},
+	{name: 'stats', num: '05', title: 'Evaluate', description: 'Some text'},
+	{name: 'microscope', num: '01', title: 'Research', description: 'Some text'},
+	{name: 'strategy', num: '02', title: 'Strategy', description: 'Some text'},
+	{name: 'design', num: '03', title: 'Design', description: 'Some text'},
+	{name: 'rocket', num: '04', title: 'Build', description: 'Some text'},
+	{name: 'tools', num: '06', title: 'Enhance', description: 'Some text'}
+	
+] %>
+
+<div id="zhexWrapper" class="icons-mobile">
+<ul id="zhexGrid">
+	<% hexArray.each do |hex| %>
+      <li class="zhex">
+        <div class="zhexIn">
+          <a class="zhexLink" href="#">
+            <div class="zhex-content hex-<%= hex[:name] %>">
+            	<div class="zhex-content-info">
+            		<div class="zhex-content-info-h2-wrapper">
+            			<% if hex[:name] == 'process' %>
+            			<h2><i class="fa fa-star" aria-hidden="true"></i></h2>
+            			<% else %>
+            			<h2><%= hex[:num] %></h2>
+            			<% end %>
+            		</div>
+            		<div class="zhex-content-info-text">
+	            		<h4>
+	            			<%= hex[:title] %>
+	            		</h4>
+	            		<span><%= hex[:description] %></span>
+	            	</div>
+            		<% if hex[:name] == 'process' %>
+        			
+        			<% else %>
+        			<%= render :partial => 'svg/icons', :locals => {:icon => hex[:name] }  %>
+        			<% end %>
+
+            		
+            	</div>
+            	
+              <h1>This is a title</h1>
+              <p>Some sample text about the article this hexagon leads to</p>
+              <div class="zhex-content--bg"></div>
+            </div>
+          </a>
+        </div>
+      </li>
+
+      <% end %>
+      
+    </ul>
+</div>   
+
+<div id="zhexWrapper" class="icons-desktop">
+    <ul id="zhexGrid">
+	<% hexArrayDesktop.each do |hex_desk| %>
+
+      <li class="zhex">
+        <div class="zhexIn">
+          <a class="zhexLink" href="#">
+            <div class="zhex-content hex-<%= hex_desk[:name] %>">
+            	<div class="zhex-content-info">
+            		<div class="zhex-content-info-h2-wrapper">
+            			<% if hex_desk[:name] == 'process' %>
+            			<h2><i class="fa fa-star" aria-hidden="true"></i></h2>
+            			<% else %>
+            			<h2><%= hex_desk[:num] %></h2>
+            			<% end %>
+            		</div>
+            		<div class="zhex-content-info-text">
+	            		<h4>
+	            			<%= hex_desk[:title] %>
+	            		</h4>
+	            		<span><%= hex_desk[:description] %></span>
+	            	</div>
+            		<% if hex_desk[:name] == 'process' %>
+        				<%= render :partial => 'svg/icons', :locals => {:icon => hex_desk[:name] } %>
+        			<% else %>
+        				<%= render :partial => 'svg/icons', :locals => {:icon => hex_desk[:name] } %>
+        			<% end %>
+
+            		
+            	</div>
+            	
+              <h1>This is a title</h1>
+              <p>Some sample text about the article this hexagon leads to</p>
+              <div class="zhex-content--bg"></div>
+            </div>
+          </a>
+        </div>
+      </li>
+
+      <% end %>
+      
+    </ul>
+ </div>

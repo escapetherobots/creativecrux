@@ -1,0 +1,173 @@
+.icons-mobile {
+  display: block;
+
+  @media(min-width: 768px) {
+    display: none;
+  }
+}
+
+.icons-desktop {
+  display: none;
+
+  @media(min-width: 768px) {
+    display: block;
+  }
+}
+
+
+
+
+.zhex-content-info * {
+  position: relative !important;
+}
+
+.zhex-content-info-text {
+  display: none;
+  position: absolute;
+}
+
+.zhex-content-info {
+  margin: 14% auto;
+
+
+  position: relative !important;
+
+  .zhex-content-info-h2-wrapper{
+    &:after {
+
+      content: '';
+      position:absolute;
+      background: white;
+      width: 200%;
+      z-index:-6;
+      height: 3px;
+      display: block;
+      margin: -36px 0% 0 0%;
+    }
+  }
+
+
+  h2 {
+    font-family: 'bebas_neuebold';
+    @include font-size(70px);
+    @include line-height(60px);
+    display: inline-block;
+    text-align: center;
+    padding: 18px 10px 10px 10px;
+    margin-bottom: 0;
+    border: 3px solid #ffffff;
+    border-radius: 6px;
+    letter-spacing: 1px;
+
+    .icons-mobile .zhex-content-info & {
+      background-color: red;
+    }
+
+    .icons-desktop .zhex-content-info & {
+      background-color: blue;
+    }
+    
+    
+  }
+
+
+  h4 {
+    font-family: 'bebas_neuebold';
+    @include font-size(50px);
+    @include line-height(52px);
+    padding-top:20px;
+    letter-spacing: 2px;
+      text-align: center;
+  }
+
+  span {
+    font-family: 'roboto';
+    font-weight: 300;
+    @include font-size(30px);
+    @include line-height(34px);
+    color: white;
+    padding-top:20px;
+    text-align: center;
+  }
+}
+
+
+
+
+.zhex-content--bg {
+  width: 140%;
+  height: 120%;
+  background: inherit;
+  left: -20%;
+  top: 35%;
+  z-index:-10;
+}
+
+#ux-icons {
+  margin:auto;
+  transform-origin: 0 0;
+
+    max-width: 260px;
+
+    @media(min-width: 768px) {
+
+    }
+}
+
+#ux-icons {
+  #bg rect{
+    fill: none;
+  }
+
+  path{
+      transform-origin: 0 0;
+      fill: #ffffff;
+    }
+
+  #microscope {
+    display: block;
+
+    
+    
+  }
+}
+
+.icons-mobile {
+  .hex-microscope {background-color: #00afb7;}
+  .hex-strategy {background-color: #00625f;}
+  .hex-design {background-color: #89c53f;}
+  .hex-rocket {background-color: #00afb7;}
+  .hex-stats {background-color: #00625f;}
+  .hex-tools {background-color: #89c53f;}
+  .hex-process {background-color: #708090;}
+}
+
+.icons-mobile {
+  .hex-microscope h2 {background-color: #00afb7;}
+  .hex-strategy h2 {background-color: #00625f;}
+  .hex-design h2 {background-color: #89c53f;}
+  .hex-rocket h2 {background-color: #00afb7;}
+  .hex-stats h2 {background-color: #00625f;}
+  .hex-tools h2 {background-color: #89c53f;}
+  .hex-process h2 {background-color: #708090;}
+}
+
+.icons-desktop {
+  .hex-microscope {background-color: #00afb7;}
+  .hex-strategy {background-color: #00625f;}
+  .hex-design {background-color: #89c53f;}
+  .hex-rocket {background-color: #00afb7;}
+  .hex-stats {background-color: #00625f;}
+  .hex-tools {background-color: #89c53f;}
+  .hex-process {background-color: #708090;}
+}
+
+.icons-desktop {
+  .hex-microscope h2 {background-color: #00afb7;}
+  .hex-strategy h2 {background-color: #00625f;}
+  .hex-design h2 {background-color: #89c53f;}
+  .hex-rocket h2 {background-color: #00afb7;}
+  .hex-stats h2 {background-color: #00625f;}
+  .hex-tools h2 {background-color: #89c53f;}
+  .hex-process h2 {background-color: #708090;}
+}
