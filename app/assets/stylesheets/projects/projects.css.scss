@@ -112,12 +112,6 @@
 	}
 
 
-
-	&-item-images {
-		@include span(8 of 12);
-		background: #ffffff;
-	}
-
 	&-item--image {
 		&-full{
 			
@@ -138,11 +132,10 @@
 
 
 	&-item-content {
-		
-		@include span(4 of 12 last);
+		display: block;
+		/*@include span(4 of 12 last);
 		/*background-image: linear-gradient(#ff9d2f, #ff6126);*/
-
-		height: 600px;
+		clear: both;
 		position: relative;
 
 		&-wrapper {
@@ -151,10 +144,217 @@
 	}
 
 	&-item--title {
-		@include font-size(80px);
 		text-transform: uppercase;
 		font-family: "bebas_neuebold";
 		font-weight: 700;
 		color: #cccccc;
+		width: 100%;
+		clear:both;
+
+		h1 {
+			padding-right: 0;
+			text-align: left;
+			font-family: "bebas_neuebold";
+			@include font-size(120px);
+			@include line-height(110px);
+
+			@media(min-width: 768px) {
+				padding: 20px;
+				text-align:right;
+			}
+
+			span {
+				display:block;
+			}
+			
+		}
+	}
+}
+
+.project-item-images {
+	clear: both;
+	display: block;
+	position: relative;
+
+	img {
+		width: 100%;
+		margin: auto;
+		display: block;
+		max-width: 1000px;
+
+		@media(min-width: 1300px) {
+			width: auto;
+
+		}
+	}	
+
+}
+
+
+
+.project-item-summary {
+	display: block;
+	position: relative;
+	float: left;
+}
+
+.project-show-bg {
+	height: 100%;
+	@include span(12 of 12 last);
+}
+
+.project-show-bg {
+	&.super-duper-project {
+		background-color: #bb3821;
+	}
+}
+
+
+
+.project-item-image-wrapper {
+	overflow: hidden;
+	position: relative;
+	z-index: -20;
+}
+
+.project-item-image-bg-effect {
+	    width: 250px;
+    height: 1600px;
+    transform: rotate(45deg);
+    background-color: black;
+    position: absolute;
+    display: block;
+    z-index: -10;
+    top: -400px;
+    left: 200px;
+    opacity:.14;
+}
+.project-item-image-bg-effect2 {
+	    width: 100px;
+    height: 1600px;
+    transform: rotate(45deg);
+    background-color: black;
+    position: absolute;
+    display: block;
+    z-index: -10;
+    top: -400px;
+    left: 700px;
+    opacity:.1;
+}
+.project-item-image-bg-effect3 {
+	    width: 30px;
+    height: 1600px;
+    transform: rotate(45deg);
+    background-color: black;
+    position: absolute;
+    display: block;
+    z-index: -10;
+    top: -400px;
+    left: 400px;
+    opacity:.2;
+}
+.project-item-image-bg-effect4 {
+	    width: 160px;
+    height: 1600px;
+    transform: rotate(-45deg);
+    background-color: black;
+    position: absolute;
+    display: block;
+    z-index: -10;
+    top: -400px;
+    left: 600px;
+    opacity:.17;
+}
+.project-item-image-bg-effect5 {
+	    width: 60px;
+    height: 1600px;
+    transform: rotate(-45deg);
+    background-color: black;
+    position: absolute;
+    display: block;
+    z-index: -10;
+    top: -400px;
+    left: 300px;
+    opacity:.12;
+}
+.project-item-image-bg-effect6 {
+	    width: 16px;
+    height: 1600px;
+    transform: rotate(-45deg);
+    background-color: black;
+    position: absolute;
+    display: block;
+    z-index: -10;
+    top: -400px;
+    left: 400px;
+    opacity:.15;
+}
+
+.project-item-image-bg-effect7 {
+	    width: 50px;
+    height: 1600px;
+    transform: rotate(-45deg);
+    background-color: black;
+    position: absolute;
+    display: block;
+    z-index: -10;
+    top: -400px;
+    left: 1200px;
+    opacity:.17;
+}
+
+.project-item-image-bg-effect8 {
+	    width: 20px;
+    height: 1600px;
+    transform: rotate(-45deg);
+    background-color: black;
+    position: absolute;
+    display: block;
+    z-index: -10;
+    top: -400px;
+    left: 1300px;
+    opacity:.1;
+}
+
+
+.project-item-image-wrapper:nth-child(2){
+	padding: 40px;
+
+	img {
+		box-shadow: -1px 1px 40px 4px rgba(0,0,0,0.3);
+	}
+
+}
+.project-item-image-wrapper:nth-child(3){
+	padding: 40px;
+	background-color: #bf3e1e;
+	img {
+		box-shadow: -1px 1px 40px 4px rgba(0,0,0,0.3);
+	}
+
+
+}
+
+.project-item-image-wrapper:nth-child(5){
+	background-color: #bf3e1e;
+}
+
+.project-item-content {
+	@include container(1200px no-gutters);
+}
+
+.project-item-content-left {
+	@include span(12 of 12);
+
+	@media(min-width: 768px) {
+		@include span(6 of 12 no-gutters);
+	}
+}
+
+.project-item-content-right {
+	@include span(12 of 12);
+
+	@media(min-width: 768px) {
+		@include span(6 of 12 no-gutters);
 	}
 }

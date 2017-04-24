@@ -32,6 +32,7 @@
 //= require picture_tag
 //= require snap
 //= require init
+//= require fitText
 
 
 

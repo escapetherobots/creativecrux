@@ -2,6 +2,7 @@ window.CruxApp || (window.CruxApp = {});
 CruxApp.init = function(){
 	var all_listeners = "DOMMouseScroll MouseScrollEvent MozMousePixelScroll wheel scroll resize";
 	this.toggler();
+	//this.fitTexter();
 	this.sceneBuilder();
 	this.sideNav();
 	this.snap();
@@ -21,6 +22,10 @@ CruxApp.toggler = function(){
     });
 }
 
+
+CruxApp.fitTexter = function(){
+	//jQuery(".project-item--title h1").fitText(.145);
+}
 
 CruxApp.particleBg = function(){
 	particleground(document.getElementById('particles'), {
@@ -79,6 +84,20 @@ CruxApp.sideNav = function(){
 	var isLateralNavAnimating = false;
 	//open/close lateral navigation
 	$('.cd-nav-trigger').on('click', function(event){
+		event.preventDefault();
+		//stop if nav animation is running 
+		if( !isLateralNavAnimating ) {
+			if($(this).parents('.csstransitions').length > 0 ) isLateralNavAnimating = true; 
+			
+			$('body').toggleClass('navigation-is-open');
+			$('.cd-navigation-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+				//animation is over
+				isLateralNavAnimating = false;
+			});
+		}
+	});
+
+	$('.cd-nav-trigger2').on('click', function(event){
 		event.preventDefault();
 		//stop if nav animation is running 
 		if( !isLateralNavAnimating ) {

@@ -242,7 +242,7 @@ main p {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #89c53f;
+  background-color: #F2F2F2;
   visibility: hidden;
   -webkit-transition: visibility 0s 0.7s;
   -moz-transition: visibility 0s 0.7s;
@@ -351,7 +351,7 @@ main p {
 }
 @media only screen and (min-width: 1170px) {
   .cd-nav .cd-navigation-wrapper {
-    padding: 62px 20%;
+    padding: 62px 6%;
   }
   .cd-nav .cd-navigation-wrapper::after {
     clear: both;

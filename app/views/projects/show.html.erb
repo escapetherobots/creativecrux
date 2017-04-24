@@ -1,75 +1,133 @@
 <div class="project-item">
 
-<div class="project-item-images">
-<% if @project.project_image.present? %>
-	<%#= @project_images[0].name %>
-	<% @project.project_image.each do |image| %>
-		<%= image_tag(image.urlpath, :class => "project-item--image-full") %>
-		<% if image.urlpath.match(/_fullsize/).present? %>
-			<% modImage = image.urlpath.split( /_fullsize/ ) %>
-			<% modImagePath = "#{modImage[0]}_thumbs-184#{modImage[1]}" %>
-			<% image_tag(modImagePath, :class => "project-item--image-small") %>
+	<div class="project-item-images">
+		<% if @project.project_image.present? %>
+			<%#= @project_images[0].name %>
+			<% image = @project.project_image.first %>
+				<%= image_tag(image.urlpath, :class => "project-item--image-full") %>
+				<% if image.urlpath.match(/_fullsize/).present? %>
+					<% modImage = image.urlpath.split( /_fullsize/ ) %>
+					<% modImagePath = "#{modImage[0]}_thumbs-184#{modImage[1]}" %>
+					<% image_tag(modImagePath, :class => "project-item--image-small") %>
+				<% end %>
+				
+
+
 		<% end %>
 		
-	<% end %>
-
-<% end %>
-</div>
-
-<div class="project-item-content">
-	<div class="project-item-content-wrapper">
-		<h3>Category: <%= @project.category.nil? ? "There is no Category" : @project.category.name  %></h3>
-<% unless @project.id == Project.where(:category => @project.category_id).first.id %>
-	<%#Hide 'Previous' link once we reach to first record %>
-	  <%= link_to Project.get_previous_project(@project), class: "project-btn" do %>
-	  	<div class="project-btn-bottom"></div>
-	  	<div class="icon">
-				<span>previous</span><i class="fa fa-arrow-left"></i>
-				<i class="fa fa-check"></i>
-			</div>
-			
-		<% end %>
-<% end %>
-<% unless  @project.id == Project.where(:category => @project.category_id).last.id %>
-	<%#Hide 'Next' link once we reach to last record %>
-	<%= link_to Project.get_next_project(@project), class: "project-btn" do %>
-		
-		<div class="icon">
-				<span>next</span><i class="fa fa-arrow-right"></i>
-				<i class="fa fa-check"></i>
-			</div>
-	<% end %>
-<% end %>
-
-
-
-
-	<h2 class="project-item--title"><%= @project.title %></h2>
-	<div class="project-item-description"><%= markdown(@project.description) %></div>
-		<button id="toggle-project-detail" data-test="toggle">Show Detail</button>
-	<div id="project-detail" data-test="toggle-project-detail" class="project--i-detail">
-
-			<h3>Category: <%= @project.category.nil? ? "There is no Category" : @project.category.name  %></h3>
-			
-			<p>Designer: <%= @project.designer %></p>
-			<p><%#= @project.category.name %></p>
 	</div>
 
-	<div class="links btn-group">
-		<% if user_signed_in? %>
-		<% if @project.user_id == current_user.id %>
-			<%= link_to "Edit Project", edit_project_path(@project), class: "btn btn-primary" %>
-			<%= link_to "Delete Project", project_path(@project), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-warning" %>
-		<% end %>
-		<% end %>
 
+	<div class="container-fluid project-show-bg <%= @project.slug %>">
+		<div class="row">
+
+			<div class="project-item-content">
+				<div class="project-item-content-left">	
+					<h3>Category: <%= @project.category.nil? ? "There is no Category" : @project.category.name  %></h3>
+					<% unless @project.id == Project.where(:category => @project.category_id).first.id %>
+						<%#Hide 'Previous' link once we reach to first record %>
+						  <%= link_to Project.get_previous_project(@project), class: "project-btn" do %>
+						  	<div class="project-btn-bottom"></div>
+						  	<div class="icon">
+									<span>previous</span><i class="fa fa-arrow-left"></i>
+									<i class="fa fa-check"></i>
+								</div>
+								
+							<% end %>
+					<% end %>
+					<% unless  @project.id == Project.where(:category => @project.category_id).last.id %>
+						<%#Hide 'Next' link once we reach to last record %>
+						<%= link_to Project.get_next_project(@project), class: "project-btn" do %>
+							
+							<div class="icon">
+									<span>next</span><i class="fa fa-arrow-right"></i>
+									<i class="fa fa-check"></i>
+								</div>
+						<% end %> 
+					<% end %>
+					<%  myTitle = @project.title 
+						myTitleArr = myTitle.split(' ')
+
+
+					%>
+
+					<div class="project-item--title">
+
+						<h1><%= @project.title %></h1>
+
+					</div>
+				</div>
+
+				<div class="project-item-content-right">
+					<div class="project-item-description"><%= markdown(@project.description) %></div>
+					<button id="toggle-project-detail" data-test="toggle">Show Detail</button>
+					<div id="project-detail" data-test="toggle-project-detail" class="project--i-detail">
+
+							<h3>Category: <%= @project.category.nil? ? "There is no Category" : @project.category.name  %></h3>
+							
+							<p>Designer: <%= @project.designer %></p>
+							<p><%#= @project.category.name %></p>
+					</div>
+
+					<div class="links btn-group">
+						<% if user_signed_in? %>
+						<% if @project.user_id == current_user.id %>
+							<%= link_to "Edit Project", edit_project_path(@project), class: "btn btn-primary" %>
+							<%= link_to "Delete Project", project_path(@project), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-warning" %>
+						<% end %>
+						<% end %>
+
+					</div><!--end btn-group -->
+					
+					<svg class="project-item--svg-bk" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+				     	<polygon class="svg--sm" fill="white" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100"/>
+				  	</svg>
+				</div>
+					
+			</div><!-- end project item content -->
+
+
+		</div><!--end row -->
+	</div><!-- end container-fluid-->
+
+
+	<div class="project-item-images">
+	<% if @project.project_image.present? %>
+		<%#= @project_images[0].name %>
+		<% @project.project_image.each_with_index do |image, index| %>
+			<div class="project-item-image-wrapper">
+			<% unless image.name == @project.project_image.first.name %>
+				<%= image_tag(image.urlpath, :class => "project-item--image-full") %>
+				<% if image.urlpath.match(/_fullsize/).present? %>
+					<% modImage = image.urlpath.split( /_fullsize/ ) %>
+					<% modImagePath = "#{modImage[0]}_thumbs-184#{modImage[1]}" %>
+					<% image_tag(modImagePath, :class => "project-item--image-small") %>
+				<% end %>
+			<% end %>
+
+			<% if index == 2 %>
+				<div class="project-item-image-bg-effect"></div>
+				<div class="project-item-image-bg-effect2"></div>
+				<div class="project-item-image-bg-effect3"></div>
+				<div class="project-item-image-bg-effect4"></div>
+				<div class="project-item-image-bg-effect5"></div>
+				<div class="project-item-image-bg-effect6"></div>
+				<div class="project-item-image-bg-effect7"></div>
+				<div class="project-item-image-bg-effect8"></div>
+			<% end %>
+			<% if index == 3 %>
+
+			<% end %>
+
+			<% if index == 4 %>
+
+			<% end %>
+
+			</div><!--end project-item-image-wrapper -->
+		<% end %><!--end the each block -->
+
+	<% end %>
 	</div>
-	<svg class="project-item--svg-bk" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-    
-     <polygon class="svg--sm" fill="white" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100"/>
-    
-  </svg>
-	</div><!--end description-wrapper-->
-</div>
+
 
 </div><!--end project-item-->
