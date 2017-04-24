@@ -45,21 +45,42 @@
 								</div>
 						<% end %> 
 					<% end %>
-					<%  myTitle = @project.title 
-						myTitleArr = myTitle.split(' ')
-
-
-					%>
 
 					<div class="project-item--title">
 
 						<h1><%= @project.title %></h1>
 
 					</div>
+
+
+					<svg width="660" height="220" style="outline: 1px solid red">  
+					 <defs>  
+					   <pattern id="pattern-2" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">  
+					     <circle cx="5" cy="5" r="5" fill="#999" />  
+					   </pattern>
+
+					   <mask id="pattern-mask-2" x="0" y="0" width="1" height="1" >  
+					     <rect x="0" y="0" width="225" height="220" fill="url(#pattern-2)"/>  
+					   </mask>
+
+					   <mask id="image-mask-2" x="0" y="0" width="1" height="1" >  
+					     <image width="660" height="495" xlink:href="http://www.vanseodesign.com/blog/wp-content/uploads/2013/09/strawberry-fields.jpg" />  
+					   </mask>  
+					 </defs>
+
+					 <g mask="url(#image-mask-2)">  
+					   <circle cx="125" cy="110" r="100" fill="#c69" mask="url(#pattern-mask-2)" />  
+					   <circle cx="325" cy="110" r="100" fill="#9c6" />  
+					   <circle cx="525" cy="110" r="100" fill="#69c" />  
+					 </g>  
+					</svg>
 				</div>
 
 				<div class="project-item-content-right">
-					<div class="project-item-description"><%= markdown(@project.description) %></div>
+					<% if @project.summary != nil %>
+						<div class="project-item-description"><%= markdown(@project.summary) %></div>
+					<% end %>
+					<!-- <div class="project-item-description"><%= markdown(@project.description) %></div> -->
 					<button id="toggle-project-detail" data-test="toggle">Show Detail</button>
 					<div id="project-detail" data-test="toggle-project-detail" class="project--i-detail">
 

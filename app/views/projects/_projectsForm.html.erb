@@ -8,7 +8,8 @@
 	<div class="panel-body">
 	  <%= f.input :title, label: "Project Title:", placeholder: "Project Title", input_html: { class: 'form-control'} %>
 
-    
+    <%= f.text_area :summary, cols: 100, rows: 15,  label: "Project Summary:", placeholder: "Project Summary"  %>
+
 	   <%= f.text_area :description, cols: 100, rows: 15,  label: "Project Description:", placeholder: "Project Description"  %>
     
 

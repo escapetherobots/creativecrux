@@ -38,16 +38,10 @@
 	}
 
 	&-item-description {
-		font-family: "bebas_neuebold";
 		text-align: left;
 		padding-right: 20px;
 
-		& p, h1, h2, h3, a, li, ul {
-			font-family: "roboto";
-			font-weight: 300;
-			color: #3c3c3c;
-			text-align: left;
-		}
+
 	}
 
 
@@ -141,6 +135,35 @@
 		&-wrapper {
 			padding: 30px 20px 20px 20px;
 		}
+
+
+		h1, h2, h3, h4 {
+			font-family: "bebas_neueregular";
+			color: white;
+			text-align: left;
+
+		}
+
+		h2 {
+			@include font-size(60px);
+			@include line-height(64px);
+		}
+
+		h3 {
+			@include font-size(46px);
+			@include line-height(52px);
+		}
+
+		ul, li, p {
+			font-family: "Roboto";
+			color: white;
+			text-align: left;
+			@include font-size(34px);
+			@include line-height(40px);
+			letter-spacing: 0;
+			margin-left: 0;
+		}
+
 	}
 
 	&-item--title {
@@ -152,9 +175,11 @@
 		clear:both;
 
 		h1 {
+			color: white;
 			padding-right: 0;
 			text-align: left;
 			font-family: "bebas_neuebold";
+			font-weight: 700;
 			@include font-size(120px);
 			@include line-height(110px);
 
@@ -204,6 +229,9 @@
 }
 
 .project-show-bg {
+
+	background-color: #708090;
+
 	&.super-duper-project {
 		background-color: #bb3821;
 	}
