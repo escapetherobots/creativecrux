@@ -624,33 +624,7 @@ h1 {
 }
 
 
-.hexy {
-	position: relative;
-	float: left;
-	svg {
-	}
 
-	img {
-		position:absolute;
-		display: block;
-		clip-path: url(#hex-mask);
-		transform-origin: 0 0;
-		
-	}
-}
-
-.hexy1 {
-
-}
-
-.hexy2 {
-
-	@media(min-width: 768px){
-		margin-top: 200px;
-		margin-left: -100px;
-	}
-	
-}
 
 
 
