@@ -107,23 +107,29 @@
   margin:auto;
   transform-origin: 0 0;
 
-      width: auto;
-      height: auto;
+  width: 180px;
+  margin-top: 20px;
 
 
     @media(min-width: 768px) {
-      width: auto;
-      height: auto;
+      width: 300px;
+
     }
 }
 
 #ux-icons {
+  transform: translateZ(0);
+  -webkit-transform-origin: 50%  51%;
+  transform-origin: 50%  51%;
+  padding: 2px;
+
   #bg rect{
     fill: none;
   }
 
   path{
-      transform-origin: 0 0;
+      transform: translateZ(0);
+      -webkit-transform-origin: 50%  51%;
       fill: #ffffff;
     }
 

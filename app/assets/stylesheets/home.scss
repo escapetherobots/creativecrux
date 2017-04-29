@@ -20,15 +20,6 @@ $susy: (
 	width:100%;
 }
 
-.projects {@include container(100%)}
-
-@media (min-width: 500px) {
-	.project--item {
-		@include span(4 of 12)
-	}
-}
-
-
 /*.nav {
 	@include span(6 of 12);
 	height:300px;
@@ -40,11 +31,11 @@ $susy: (
 
 @keyframes colorchange
     {
-      0%   {background: #89c53f;}
-      25%  {background: #63cecb;}
-      50%  {background: #006360;}
-      75%  {background: #00AFB7;}
-      100% {background: #89c53f;}
+      0%   {background: #00AFB7;}
+      25%  {background: #88C440;}
+      50%  {background: #E2B705;}
+      75%  {background: #88C440;}
+      100%  {background: #00AFB7;}
     }
 
 @keyframes bg-reveal
@@ -72,7 +63,6 @@ $susy: (
 }
 
 .main-bg {
-	
 	animation: colorchange 10s infinite;
 	height: 370px;
 	width: 100%;
@@ -91,7 +81,7 @@ $susy: (
 
 
 		@media(min-width: 500px){
-			transform: scale(2);
+			transform: scale(1);
 			width: 100%;
 			margin-left: 0;
 		}
@@ -161,10 +151,7 @@ $susy: (
 	}
 }
 
-#crux-logo-5:hover {
-	transform: scale(1.3);
-	transition: all .2s ease-out;
-}
+
 
 #crux-logo-4--clipPath {
 	pointer-event: all;
@@ -288,6 +275,11 @@ $susy: (
 
 }
 
+.main-header-wrapper {
+	max-width: 800px;
+	margin: auto;
+	z-index: 50;
+}
 
 .intro {
 	margin-top: 70px;
@@ -322,6 +314,7 @@ $susy: (
 	padding: 40px;
 	background-color: #00AFB7;
 
+
 	.row {
 		
 	}
@@ -334,6 +327,7 @@ $susy: (
 		letter-spacing: 2px;
 		text-align: left;
 		color: #047382;
+		color: white;
 		padding-bottom: 10px;
 		border: none;
 	}
@@ -345,6 +339,7 @@ $susy: (
 		letter-spacing: 2px;
 		text-align: left;
 		color: #047382;
+		color: white;
 		padding-top: 30px;
 		padding-bottom: 10px;
 	}
@@ -378,7 +373,6 @@ $susy: (
 	}
 
 	.z-ux-right {
-		
 
 		@include span(12 of 12);
 		padding: 20px;
@@ -386,14 +380,45 @@ $susy: (
 		@media(min-width: 768px) {
 			@include span(6 of 12);
 		}
-
 	}
 
 }
 
 
-.z-uxContainer--bg-gray {
-	background-color: #708090;
+.z-uxContainer--bg-2 {
+	background-color: #88C440;
+	h2 {
+		color: #3D7C14;
+		color: white;
+
+	}
+	h3 {
+		color: white;
+	}
+}
+
+.z-uxContainer--bg-3 {
+	background-color: #E2B705;
+	h2 {
+		color: #C66F06;
+		color: white;
+
+	}
+	h3{
+		color: white;
+	}
+}
+
+.z-uxContainer--bg-4 {
+	background-color: #3d3d3d;
+	h2 {
+		color: #C66F06;
+		color: white;
+
+	}
+	h3{
+		color: white;
+	}
 }
 
 
@@ -411,6 +436,19 @@ $susy: (
 }
 
 #robot2-svg {
+	height:100%;
+	width:100%;
+	max-width: 400px;
+	text-align: center;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	svg {
+
+	}
+}
+
+#robot3-svg {
 	height:100%;
 	width:100%;
 	max-width: 400px;
@@ -622,8 +660,6 @@ h1 {
     margin: 0;
   }
 }
-
-
 
 
 

@@ -1,8 +1,23 @@
+
+$susy: (
+  columns: 12,
+  gutters: 0,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
+
+.project-all-slice {
+	width: 100%;
+}
+
 .project-slice {
-    min-height: 600px;
-    width: 100%;
-    clear: both;
-    overflow: hidden;
+	@include container(100%)
+
+}
+
+.project-slice:hover {		
+		
 
 }
 
@@ -32,35 +47,72 @@
 
 
 .project {
-
 	&--item {
-		height: 200px;
+		overflow: hidden;
+		height: 400px;
+		@include span(12 of 12);
+
+		@media(min-width: 1000px) {
+			@include span(4 of 12);	
+		}
+		
+	}
+
+	&--item:hover {
+		img {
+			transform:scale(1.05);
+			-webkit-filter: grayscale(0%);
+			filter: grayscale(0%);
+			opacity: 1;
+		}
+
+		.project-slice-title {
+
+				color: white;
+				text-decoration: none;
+				transition:font 0.5s ease;
+				opacity: .3;
+			
+		}
 	}
 
 	&-item-description {
 		text-align: left;
 		padding-right: 20px;
-
-
 	}
 
 
 
-	&--detail-link {
+	&-slice-title {
 		color: black;
-		opacity: 0.2;
+		opacity: 0.3;
 		text-transform: uppercase;
+		font-family: "bebas_neuebold";
 		@include font-size(80px);
-		font-weight: 700;
+		@include line-height(72px);
+		letter-spacing: 0;
 		transition: all .3s ease-out;
-
-		&:hover {
-			color: white;
-			text-decoration: none;
-			transition:font 0.3s ease;
-			opacity: 0;
-		}
+		padding: 20px;
+		width: 100px;
 	}
+
+	&-slice-title--left {
+		@include font-size(180px);
+		@include line-height(120px);
+		padding-bottom:0;	
+		padding-top: 10px;
+		display: inline-block;
+
+	}
+
+	&-slice-title--right {
+		display: inline-block;
+		clear: both;
+		padding-top:4px;
+		padding-left:4px;
+
+	}
+
 
 	&--detail{
 		position:absolute;
@@ -76,13 +128,16 @@
 	}
 
 	&--img-wrapper {
-		max-width: 100%;
-		
+		display: block;
+		position: relative;
 		overflow:hidden;
+		margin: auto;
 	}
 
 	&--img {
-		width: 100%;
+		display: block;
+		margin: auto;
+
 		-webkit-transition: all .3s ease-out;
 		-moz-transition: all .3s ease-out;
 		-o-transition: all .3s ease-out;
@@ -98,6 +153,18 @@
 			filter: grayscale(0%);
 			opacity: 1;
 		};
+
+		width: 100%;
+
+		@media(min-width: 768px){
+			margin-left: -20%;
+		}
+
+		@media(min-width: 1000px){
+			width: auto;
+		}
+
+
 	}
 
 	&-item {
