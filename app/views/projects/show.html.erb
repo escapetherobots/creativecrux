@@ -1,6 +1,15 @@
 <div class="project-item">
 
+	<div class="project-management-links">
+						<% if user_signed_in? %>
+						<% if @project.user_id == current_user.id %>
+							<%= link_to "Edit Project", edit_project_path(@project), class: "btn btn-4 btn-4a btn-proj-manage icon-arrow-right" %>
 
+							<%= link_to "Delete Project", project_path(@project), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-4 btn-4a btn-proj-manage icon-arrow-right" %>
+						<% end %>
+						<% end %>
+
+	</div><!--end btn-group -->
 
 	<div class="project-item-images">
 		<% if @project.project_image.present? %>
@@ -25,10 +34,19 @@
 
 			<div class="project-item-content">
 				<div class="project-item-content-left">	
-					<h3>Category: <%= @project.category.nil? ? "There is no Category" : @project.category.name  %></h3>
+					
+					
+					<div class="project-item--title">
+
+						<h1><%= @project.title %></h1>
+
+
+					</div>
+					<h3 style="text-align: right;padding-right: 20px">Category: <%= @project.category.nil? ? "There is no Category" : @project.category.name  %></h3>
+
 					<% unless @project.id == Project.where(:category => @project.category_id).first.id %>
 						<%#Hide 'Previous' link once we reach to first record %>
-						  <%= link_to Project.get_previous_project(@project), class: "project-btn" do %>
+						  <%= link_to Project.get_previous_project(@project), class: "btn btn-4a icon-arrow-right" do %>
 						  	<div class="project-btn-bottom"></div>
 						  	<div class="icon">
 									<span>previous</span><i class="fa fa-arrow-left"></i>
@@ -39,7 +57,7 @@
 					<% end %>
 					<% unless  @project.id == Project.where(:category => @project.category_id).last.id %>
 						<%#Hide 'Next' link once we reach to last record %>
-						<%= link_to Project.get_next_project(@project), class: "project-btn" do %>
+						<%= link_to Project.get_next_project(@project), class: "btn btn-4a icon-arrow-right" do %>
 							
 							<div class="icon">
 									<span>next</span><i class="fa fa-arrow-right"></i>
@@ -48,59 +66,24 @@
 						<% end %> 
 					<% end %>
 
-					<div class="project-item--title">
-
-						<h1><%= @project.title %></h1>
-
-					</div>
-
-
-					<svg width="660" height="220" style="outline: 1px solid red">  
-					 <defs>  
-					   <pattern id="pattern-2" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">  
-					     <circle cx="5" cy="5" r="5" fill="#999" />  
-					   </pattern>
-
-					   <mask id="pattern-mask-2" x="0" y="0" width="1" height="1" >  
-					     <rect x="0" y="0" width="225" height="220" fill="url(#pattern-2)"/>  
-					   </mask>
-
-					   <mask id="image-mask-2" x="0" y="0" width="1" height="1" >  
-					     <image width="660" height="495" xlink:href="http://www.vanseodesign.com/blog/wp-content/uploads/2013/09/strawberry-fields.jpg" />  
-					   </mask>  
-					 </defs>
-
-					 <g mask="url(#image-mask-2)">  
-					   <circle cx="125" cy="110" r="100" fill="#c69" mask="url(#pattern-mask-2)" />  
-					   <circle cx="325" cy="110" r="100" fill="#9c6" />  
-					   <circle cx="525" cy="110" r="100" fill="#69c" />  
-					 </g>  
-					</svg>
 				</div>
 
 				<div class="project-item-content-right">
-					<% if @project.summary != nil %>
-						<div class="project-item-description"><%= markdown(@project.summary) %></div>
-					<% end %>
+					
 					<!-- <div class="project-item-description"><%= markdown(@project.description) %></div> -->
-					<button id="toggle-project-detail" data-test="toggle">Show Detail</button>
+					<% unless @project.summary == nil %>
+								<div class="project-item-description"><%= markdown(@project.summary) %></div>
+							<% end %>
+					<button id="toggle-project-detail" data-test="toggle" class="btn btn-4 btn-4a icon-arrow-right">Show Detail</button>
 					<div id="project-detail" data-test="toggle-project-detail" class="project--i-detail">
 
 							<h3>Category: <%= @project.category.nil? ? "There is no Category" : @project.category.name  %></h3>
-							
-							<p>Designer: <%= @project.designer %></p>
+							<p><%= markdown(@project.description) %></p>
 							<p><%#= @project.category.name %></p>
+							
 					</div>
 
-					<div class="links btn-group">
-						<% if user_signed_in? %>
-						<% if @project.user_id == current_user.id %>
-							<%= link_to "Edit Project", edit_project_path(@project), class: "btn btn-primary" %>
-							<%= link_to "Delete Project", project_path(@project), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-warning" %>
-						<% end %>
-						<% end %>
-
-					</div><!--end btn-group -->
+					
 
 					
 
@@ -112,6 +95,10 @@
 		</div><!--end row -->
 	</div><!-- end container-fluid-->
 
+	
+
+
+	
 
 	<div class="project-item-images">
 	<% if @project.project_image.present? %>

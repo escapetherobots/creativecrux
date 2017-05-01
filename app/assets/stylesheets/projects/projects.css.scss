@@ -21,6 +21,10 @@ $susy: (
 
 }
 
+
+
+
+
 #project-detail {
 	display: none;
 }
@@ -223,10 +227,21 @@ $susy: (
 
 		ul, li, p {
 			font-family: "Roboto";
-			color: white;
+			color: #3b3b3b;
 			text-align: left;
 			@include font-size(34px);
-			@include line-height(40px);
+			@include line-height(48px);
+			letter-spacing: 0;
+			margin-left: 0;
+		}
+
+		pre {
+			font-family: "Roboto";
+			
+			background-color: transparent;
+			text-align: left;
+			@include font-size(34px);
+			@include line-height(48px);
 			letter-spacing: 0;
 			margin-left: 0;
 		}
@@ -297,10 +312,14 @@ $susy: (
 
 .project-show-bg {
 
-	background-color: #708090;
+	background-color: #e2e2e2;
+
+	h1 {
+		color: #ED1B2C;
+	}
 
 	&.super-duper-project {
-		background-color: #bb3821;
+		
 	}
 }
 
@@ -453,3 +472,65 @@ $susy: (
 		@include span(6 of 12 no-gutters);
 	}
 }
+
+.project-management-links {
+	margin: auto;
+	width: 800px;
+
+	.btn-proj-manage {
+		border-color: #ccc;
+		color: #ccc ;
+	}
+
+	.btn-proj-manage:focus {
+		border-color: #ccc;
+		color: #ccc ;
+	}
+
+	.btn-proj-manage:active {
+		border-color: #ccc;
+		color: #ccc ;
+	}
+
+	.btn-proj-manage:before {
+		color: #333 ;
+		padding: 16px 0 0 0;
+	}
+
+	.btn-proj-manage:hover {
+		color: #333;
+		border-color: #333;
+
+		
+	}
+	
+
+
+	
+}
+
+#toggle-project-detail + .project-detail{
+	transition:all 0.5s ease;
+}
+
+#toggle-project-detail:before {
+
+}
+
+
+.show-toggle {
+	transition:all 0.5s ease;
+}
+
+.show-toggle:before {
+
+
+}
+
+.show-toggle + .project-detail{
+		transition:all 0.5s ease;
+
+
+	}
+
+	

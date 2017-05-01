@@ -1,4 +1,6 @@
 /* General button style (reset) */
+
+
 .btn {
   border: none;
   font-family: inherit;
@@ -6,9 +8,9 @@
   color: inherit;
   background: none;
   cursor: pointer;
-  padding: 10px 50px 10px 50px;
+  padding: 8px 35px 6px 35px;
   display: inline-block;
-  margin: 15px 0px;
+  margin: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
@@ -127,11 +129,11 @@
 /* Button 4 */
 .btn-4 {
   border-radius: 10px;
-  border: 3px solid #fff;
+  border: 2px solid #fff;
   color: #fff;
   overflow: hidden;
   font-family: 'bebas_neuebold';
-  @include font-size(40px);
+  @include font-size(34px);
   background-color: transparent;
 }
 
@@ -147,10 +149,10 @@
 .btn-4:before {
   position: absolute;
   height: 100%;
-  @include font-size(40px);
-  @include line-height(34px);
+  @include font-size(28px);
+  @include line-height(20px);
   color: #333;
-  padding-top: 16px;
+  padding: 16px 0 0 0;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
@@ -167,7 +169,7 @@
 }
 
 .btn-4a:hover:before {
-  left: 80%;
+  left: 85%;
 }
 
 /* Button 4b */

@@ -27,15 +27,32 @@ $susy: (
 }*/
 .navbar {
 	margin-bottom: 0;
+	border-radius: 0;
+}
+
+.navbar-nav li a {
+	font-family: "bebas_neueregular";
+	@include font-size(30px);
+	@include line-height(34px);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.navbar-brand {
+	
+	font-family: "bebas_neuebold";
+	@include font-size(44px);
+	@include line-height(38px);
+	letter-spacing: 1px;
 }
 
 @keyframes colorchange
     {
-      0%   {background: #00AFB7;}
-      25%  {background: #88C440;}
-      50%  {background: #E2B705;}
-      75%  {background: #88C440;}
-      100%  {background: #00AFB7;}
+      0%   {fill: #00AFB7;}
+      25%  {fill: #88C440;}
+      50%  {fill: #E2B705;}
+      75%  {fill: #88C440;}
+      100%  {fill: #00AFB7;}
     }
 
 @keyframes bg-reveal
@@ -44,33 +61,36 @@ $susy: (
       100% {opacity: .3;}
     }
 
-
-
 .main-bg-gradient {
 	  background-image: url($aws + '_fullsize/crux-bg-scaffold.jpg');
 	  position: absolute;
-	  height: 370px;
+	  height: 320px;
 	  width: 100%;
-	  opacity: .3;
+	  opacity: .5;
+	  z-index: -50;
+	  top: 0;
 	  background-size: cover;
 	  animation: bg-reveal 6s;
 		
 		@media(min-width: 500px) {
 			background-image: url($aws + '_fullsize/crux-bg-scaffold.jpg');
-			height:500px;
+			height:400px;
 		}
 
 }
 
+
+
 .main-bg {
 	animation: colorchange 10s infinite;
-	height: 370px;
+	height: 320px;
 	width: 100%;
 	text-align: center;
 	overflow: hidden;
+	position: relative;
 
 	@media(min-width: 500px) {
-		height: 500px;
+		height: 400px;
 	}
 
 	#crux-hero {
@@ -130,6 +150,10 @@ $susy: (
 	margin-top:0;
 	padding: 10px;
 	transition: all .2s ease-out;
+	opacity: .7;
+
+
+	
 
 	path:nth-child(1){
 		fill: none;
@@ -141,6 +165,13 @@ $susy: (
 		fill: #ffffff;
 	}
 
+	#crux-logo-5-cr {
+		fill: #3d3d3d;
+	}
+
+	#crux-logo-5-ux {
+		animation: colorchange 10s infinite;
+	}
 
 	@media(min-width: 600px){
 		padding: 0 20px;
@@ -279,6 +310,36 @@ $susy: (
 	max-width: 800px;
 	margin: auto;
 	z-index: 50;
+
+	h1 {
+		margin-top: 40px;
+		margin-bottom: 10px;
+		margin-left: auto;
+		margin-right: auto;
+		font-family: 'bebas_neueregular';
+		color: #3d3d3d;
+		opacity: .7;
+		letter-spacing: 1px;
+		padding: 0 20px;
+		width: 80%;
+	}
+
+	#crux-logo-5 {
+		padding: 0 20px;
+	}
+
+	@media(min-width: 768px) {
+		padding:0;
+
+		#crux-logo-5 {
+			padding: 0 100px;
+		}
+
+		span {
+
+			display: block;
+		}
+	}
 }
 
 .intro {
@@ -398,7 +459,7 @@ $susy: (
 }
 
 .z-uxContainer--bg-3 {
-	background-color: #E2B705;
+	background-color: #edc418;
 	h2 {
 		color: #C66F06;
 		color: white;
