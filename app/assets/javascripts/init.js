@@ -12,8 +12,18 @@ CruxApp.init = function(){
 		this.snap();
 		this.snap2();
 		this.snap3();
-	} else {
-		console.log('no snap');
+	}
+
+	if ( $('.z-projectPostsContainer #robot-svg').length ) {
+		this.snap();
+	}
+
+	if ( $('.z-projectPostsContainer #robot2-svg').length ) {
+		this.snap2();
+	}
+
+	if ( $('.z-projectPostsContainer #robot3-svg').length ) {
+		this.snap3();
 	}
 		
 }

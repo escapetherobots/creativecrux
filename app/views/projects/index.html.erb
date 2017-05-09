@@ -1,8 +1,9 @@
+
 <div class="main-bg">
 	
 		<!--particle generator-->
 		<div class="main-header-wrapper">
-			<h1><span>Crafting Exceptional User Experiences </span>Through Design and Coding</h1>
+			<h1><span>Crafting User Experiences </span>Through Design &amp; Code</h1>
 			<%= render 'svg/cruxlogo5' %>
 		</div>
 	<!--logo title-->
@@ -29,29 +30,32 @@
 
 
 				<% @projects.each_slice(3) do |project| %>
-				<div class="project-slice">
-					<% project.each_with_index do |p, index| %>
-					<div class="project--item">
-						<div class="project--detail">
-							
-								<%= link_to project_path(p) do %>
-									<h2 class="project-slice-title">
-								  		<span class="project-slice-title--left"><%= "0#{index + 1}" %></span><span class="project-slice-title--right"><%= p.title %></span>
-									</h2>
-								<% end %>
+					
+							<div class="project-slice">
 
-							
+							<% project.each_with_index do |p, index| %>
+							<div class="project--item">
+								<div class="project--detail">
+									
+										<%= link_to project_path(p) do %>
+											<h2 class="project-slice-title">
+										  		<span class="project-slice-title--left"><%= "0#{index + 1}" %></span><span class="project-slice-title--right"><%= p.title %></span>
+											</h2>
+										<% end %>
+
+									
+								</div>
+								
+								<% if p.project_image[1].present? %>
+								<div class="project--img-wrapper">
+									<%= image_tag(p.project_image[1]["urlpath"], class: "project--img")%>
+									<%#= image_tag(p.project_image[0].urlpath) %>
+								</div>
+								<% end %>
+							</div>
+							<% end %>
 						</div>
-						
-						<% if p.project_image[1].present? %>
-						<div class="project--img-wrapper">
-							<%= image_tag(p.project_image[1]["urlpath"], class: "project--img")%>
-							<%#= image_tag(p.project_image[0].urlpath) %>
-						</div>
-						<% end %>
-					</div>
-					<% end %>
-				</div>	
+					
 				<% end %> <%# End of @projects.each_slice %>
 			<% end %> <%# End of Else statement for @projects.count == 0 %>
 		</div><!--end project-all-slice-->
@@ -69,7 +73,7 @@
 		</div>
 		<div class="z-ux-right">
 			<h2>DEV BLOG</h2>
-			<p>Although not much of a blogger, I figured this would be a good way to document my journey through the coding trenches.</p>
+			<p>I'm not much of a blogger, but I figured this would be a good way to document my journey through the coding trenches.</p>
 			
 			<h3>Current Projects:</h3>
 			<ul>
@@ -81,11 +85,9 @@
 				<li>Angular &amp; D3</li>
 
 			</ul>
-			<button class="btn btn-4 btn-4a icon-arrow-right">DEV SNIPPETS</button>
+			<%= link_to 'DEV SNIPPETS', projects_blog_path(category: 'Grit'), class: 'btn btn-4 btn-4a icon-arrow-right margin-top-15' %>
 		</div>
-
 	</div>
-
 </div>
 
 <div class="container-fluid z-uxContainer z-uxContainer--bg-2">
@@ -99,7 +101,7 @@
 			<h2>UX/DESIGN</h2>
 			<p>The goal of UX design in business is to “improve customer satisfaction and loyalty through the utility, ease of use, and pleasure provided in the interaction with a product.” --Oxford Journal: Interacting with Computers</p>
 			<!-- <p>https://academic.oup.com/iwc/article/23/5/473/660020/UX-Curve-A-method-for-evaluating-long-term-user</p> -->
-			<button class="btn btn-4 btn-4a icon-arrow-right">READ POSTS</button>
+			<%= link_to 'READ POSTS', projects_blog_path(category: 'UX'), class: 'btn btn-4 btn-4a icon-arrow-right margin-top-15' %>
 		</div>
 
 
@@ -117,8 +119,8 @@
 		</div>
 		<div class="z-ux-right">
 				<h2>MATH NOTES</h2>
-				<p>Like a lot of people, I used to tell myself that I just wasn't good at math, but since going back to school to get a CS degree, I've realized how enjoyable it actually is. The most gratifying aspect of math is the objectivity. With math, you don't have to wonder if a client will &ldquo;like&ldquo; your solution to a given problem, it either works or it doesn't. So, if you want to feel some left-brain pain by freshening up your math skills, check out some of the topics that I've currently been learning!</p>
-				<button class="btn btn-4 btn-4a icon-arrow-right">GO MATH!</button>
+				<p>I used to feel like I just wasn't a math person, but since going back to school to get a CS degree, I've realized how enjoyable it actually is. The most gratifying aspect of math is the objectivity. With math, you don't have to wonder whether or not your solution to a given problem will be acceptable, it either works or it doesn't. So, if you want to feel some left-brain pain by freshening up your math skills, check out some of the topics that I've currently been learning!</p>
+				<%= link_to 'GO MATH!', projects_blog_path(category: 'Design'), class: 'btn btn-4 btn-4a icon-arrow-right margin-top-15' %>
 
 				<!-- <canvas id="myCanvas" width="500" height="300"></canvas> -->
 
@@ -133,11 +135,11 @@
 <div class="container-fluid z-uxContainer z-uxContainer--bg-4">
 	<div class="row">
 		<!-- <svg id="svg-area"></svg> -->
-
-		<div class="z-ux-left">
-			<h2>Background &amp; Skills</h2>
+		<h2>Background &amp; Experience
+		<div class="z-resume-left">
+			
 		</div>
-		<div class="z-ux-right">
+		<div class="z-resume-right">
 				<h2>Experience</h2>
 				<h3>Job 1</h3>
 				<p>Job Description</p>
@@ -160,37 +162,37 @@
 	</div>
 </div> -->
 
-<div class="container z-hexContainer">
+<!-- <div class="container z-hexContainer">
 	<div class="row">
-		<%= render 'shared/crux_diagram' %>
+		<%# render 'shared/crux_diagram' %>
 	</div>
 	<%#= render 'svg/testtube' %>
 
-</div>
+</div> -->
 
 
 
-<div class="container z-hexContainer" id="z-hexContainer--diagram">
+<!-- <div class="container z-hexContainer" id="z-hexContainer--diagram">
 	<div class="row">
-		<% render 'shared/hex_grid2' %>
+		<%# render 'shared/hex_grid2' %>
 	</div>
 	<%#= render 'svg/testtube' %>
 
-</div>
+</div> -->
 
 
 
 
 
-<div class="container">
-	<div class="row"> <!-- begin top row -->
+<!-- <div class="container">
+	<div class="row">
 		<div class="logo-anim">
 		<%# render 'svg/cruxlogo4' %>
 		
 		</div>
-	</div> <!--end top row -->
+	</div>
 </div>
-
+ -->
 
 
 

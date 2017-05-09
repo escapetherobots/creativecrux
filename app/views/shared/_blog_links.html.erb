@@ -1,0 +1,9 @@
+<% unless params[:category] == 'Grit' %>
+	<%= link_to 'DEV SNIPPETS', projects_blog_path(category: 'Grit'), class: 'btn btn-4 btn-4a icon-arrow-right' %>
+<% end %>
+<% unless params[:category] == 'UX' %>
+	<%= link_to 'UX BLOG', projects_blog_path(category: 'UX'), class: 'btn btn-4 btn-4a icon-arrow-right' %>
+<% end %>
+<% unless params[:category] == 'Design' %>
+	<%= link_to 'MATH BLOG', projects_blog_path(category: 'Design'), class: 'btn btn-4 btn-4a icon-arrow-right' %>
+<% end %>

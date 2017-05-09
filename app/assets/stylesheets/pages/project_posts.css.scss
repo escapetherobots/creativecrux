@@ -1,0 +1,129 @@
+
+
+.z-projectPostsContainer {
+	
+
+
+	@media(min-width: 768px) {
+		display: table;
+		min-height: 100%;
+
+
+	}
+
+
+	h2 {
+		color: white;
+		font-family: 'bebas_neuebold';
+		@include font-size(100px);
+		@include line-height(62px);
+		letter-spacing: 2px;
+		text-align: left;
+		color: #047382;
+		color: white;
+		padding-bottom: 10px;
+		border: none;
+	}
+
+	h3 {
+		font-family: 'bebas_neueregular';
+		@include font-size(60px);
+		@include line-height(62px);
+		letter-spacing: 2px;
+		text-align: left;
+		color: #047382;
+		color: white;
+		padding-top: 30px;
+		padding-bottom: 10px;
+	}
+
+	p, ul, li {
+		color: white;
+		font-family: 'proxima_nova_rgregular';
+		@include font-size(40px);
+		@include line-height(50px);
+		text-align: left;
+		letter-spacing: 1px;
+		margin: 0;
+		padding: 0;
+	}
+
+
+	.z-ux-left {
+		/*@include span(12 of 12);*/
+		padding: 20px;
+		display: block;
+		
+
+		@media(min-width: 700px) {
+			/*@include span(last 4 of 12);*/
+			display: table-cell;
+
+		}
+
+		@media(min-width: 1000px) {
+			/*@include span(last 3 of 12);*/
+			width: 400px;
+			max-width: 400px;
+		}
+
+		svg {
+
+			@media(min-width: 700px) {
+				max-width: 400px;
+				float: right;
+				
+			}
+		}
+	}
+
+
+	.z-ux-right {
+		display: block;
+		/*@include span(12 of 12);*/
+		padding: 20px;
+
+		@media(min-width: 700px) {
+			/*@include span(8 of 12);*/
+			display: table-cell;
+			vertical-align: top;
+			
+
+		}
+
+		@media(min-width: 1000px) {
+			/*@include span(9 of 12);*/
+		}
+
+		h2, p {
+			color: #3d3d3d;
+		}
+	}
+
+	.z-ux-left--bg-dev {
+		background-color: #00AFB7;
+	}
+
+	.z-ux-left--bg-ux {
+		background-color: #88C440;
+	}
+
+	.z-ux-left--bg-design {
+
+		background-color: #f4b006;
+	}
+
+}
+
+
+.z-projectPostsContainer--bg-2 {
+	background-color: transparent;
+	h2 {
+		color: #3D7C14;
+		color: white;
+
+	}
+	h3 {
+		color: white;
+	}
+}

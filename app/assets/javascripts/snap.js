@@ -2,10 +2,11 @@ window.CruxApp || (window.CruxApp = {});
 
 //toggle effect
 CruxApp.snap = function(){
+
 	var theRobot = '#robot-svg';
 	var s = Snap(theRobot);
 	
-	
+
 	var armBack = s.select("#arm-back"),
 		armFront = s.select("#arm-front"),
 		body = s.select("#body"),
@@ -117,12 +118,14 @@ CruxApp.snap = function(){
 }
 
 CruxApp.snap2 = function(){
-	var theRobot = '#robot2-svg';
-	var s = Snap(theRobot);
 
-	var armBack = s.select("#arm-left"),
-		armFront = s.select("#arm-right"),
-		body = s.select("#body"),
+	var s = Snap('#robot2-svg');
+
+
+	var armFront = s.select("#arm-right");
+	var armBack = s.select("#arm-left");
+
+	var body = s.select("#body"),
 		brain = s.select("#brain"),
 		eye1 = s.select("#eye1"),
 		eye2 = s.select("#eye2"),

@@ -1,0 +1,53 @@
+<div class="ztestcol"></div>
+
+<div class="z-projectPostsContainer">
+		<% if @category.name == 'Grit' %>
+
+			<div class="z-ux-left z-ux-left--bg-dev">
+				
+				<%= render 'svg/robot' %>
+				<h2>DEV BLOG</h2>
+				<p>Documenting my journey through code. It's a journey that's both difficult and yet extremely gratifying, probably because "Nothing in the world is worth having or worth doing unless it means effort, pain, difficulty". ––Theodore Roosevelt.</p>
+				<%= render 'shared/blog_links' %>
+				
+			</div>
+
+		<% elsif @category.name == 'UX' %>
+				<div class="z-ux-left z-ux-left--bg-ux">
+				
+					<%= render 'svg/robot2' %>
+					<h2>UX BLOG</h2>
+					<p>Documenting my journey through code. It's a journey that's both difficult and yet extremely gratifying, probably because "Nothing in the world is worth having or worth doing unless it means effort, pain, difficulty". ––Theodore Roosevelt.</p>
+					<%= render 'shared/blog_links' %>
+				</div>
+
+
+		<% else %>
+				<div class="z-ux-left z-ux-left--bg-design">
+				
+					<%= render 'svg/robot3' %>
+					<h2>MATH</h2>
+					<p>Documenting my journey through code. It's a journey that's both difficult and yet extremely gratifying, probably because "Nothing in the world is worth having or worth doing unless it means effort, pain, difficulty". ––Theodore Roosevelt.</p>
+					<%= render 'shared/blog_links' %>
+				</div>
+
+
+
+		<% end %>	
+			
+			<div class="z-ux-right">
+				<% @projects.each do |proj| %>
+					<h2><%= proj.title %></h2>
+					<p><%= proj.summary %></p>
+					<p><%= markdown(proj.description) %></p>
+
+				<% end %>
+				
+				
+				
+			</div>
+
+		
+
+
+</div>

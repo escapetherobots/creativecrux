@@ -16,6 +16,11 @@ $susy: (
   global-box-sizing: border-box 
   );
 
+
+.margin-top-15 {
+	margin-top: 15px;
+}
+
 .full-width {
 	width:100%;
 }
@@ -221,7 +226,7 @@ $susy: (
 	}
 
 	h3 {
-		font-family: 'roboto';
+		font-family: 'proxima_nova_rgregular';
 		font-weight: 700;
 		@include font-size(40px);
 		@include line-height(44px);
@@ -247,8 +252,8 @@ $susy: (
 	}
 
 	li {
-		font-family: 'roboto';
-		font-weight: 300;
+		font-family: 'proxima_nova_rgregular';
+		font-weight: 400;
 		@include font-size(34px);
 		@include line-height(50px);
 		color: #708090;
@@ -266,8 +271,8 @@ $susy: (
 	}
 
 	p {
-		font-family: 'roboto';
-		font-weight: 300;
+		font-family: 'proxima_nova_rgregular';
+		font-weight: 400;
 		@include font-size(30px);
 		@include line-height(44px);
 		color: #708090;
@@ -277,7 +282,7 @@ $susy: (
 	}
 
 	p.date {
-		font-family: 'roboto';
+		font-family: 'proxima_nova_rgregular';
 		font-style: italic;
 		font-weight: bolder;
 		@include font-size(30px);
@@ -289,8 +294,8 @@ $susy: (
 	}
 
 	p.robotoBold {
-		font-family: 'roboto';
-		font-weight: 300;
+		font-family: 'proxima_nova_rgbold';
+		font-weight: 400;
 		@include font-size(30px);
 		@include line-height(44px);
 		color: #708090;
@@ -300,8 +305,8 @@ $susy: (
 	}
 
 	p.zintro {
-		font-family: 'roboto';
-		font-weight: 300;
+		font-family: 'proxima_nova_rgregular';
+		font-weight: 400;
 		@include font-size(50px);
 		@include line-height(64px);
 		color: #708090;
@@ -324,6 +329,8 @@ $susy: (
 		margin-left: auto;
 		margin-right: auto;
 		font-family: 'bebas_neueregular';
+		@include font-size(60px);
+		@include line-height(60px);
 		color: #3d3d3d;
 		opacity: .7;
 		letter-spacing: 1px;
@@ -378,6 +385,8 @@ $susy: (
 }
 
 
+
+
 .z-uxContainer {
 	padding: 40px;
 	background-color: #00AFB7;
@@ -414,8 +423,8 @@ $susy: (
 
 	p, ul, li {
 		color: white;
-		font-family: 'roboto';
-		font-weight: 300;
+		font-family: 'proxima_nova_rgregular';
+		font-weight: 400;
 		@include font-size(40px);
 		@include line-height(50px);
 		text-align: left;
@@ -466,7 +475,7 @@ $susy: (
 }
 
 .z-uxContainer--bg-3 {
-	background-color: #edc418;
+	background-color: #f4b006;
 	h2 {
 		color: #C66F06;
 		color: white;
@@ -478,20 +487,32 @@ $susy: (
 }
 
 .z-uxContainer--bg-4 {
-	background-color: #3d3d3d;
-	h2 {
-		color: #C66F06;
-		color: white;
+	background: transparent;
 
+	h2 {
+		color: #3c3c3c;
 	}
+
 	h3{
 		color: white;
 	}
 }
+.z-uxContainer--bg-4:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+	background-image: url($aws + '_fullsize/crux-bg-scaffold.jpg');
+	background-size: cover;
+	z-index: -1;
+
+}
 
 
 #robot-svg {
-	height:100%;
 	width:100%;
 	max-width: 400px;
 	text-align: center;
@@ -504,7 +525,6 @@ $susy: (
 }
 
 #robot2-svg {
-	height:100%;
 	width:100%;
 	max-width: 400px;
 	text-align: center;
@@ -517,7 +537,6 @@ $susy: (
 }
 
 #robot3-svg {
-	height:100%;
 	width:100%;
 	max-width: 400px;
 	text-align: center;

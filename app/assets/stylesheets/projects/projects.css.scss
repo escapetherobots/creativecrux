@@ -29,29 +29,12 @@ $susy: (
 	display: none;
 }
 
-.project-btn {
-	background: #555555;
-	height:40px;
-	width: 160px;
-	display: block;
-	line-height: 40px;
-	float: left;
-	text-align: center;
 
-	
-}
-
-.project-btn-bottom {
-	height:6px;
-		width:100%;
-		position: absolute;
-		bottom:0;
-		background: red;
-}
 
 
 .project {
 	&--item {
+		position: relative;
 		overflow: hidden;
 		height: 400px;
 		@include span(12 of 12);
@@ -197,6 +180,8 @@ $susy: (
 
 
 	&-item-content {
+		margin-top: 40px;
+		padding: 0 20px;
 		display: block;
 		/*@include span(4 of 12 last);
 		/*background-image: linear-gradient(#ff9d2f, #ff6126);*/
@@ -207,6 +192,66 @@ $susy: (
 			padding: 30px 20px 20px 20px;
 		}
 
+		.project-previous-next-links {
+			display: block;
+			margin: auto;
+			text-align: center;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			border-bottom: 2px solid #cccccc;
+
+			@media(min-width: 768px) {
+				border:0;
+			}
+		}
+
+		/* Button 4 */
+		.btn-4 {
+		  border-radius: 10px;
+		  border: 2px solid #3c3c3c;
+		  color: #3c3c3c;
+		  overflow: hidden;
+		  font-family: 'bebas_neuebold';
+		  @include font-size(34px);
+		  background-color: transparent;
+		}
+
+		.btn-4:active {
+		  border-color: #3c3c3c;
+		  color: #3c3c3c;
+		}
+
+		.btn-4:hover {
+		  border-color: #cccccc;
+		  color: #cccccc;
+		}
+
+		.btn-4:before {
+		  position: absolute;
+		  height: 100%;
+		  @include font-size(28px);
+		  @include line-height(20px);
+		  color: #ccc;
+		  padding: 16px 0 0 0;
+		  -webkit-transition: all 0.3s;
+		  -moz-transition: all 0.3s;
+		  transition: all 0.3s;
+		}
+
+		.btn-4:active:before {
+		  color: #3c3c3c;
+		}
+
+		.btn-100 {
+			width: 100%;
+
+			@media(min-width: 768px) {
+				width: auto;
+			}
+		}
+
+
+
 
 		h1, h2, h3, h4 {
 			font-family: "bebas_neueregular";
@@ -215,24 +260,47 @@ $susy: (
 
 		}
 
+		h1 {
+			padding-bottom: 20px;
+		}
+
 		h2 {
 			@include font-size(60px);
 			@include line-height(64px);
+			letter-spacing: 2px;
+		}
+
+		h2:first-of-type {
+			padding-top: 14px;
 		}
 
 		h3 {
-			@include font-size(46px);
+			font-family: "bebas_neuelight";
+			@include font-size(50px);
 			@include line-height(52px);
+			text-align: left;
+			padding-top: 20px;
+			padding-bottom: 10px;
+			letter-spacing: 2px;
+
+			@media(min-width: 768px){
+				text-align: center;
+			}
 		}
 
 		ul, li, p {
-			font-family: "Roboto";
+			font-family: "proxima_nova_rgregular";
 			color: #3b3b3b;
 			text-align: left;
 			@include font-size(34px);
 			@include line-height(48px);
 			letter-spacing: 0;
 			margin-left: 0;
+			padding:20px;
+
+			@media(min-width: 768px) {
+				padding:0;
+			}
 		}
 
 		pre {
@@ -255,6 +323,14 @@ $susy: (
 		color: #cccccc;
 		width: 100%;
 		clear:both;
+		border-bottom: 2px solid #cccccc;
+		padding: 0;
+		margin: auto;
+
+
+		@media(min-width: 1200px) {
+			
+		}
 
 		h1 {
 			color: white;
@@ -262,12 +338,17 @@ $susy: (
 			text-align: left;
 			font-family: "bebas_neuebold";
 			font-weight: 700;
+			
+			
 			@include font-size(120px);
-			@include line-height(110px);
+			@include line-height(102px);
+			letter-spacing: 2px;
 
 			@media(min-width: 768px) {
-				padding: 20px;
-				text-align:right;
+				@include font-size(160px);
+				@include line-height(140px);
+				text-align:center;
+				width: 100%;
 			}
 
 			span {
@@ -307,20 +388,27 @@ $susy: (
 
 .project-show-bg {
 	height: 100%;
-	@include span(12 of 12 last);
+
+	max-width: 1200px;
+	margin: auto;
 }
 
 .project-show-bg {
 
-	background-color: #e2e2e2;
+
 
 	h1 {
-		color: #ED1B2C;
+		color: #4c4c4c;
 	}
+	h2, h3, p { color: #4c4c4c; }
 
 	&.super-duper-project {
-		
+		h1 {
+			color: #bf3e1e;
+		}
 	}
+
+	
 }
 
 
@@ -461,21 +549,27 @@ $susy: (
 	@include span(12 of 12);
 
 	@media(min-width: 768px) {
-		@include span(6 of 12 no-gutters);
+		@include span(8 of 12 no-gutters);
 	}
 }
 
 .project-item-content-right {
 	@include span(12 of 12);
+	margin-top: 20px;
 
 	@media(min-width: 768px) {
-		@include span(6 of 12 no-gutters);
+		margin-top: 0;
+		@include span(3.5 of 12 no-gutters last);
+
 	}
 }
 
 .project-management-links {
 	margin: auto;
-	width: 800px;
+	margin-top:20px;
+	display: block;
+	width: auto;
+	text-align: center;
 
 	.btn-proj-manage {
 		border-color: #ccc;

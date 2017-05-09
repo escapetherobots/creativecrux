@@ -33,57 +33,50 @@
 		<div class="row">
 
 			<div class="project-item-content">
+				<div class="project-item--title">
+					<h3>Category: <%= @project.category.nil? ? "There is no Category" : @project.category.name  %></h3>
+					<h1><%= @project.title %></h1>
+				</div>
+
 				<div class="project-item-content-left">	
-					
-					
-					<div class="project-item--title">
-
-						<h1><%= @project.title %></h1>
-
-
-					</div>
-					<h3 style="text-align: right;padding-right: 20px">Category: <%= @project.category.nil? ? "There is no Category" : @project.category.name  %></h3>
-
-					<% unless @project.id == Project.where(:category => @project.category_id).first.id %>
-						<%#Hide 'Previous' link once we reach to first record %>
-						  <%= link_to Project.get_previous_project(@project), class: "btn btn-4a icon-arrow-right" do %>
-						  	<div class="project-btn-bottom"></div>
-						  	<div class="icon">
-									<span>previous</span><i class="fa fa-arrow-left"></i>
-									<i class="fa fa-check"></i>
-								</div>
-								
+					<% unless @project.summary == nil %>
+								<div class="project-item-description"><%= markdown(@project.summary) %></div>
 							<% end %>
-					<% end %>
-					<% unless  @project.id == Project.where(:category => @project.category_id).last.id %>
-						<%#Hide 'Next' link once we reach to last record %>
-						<%= link_to Project.get_next_project(@project), class: "btn btn-4a icon-arrow-right" do %>
+					<button id="toggle-project-detail" data-test="toggle" class="btn btn-4 btn-4a icon-arrow-right btn-100">Show Details</button>
+					<div id="project-detail" data-test="toggle-project-detail" class="project--i-detail">
+
 							
-							<div class="icon">
-									<span>next</span><i class="fa fa-arrow-right"></i>
-									<i class="fa fa-check"></i>
-								</div>
-						<% end %> 
-					<% end %>
+					<p><%= markdown(@project.description) %></p>
+					<p><%#= @project.category.name %></p>
+							
+					</div>
+					
+					
+					
+					<div class="project-previous-next-links">
+						<% unless @project.id == Project.where(:category => @project.category_id).first.id %>
+							<%#Hide 'Previous' link once we reach to first record %>
+
+							  <%= link_to "Previous", Project.get_previous_project(@project), class: "btn btn-4 btn-4b btn-proj-manage icon-arrow-left" %>
+							  	
+						<% end %>
+						<% unless  @project.id == Project.where(:category => @project.category_id).last.id %>
+							<%#Hide 'Next' link once we reach to last record %>
+							<%= link_to "Next Post", Project.get_next_project(@project), class: "btn btn-4 btn-4a btn-proj-manage icon-arrow-right" %>
+						<% end %>
+					</div>
 
 				</div>
 
 				<div class="project-item-content-right">
 					
 					<!-- <div class="project-item-description"><%= markdown(@project.description) %></div> -->
-					<% unless @project.summary == nil %>
-								<div class="project-item-description"><%= markdown(@project.summary) %></div>
-							<% end %>
-					<button id="toggle-project-detail" data-test="toggle" class="btn btn-4 btn-4a icon-arrow-right">Show Detail</button>
-					<div id="project-detail" data-test="toggle-project-detail" class="project--i-detail">
-
-							<h3>Category: <%= @project.category.nil? ? "There is no Category" : @project.category.name  %></h3>
-							<p><%= markdown(@project.description) %></p>
-							<p><%#= @project.category.name %></p>
-							
-					</div>
-
 					
+
+					<p>
+						Figma is fundamentally different than previous attempts. They are leveraging the power of modern browsers, and are poised to go further than our design software could have previously.
+This isn’t bleeding edge, it’s not too early. Try Figma out on a real project, then decide if it’s right for you. It’s free right now, even for teams, so there’s no reason not to check it out.
+					</p>
 
 					
 

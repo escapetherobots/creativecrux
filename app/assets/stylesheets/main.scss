@@ -1,7 +1,7 @@
 @import 'base/reset';
 @import 'susy';
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,700');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+/*url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');*/
+/*url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');*/
 
 
 @import 'base/fonts';
@@ -16,6 +16,7 @@
 
 @import 'site/background';
 @import 'projects/projects';
+@import 'pages/project_posts';
 @import 'shapes/shapes';
 @import 'shapes/hexagons';
 @import 'shapes/hexagons2';
@@ -27,15 +28,13 @@
 @import 'home';
 
 
-/*@import 'svgtest/animated-text-fills';*/
+/*@import 'svgtest/animated-text-fills';
 /*@import 'svgtest/animated-resume';*/
 @import 'diagram/diagram';
 /*@import 'aos/dist/aos.css';*/
 
 
-body {
-
-}
+html,body { height: 100%; margin: 0px; padding: 0px; }
 
 h1,h2,h3,p, li, li a {
 	font-family: 'bebas_neuebook', sans-serif ;
@@ -45,6 +44,7 @@ h1,h2,h3,p, li, li a {
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box;
+  display: block;
 }
 *, *:before, *:after {
   box-sizing: inherit;

@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
 	before_action :find_project, only: [:show, :edit, :update, :destroy]
-	before_action :authenticate_user!, except: [:index, :show]
+	before_action :authenticate_user!, except: [:index, :show, :index_posts]
 
 	def index
 		if params[:category].blank?
@@ -8,11 +8,17 @@ class ProjectsController < ApplicationController
 						.where.not(category: 8)
 						.where.not(category: 9)
 						.where.not(category: 10)
+						.where.not(category: 11)
 						.order("created_at ASC")
 		else
 			@category_id = Category.find_by(name: params[:category]).id
 			@projects = Project.where(:category_id => @category_id).order("created_at ASC")
 		end
+	end
+
+	def index_posts
+		@category = Category.where(name: params[:category]).first
+		@projects = Project.where(category: @category).order("created_at ASC")
 	end
 
 	def show

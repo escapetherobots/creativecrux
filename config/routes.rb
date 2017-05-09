@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   root 'projects#index'
 
   get "/static/:page" => "static#show"
-
+  get "/projects/blog" => "projects#index_posts"
 
   resources :projects
   resources :project_images
