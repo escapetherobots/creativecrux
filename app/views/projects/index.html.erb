@@ -1,10 +1,12 @@
 
+
+
 <div class="main-bg">
-	
+		<%= render 'svg/cruxlogo6' %>
 		<!--particle generator-->
 		<div class="main-header-wrapper">
 			<h1 class="ztitle-container"><span>Create. Read. Update. Explore. </span></h1>
-			<%= render 'svg/cruxlogo6' %>
+			
 		</div>
 	<!--logo title-->
 
@@ -18,49 +20,6 @@
 
 
 
-<div class="container-fluid">
-	<div class="row">
-		<div class="project-all-slice">
-			<!-- <h1 class="current-category"><%= params[:category] %></h1> -->
-		<%#= debug @projects[4].project_image[0].name%>
-
-			<% if @projects.count == 0 #if there are no projects in the current category then... %>
-				<h3>Check Back Later. Please and Thanks!</h3>
-			<% else %>
-
-
-							<div class="project-slice">
-
-							<% @projects.each_with_index do |p, index| %>
-							<div class="project--item">
-								<div class="project--detail">
-									
-										<%= link_to project_path(p) do %>
-											<h2 class="project-slice-title">
-										  		<span class="project-slice-title--left"><%= "0#{index + 1}" %></span><span class="project-slice-title--right"><%= p.title %></span>
-											</h2>
-										<% end %>
-
-									
-								</div>
-								
-								<% if p.project_image[1].present? %>
-								<div class="project--img-wrapper">
-									<%= image_tag(p.project_image[1]["urlpath"], class: "project--img")%>
-									<%#= image_tag(p.project_image[0].urlpath) %>
-								</div>
-								<% end %>
-							</div>
-							<% end %>
-						</div>
-					
-
-			<% end %> <%# End of Else statement for @projects.count == 0 %>
-		</div><!--end project-all-slice-->
-
-	</div>
-
-</div>
 
 
 
@@ -71,8 +30,8 @@
 			<%= render 'svg/robot' %>
 		</div>
 		<div class="z-ux-right">
-			<h2>DEV BLOG</h2>
-			<p>I'm not much of a blogger, but I figured this would be a good way to document my journey through the coding trenches.</p>
+			<h2>DEV STUFF</h2>
+			<p>Using modular dynamicism, we could recreate, unfold, re-sequence, understand, and reshape the way we think of thought itself. By constantly monitoring thought itself, it will not only lead you nowhere, it will give you a headache. So try not to do that; instead, try to do something that's way outside of the box.</p>
 			
 			<h3>Current Projects:</h3>
 			<ul>
@@ -84,7 +43,7 @@
 				<li>Angular &amp; D3</li>
 
 			</ul>
-			<%= link_to 'DEV SNIPPETS', projects_blog_path(category: 'Grit'), class: 'btn btn-4 btn-4a icon-arrow-right margin-top-15' %>
+			<%= link_to 'VISIT MY GITHUB', 'https://github.com/escapetherobots', class: 'btn btn-4 btn-4a icon-arrow-right margin-top-15' %>
 		</div>
 	</div>
 </div>
@@ -100,7 +59,7 @@
 			<h2>UX/DESIGN</h2>
 			<p>The goal of UX design in business is to “improve customer satisfaction and loyalty through the utility, ease of use, and pleasure provided in the interaction with a product.” --Oxford Journal: Interacting with Computers</p>
 			<!-- <p>https://academic.oup.com/iwc/article/23/5/473/660020/UX-Curve-A-method-for-evaluating-long-term-user</p> -->
-			<%= link_to 'READ POSTS', projects_blog_path(category: 'UX'), class: 'btn btn-4 btn-4a icon-arrow-right margin-top-15' %>
+			<%= link_to 'Coming Soon', "#", class: 'btn btn-4 btn-4a icon-arrow-right margin-top-15' %>
 		</div>
 
 
@@ -117,9 +76,20 @@
 			<%= render 'svg/robot3' %>
 		</div>
 		<div class="z-ux-right">
-				<h2>MATH NOTES</h2>
-				<p>I used to feel like I just wasn't a math person, but since going back to school to get a CS degree, I've realized how enjoyable it actually is. The most gratifying aspect of math is the objectivity. With math, you don't have to wonder whether or not your solution to a given problem will be acceptable, it either works or it doesn't. So, if you want to feel some left-brain pain by freshening up your math skills, check out some of the topics that I've currently been learning!</p>
-				<%= link_to 'GO MATH!', projects_blog_path(category: 'Design'), class: 'btn btn-4 btn-4a icon-arrow-right margin-top-15' %>
+				<h2>Skills</h2>
+				<p>'Cause it's more than you think
+and it's less than that 
+we're only living in 
+the memories of our future selves
+and it's fun to think that we're here right now
+but we never really are  
+'cause we're somewhere in the future 
+controlling the options
+giving lots of hints to ourselves
+in order for us to understand
+the choice is still important
+in a world where we gotta figure some stuff out, yea</p>
+				<%= link_to 'COMING SOON', "#{}", class: 'btn btn-4 btn-4a icon-arrow-right margin-top-15' %>
 
 				<!-- <canvas id="myCanvas" width="500" height="300"></canvas> -->
 
@@ -131,12 +101,12 @@
 </div>
 
 
-<div class="container-fluid z-uxContainer z-uxContainer--bg-4">
+<!-- <div class="container-fluid z-uxContainer z-uxContainer--bg-4">
 	<div class="row">
 		
 	</div>
 
-</div>
+</div> -->
 
 
 

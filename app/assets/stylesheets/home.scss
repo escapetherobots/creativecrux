@@ -84,6 +84,7 @@ $susy: (
 
 }
 
+
 .main-bg {
 	animation: colorchange 10s infinite;
 	height: 600px;
@@ -187,20 +188,16 @@ $susy: (
 
 
 .main-header-wrapper {
-	display: flex;
 	align-items: center;
 	z-index: 50;
 	justify-content: center;
 	align-items: center;
-	flex-wrap: wrap;
-	height: 600px;
+	position: relative;
 	
 	@media(min-width: 768px) {
-		flex-wrap: no-wrap;
 		justify-items: center;
 		padding:0;
-		height: 400px;
-
+		text-align: center;
 		#crux-logo-5 {
 			padding: 0 100px;
 		}
@@ -287,7 +284,10 @@ $susy: (
 
 .z-uxContainer {
 	padding: 40px;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, .25) 0%, rgba(0, 0, 0, 0) 10%);
 	background-color: #00AFB7;
+
+	
 
 
 	.row {

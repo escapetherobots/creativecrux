@@ -1,0 +1,43 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="project-all-slice">
+			<!-- <h1 class="current-category"><%= params[:category] %></h1> -->
+		<%#= debug @projects[4].project_image[0].name%>
+
+			<% if @projects.count == 0 #if there are no projects in the current category then... %>
+				<h3>Check Back Later. Please and Thanks!</h3>
+			<% else %>
+
+
+							<div class="project-slice">
+
+							<% @projects.each_with_index do |p, index| %>
+							<div class="project--item">
+								<div class="project--detail">
+									
+										<%= link_to project_path(p) do %>
+											<h2 class="project-slice-title">
+										  		<span class="project-slice-title--left"><%= "0#{index + 1}" %></span><span class="project-slice-title--right"><%= p.title %></span>
+											</h2>
+										<% end %>
+
+									
+								</div>
+								
+								<% if p.project_image[1].present? %>
+								<div class="project--img-wrapper">
+									<%= image_tag(p.project_image[1]["urlpath"], class: "project--img")%>
+									<%#= image_tag(p.project_image[0].urlpath) %>
+								</div>
+								<% end %>
+							</div>
+							<% end %>
+						</div>
+					
+
+			<% end %> <%# End of Else statement for @projects.count == 0 %>
+		</div><!--end project-all-slice-->
+
+	</div>
+
+</div>

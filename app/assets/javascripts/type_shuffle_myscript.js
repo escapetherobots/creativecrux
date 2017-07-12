@@ -8,7 +8,7 @@ CruxApp.typeShuffler = function(){
 		'I move fast. I\'ve got my own thing going on here, Ricky Town. Population...Ricky.',
 		'Without your space helmet, Dave? You\'re going to find that rather difficult.', 
 		'He\'s a fellow Khaki Scout, and he needs our help. Are we man enough to give that, so part of his brain doesn\'t get removed out of him? ',
-		'CRAFTING RICH USER EXPERIENCES THROUGH DEVELOPMENT &amp; DESIGN'
+		'CRAFTING RICH USER EXPERIENCES THROUGH DEVELOPMENT & DESIGN'
 		];
 	
 	var getRandom = function(){
