@@ -1,0 +1,114 @@
+.cd-nav-resume {
+	h1 {
+		font-family: 'bebas_neuebook';
+		@include font-size(80px);
+		@include line-height(84px);
+		color: #708090;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+
+		
+	}
+
+	h2 {
+		font-family: 'bebas_neuebook';
+		@include font-size(80px);
+		@include line-height(84px);
+		color: #708090;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		margin-top: 30px;
+		font-weight: normal;
+	}
+
+	h3 {
+		font-family: 'proxima_nova_rgregular';
+		@include font-size(40px);
+		@include line-height(44px);
+		color: #708090;
+		text-transform: uppercase;
+		margin-bottom: 0px;
+		margin-top: 20px;
+		letter-spacing: .2px;
+	}
+
+
+	h4 {
+
+	}
+
+
+	ul {
+		list-style: outside;
+		list-style: none;
+	  padding: 0;
+	  margin: 0;
+
+	}
+
+	li {
+		font-family: 'proxima_nova_rgregular';
+		font-weight: 400;
+		@include font-size(34px);
+		@include line-height(50px);
+		color: #708090;
+		color: #333333;
+		margin-bottom:10px;
+		letter-spacing: .2px;
+		padding-left: 1em; 
+  		text-indent: -.7em;
+
+	}
+
+	li::before {
+	  content: "• ";
+	  color: #333333; /* or whatever color you prefer */
+	}
+
+	p {
+		font-family: 'proxima_nova_rgregular';
+		font-weight: 400;
+		@include font-size(30px);
+		@include line-height(44px);
+		color: #708090;
+		color: #333333;
+		margin-bottom:0;
+		letter-spacing: .2px;
+	}
+
+	p.date {
+		font-family: 'proxima_nova_rgregular';
+		font-style: italic;
+		font-weight: bolder;
+		@include font-size(30px);
+		@include line-height(44px);
+		color: #708090;
+		color: #333333;
+		margin-bottom: 10px;
+		letter-spacing: .2px;
+	}
+
+	p.robotoBold {
+		font-family: 'proxima_nova_rgbold';
+		font-weight: 400;
+		@include font-size(30px);
+		@include line-height(44px);
+		color: #708090;
+		color: #333333;
+		margin-bottom:0;
+		letter-spacing: .2px;
+	}
+
+	p.zintro {
+		font-family: 'proxima_nova_rgregular';
+		font-weight: 400;
+		@include font-size(50px);
+		@include line-height(64px);
+		color: #708090;
+		color: #333333;
+		margin-bottom:0;
+		letter-spacing: .2px;
+	}
+
+
+}

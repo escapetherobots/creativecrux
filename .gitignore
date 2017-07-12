@@ -21,3 +21,6 @@ vendor/assets/bower_components
 
 .DS_Store
 */.DS_Store
+
+/config/secrets.yml
+/config

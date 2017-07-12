@@ -13,6 +13,7 @@
 
  * require_tree .
  *= require_self
+
  *= require main
 *= require font-awesome
 * require jquery.sidr.dark
@@ -21,6 +22,7 @@
 
 
  */
+ @import "bourbon";
  @import "bootstrap-sprockets";
  @import "bootstrap";
 

@@ -25,6 +25,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'modernizr-rails'
+gem 'bourbon'
 # enable hirb to make rails console readable
 gem 'hirb'
 gem 'simple_form', '~> 3.4'

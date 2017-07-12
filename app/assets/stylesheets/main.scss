@@ -8,23 +8,25 @@
 @import 'base/mixins';
 @import 'base/animate';
 @import 'base/buttons';
+
 @import 'nav-partials/layout';
 @import 'nav-partials/mixins';
 @import 'nav-partials/variables';
 @import 'nav/pushnav';
 @import 'nav/svg_buttons';
+/*@import 'nav/nav-resume';*/
 
 @import 'site/background';
 @import 'projects/projects';
 @import 'pages/project_posts';
 @import 'shapes/shapes';
-@import 'shapes/hexagons';
-@import 'shapes/hexagons2';
-@import 'shapes/hexagons3';
+/*@import 'shapes/hexagons';*/
+/*@import 'shapes/hexagons2';*/
+/*@import 'shapes/hexagons3';*/
 
 @import 'diagram/hex_diagram';
 
-
+@import 'nav/slider';
 @import 'home';
 
 
@@ -49,3 +51,6 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+
+

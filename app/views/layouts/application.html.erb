@@ -26,8 +26,8 @@
 
 
 	<%#= render 'shared/parallax03' %>
-	<%= render 'shared/navbar_icon' %>
-	
+	<%#= render 'shared/navbar_icon' %>
+		
 		<%= render 'shared/navbar' %>
 	
 		<% if Rails.env.test? %>
@@ -39,8 +39,33 @@
   
 	<%= yield %>
 	
+	<div class="cd-panel from-right">
+		<header class="cd-panel-header">
+			<h1>About</h1>
+			<a href="#0" class="cd-panel-close">Close</a>
+		</header>
 
+		<div class="cd-panel-container">
+			<div class="cd-panel-content">
+				<div class="cd-panel-resume" id="resume">
+					<h2>Background &amp; Experience </h2>
+					<div class="resume-left">
+						<%= render 'shared/resume3' %>
+						<div id="myChart">
+							<canvas id="myChartCanvas"></canvas>
+							<canvas id="myChartCanvas2"></canvas>
+						</div>
+					</div>
+					<div class="resume-right">
+						<%= render 'shared/resume2' %>
+					</div>
+
+				</div>
+			</div>	
+
+		</div> <!-- cd-panel-container -->
+	</div> <!-- cd-panel -->
 	
-	<%= render 'shared/pushnav' %>
+	<%# render 'shared/pushnav' %>
 </body>
 </html>

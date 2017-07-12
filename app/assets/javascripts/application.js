@@ -28,16 +28,25 @@
 //= require scrollmagic/scrollmagic/uncompressed/plugins/jquery.ScrollMagic.js
 //= require scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js
 
+//= require chart.js/dist/Chart.min.js
+//= require jquery_lazyload/jquery.lazyload.js
+
+//= require inview
+//= require lazy
 //= require cocoon
 //= require picture_tag
-//= require snap
+//= require my_charts
+//= require snap_myscript
+//= require snapsvg
+//= require type_shuffle
+//= require type_shuffle_myscript
 //= require init
-//= require fitText
+
 
 
 
 // require jquery.sidr
-//= require snapsvg
+
 // require 'main'
 // require 'pushnav' js scripts
 

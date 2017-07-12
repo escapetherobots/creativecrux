@@ -3,8 +3,8 @@
 	
 		<!--particle generator-->
 		<div class="main-header-wrapper">
-			<h1><span>Crafting User Experiences </span>Through Design &amp; Code</h1>
-			<%= render 'svg/cruxlogo5' %>
+			<h1 class="ztitle-container"><span>Create. Read. Update. Explore. </span></h1>
+			<%= render 'svg/cruxlogo6' %>
 		</div>
 	<!--logo title-->
 
@@ -29,11 +29,9 @@
 			<% else %>
 
 
-				<% @projects.each_slice(3) do |project| %>
-					
 							<div class="project-slice">
 
-							<% project.each_with_index do |p, index| %>
+							<% @projects.each_with_index do |p, index| %>
 							<div class="project--item">
 								<div class="project--detail">
 									
@@ -56,7 +54,7 @@
 							<% end %>
 						</div>
 					
-				<% end %> <%# End of @projects.each_slice %>
+
 			<% end %> <%# End of Else statement for @projects.count == 0 %>
 		</div><!--end project-all-slice-->
 
@@ -68,6 +66,7 @@
 
 <div class="container-fluid z-uxContainer">
 	<div class="row">
+
 		<div class="z-ux-left">
 			<%= render 'svg/robot' %>
 		</div>
@@ -134,20 +133,7 @@
 
 <div class="container-fluid z-uxContainer z-uxContainer--bg-4">
 	<div class="row">
-		<!-- <svg id="svg-area"></svg> -->
-		<h2>Background &amp; Experience
-		<div class="z-resume-left">
-			
-		</div>
-		<div class="z-resume-right">
-				<h2>Experience</h2>
-				<h3>Job 1</h3>
-				<p>Job Description</p>
-
-
-		</div>
-
-
+		
 	</div>
 
 </div>

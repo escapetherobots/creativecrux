@@ -7,3 +7,6 @@
 <% unless params[:category] == 'Design' %>
 	<%= link_to 'MATH BLOG', projects_blog_path(category: 'Design'), class: 'btn btn-4 btn-4a icon-arrow-right' %>
 <% end %>
+<% unless params[:category] == 'All Posts' %>
+	<%= link_to 'MATH BLOG', projects_blog_path(category: 'Design'), class: 'btn btn-4 btn-4a icon-arrow-right' %>
+<% end %>

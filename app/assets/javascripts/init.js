@@ -5,6 +5,7 @@ CruxApp.init = function(){
 	//this.fitTexter();
 	this.sceneBuilder();
 	this.sideNav();
+	this.resume();
 	//this.trig();
 	//this.particleBg();
 
@@ -25,7 +26,35 @@ CruxApp.init = function(){
 	if ( $('.z-projectPostsContainer #robot3-svg').length ) {
 		this.snap3();
 	}
+
+	if( $('.projects').length ) {
+		this.typeShuffler();
+	}
+
+	// if ( $('#myChart').parentsUntil('.cd-panel').css('visibility') != "hidden" ){
+	// 	this.myChart();
+	// }
+
+	if ( $('#charts').length ) {
+		this.myChart();
+	}
+	
 		
+}
+
+CruxApp.resume = function(){
+	
+	$('#zd-btn').on('click', function(event){
+		event.preventDefault();
+		$('.cd-panel').addClass('is-visible');
+	});
+	//clode the lateral panel
+	$('.cd-panel').on('click', function(event){
+		if( $(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close') ) { 
+			$('.cd-panel').removeClass('is-visible');
+			event.preventDefault();
+		}
+	});
 }
 
 CruxApp.trig = function(){
@@ -204,4 +233,5 @@ CruxApp.sideNav = function(){
 
 $(document).on("turbolinks:load", function(){
 	return CruxApp.init();
+
 });

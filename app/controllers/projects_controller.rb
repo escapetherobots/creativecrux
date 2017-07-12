@@ -17,8 +17,13 @@ class ProjectsController < ApplicationController
 	end
 
 	def index_posts
-		@category = Category.where(name: params[:category]).first
-		@projects = Project.where(category: @category).order("created_at ASC")
+		if params[:category].blank?
+			#@projects = Project.where.not(category: )
+			@projects = Project.all
+		else
+			@category = Category.where(name: params[:category]).first
+			@projects = Project.where(category: @category).order("created_at ASC")
+		end
 	end
 
 	def show

@@ -12,25 +12,16 @@ $susy: (
 }
 
 .project-slice {
-	@include container(100%)
+	@include container(100%);
 
 }
 
 .project-slice:hover {		
-		
-
 }
-
-
-
-
 
 #project-detail {
 	display: none;
 }
-
-
-
 
 .project {
 	&--item {
