@@ -4,11 +4,9 @@ CruxApp.typeShuffler = function(){
 
 	// Quote Array
 	var quoteArr = [
-		'CREATIVE CRUX',
+		'CREATIVE CRUX: Create. Read. Update. Explore.',
 		'I move fast. I\'ve got my own thing going on here, Ricky Town. Population...Ricky.',
-		'Without your space helmet, Dave? You\'re going to find that rather difficult.', 
-		'He\'s a fellow Khaki Scout, and he needs our help. Are we man enough to give that, so part of his brain doesn\'t get removed out of him? ',
-		'CRAFTING RICH USER EXPERIENCES THROUGH DEVELOPMENT & DESIGN'
+		'Without your space helmet, Dave? You\'re going to find that rather difficult.'
 		];
 	
 	var getRandom = function(){
@@ -83,7 +81,7 @@ CruxApp.typeShuffler = function(){
 		
 		// Shuffle the container with custom text
 		container.shuffleLetters({
-			"text": "THROUGH DESIGN &amp; DEVELOPMENT"
+			"text": "THROUGH DESIGN & DEVELOPMENT"
 		});
 		
 		//userText.val("type anything and hit return..").fadeIn();

@@ -69,7 +69,7 @@ $susy: (
 .main-bg-gradient {
 	  background-image: url($aws + '_fullsize/crux-bg-scaffold.jpg');
 	  position: absolute;
-	  height: 600px;
+	  height: 650px;
 	  width: 100%;
 	  opacity: .5;
 	  z-index: -50;
@@ -79,7 +79,8 @@ $susy: (
 		
 		@media(min-width: 500px) {
 			background-image: url($aws + '_fullsize/crux-bg-scaffold.jpg');
-			height:400px;
+			height:500px;
+			background-size: cover;
 		}
 
 }
@@ -87,14 +88,14 @@ $susy: (
 
 .main-bg {
 	animation: colorchange 10s infinite;
-	height: 600px;
+	height: 650px;
 	width: 100%;
 	text-align: center;
 	overflow: hidden;
 	position: relative;
 
 	@media(min-width: 500px) {
-		height: 400px;
+		height: 500px;
 	}
 
 	#crux-hero {
@@ -143,42 +144,15 @@ $susy: (
 }
 
 
-#crux-logo-5 {
-	width: 100%;
-	height: 100%;
-	margin-top:0;
+#crux-logo-6 {
+	margin-top:40px;
 	transition: all .2s ease-out;
-	opacity: .7;
 
 
-	path:nth-child(1){
-		fill: none;
-	}
-	path:nth-child(2){
-		fill: #ffffff;
-	}
-	path:nth-child(3){
-		fill: #ffffff;
-	}
 
-	#crux-logo-5-cr {
-		fill: #3d3d3d;
-	}
-
-	#crux-logo-5-ux {
-		animation: colorchange 10s infinite;
-	}
-
-	@media(min-width: 600px){
-		padding: 0 20px;
-	}
-
-	@media(min-width: 800px){
-		padding: 0 40px;
-	}
 }
 
-#crux-logo-5:hover {
+#crux-logo-6:hover {
 	transition: all .4s ease-out;
 
 	@media(min-width: 768px) {
@@ -191,15 +165,18 @@ $susy: (
 	align-items: center;
 	z-index: 50;
 	justify-content: center;
-	align-items: center;
 	position: relative;
+	width: 80%;
+	margin: auto;
 	
 	@media(min-width: 768px) {
 		justify-items: center;
 		padding:0;
 		text-align: center;
+		width: 50%;
+
 		#crux-logo-5 {
-			padding: 0 100px;
+			padding: 40px 100px;
 		}
 
 		span {
@@ -211,14 +188,13 @@ $susy: (
 
 	h1 {
 		font-family: 'bebas_neuebold';
-		@include font-size(80px);
-		@include line-height(74px);
+		@include font-size(68px);
+		@include line-height(64px);
 		text-align: center;
 		color: #3d3d3d;
 		opacity: .7;
 		letter-spacing: 1px;
-		padding: 0 20px;
-		width: 600px;
+		padding: 20px 20px;
 
 		@media(min-width: 768) {
 			text-align: left;
@@ -283,12 +259,20 @@ $susy: (
 
 
 .z-uxContainer {
-	padding: 40px;
-	background: linear-gradient(to bottom, rgba(0, 0, 0, .25) 0%, rgba(0, 0, 0, 0) 10%);
+	padding: 40px 40px 80px 40px;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, .25) 0%, rgba(0, 0, 0, 0) 6%);
 	background-color: #00AFB7;
 
 	
-
+	.zQuote {
+		padding-top: 12px;
+		color: white;
+		font-family: 'proxima_nova_rgbold';
+		font-weight: 400;
+		@include font-size(34px);
+		@include line-height(40px);
+		font-style: italic;
+	}
 
 	.row {
 		
@@ -303,6 +287,7 @@ $susy: (
 		text-align: left;
 		color: #047382;
 		color: white;
+		padding-top: 40px;
 		padding-bottom: 10px;
 		border: none;
 	}
