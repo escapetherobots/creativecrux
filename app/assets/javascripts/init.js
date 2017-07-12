@@ -44,7 +44,7 @@ CruxApp.init = function(){
 
 CruxApp.resume = function(){
 	
-	$('#zd-btn').on('click', function(event){
+	$('.zd-btn').on('click', function(event){
 		event.preventDefault();
 		$('.cd-panel').addClass('is-visible');
 	});
