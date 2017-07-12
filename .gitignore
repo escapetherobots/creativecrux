@@ -24,3 +24,4 @@ vendor/assets/bower_components
 
 /config/secrets.yml
 /config
+/db
