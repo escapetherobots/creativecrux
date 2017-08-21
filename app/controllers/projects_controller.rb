@@ -17,8 +17,11 @@ class ProjectsController < ApplicationController
 	# end
 
 	def index
-		@category_id = Category.find_by(name: "Development").id
-		@projects = Project.where(category: @category_id).order("created_at ASC")
+		if Category.find_by(name: "Development")
+			@category_id = Category.find_by(name: "Development").id
+			@projects = Project.where(category: @category_id).order("created_at ASC")
+		else
+			@projects = Project.all
 	end
 
 	def index_posts
