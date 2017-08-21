@@ -13,7 +13,7 @@
 	<div class="main-bg-gradient"></div>
 </div>
 
-<% if @projects %>
+<!-- <% if @projects %>
 <div class="main-projects-preview">
 	<div class="main-projects-preview__project">
 		<%= link_to(@projects[0]) do%>
@@ -29,7 +29,7 @@
 		<%= image_tag(@projects[0].project_image[0].urlpath, :class => "zclass") %>
 	</div>
 </div>
-<% end %>
+<% end %> -->
 <!-- **************************************** -->
 <div class="container-fluid z-uxContainer">
 
@@ -75,28 +75,34 @@
 
 			<div class="link-container-wrapper">
 				<div class="link-container">
+				<%= link_to 'Reactive Notes With Meteor',
+							"https://crux-meteor-notes.herokuapp.com/",
+							target: "_blank",
+							class: 'btn btn-4 btn-4a icon-arrow-right margin-top-15' %>
+				</div>
+				<div class="link-container">
 				<%= link_to 'Short Link URL App',
-							"http://crux-links.herokuapp.com/",
+							"https://crux-links.herokuapp.com/",
 							target: "_blank",
 							class: 'btn btn-4 btn-4a icon-arrow-right margin-top-15' %>
 				</div>
 
 				<div class="link-container">
-					<%= link_to 'Most Amazing Todo App Ever',
-							"http://crux-react-todo.herokuapp.com/",
+					<%= link_to 'Todo App with React',
+							"https://crux-react-todo.herokuapp.com/",
 							target: "_blank",
 							class: 'btn btn-4 btn-4a icon-arrow-right margin-top-15' %>
 				</div>
 				<div class="link-container">
 				<%= link_to 'RPG Start with Phaser.js',
-							"http://crux-phaser.herokuapp.com/",
+							"https://crux-phaser.herokuapp.com/",
 							target: "_blank",
 							class: 'btn btn-4 btn-4a icon-arrow-right margin-top-15' %>
 				</div>
 
 				<div class="link-container">
 				<%= link_to 'Weather app with React',
-							"http://crux-weather.herokuapp.com/",
+							"https://crux-weather.herokuapp.com/",
 							target: "_blank",
 							class: 'btn btn-4 btn-4a icon-arrow-right margin-top-15' %>
 				</div>
@@ -118,15 +124,17 @@
 			<%= render 'svg/robot3' %>
 		</div>
 		<div class="z-ux-right">
-				<h2>Skills</h2>
-				<p>Some of the skills I have picked up on my journey:</p>
+				<h2>Toolbox</h2>
 				<ul>
 					<li>JS/ES6/jQuery</li>
-					<li>HTML/SCSS/</li>
+					<li>HTML/SCSS</li>
 					<li>React and Redux</li>
+					<li>Meteor.js</li>
 					<li>Ruby/Rails</li>
 					<li>PHP/CakePHP</li>
-					<li>Firebase/MongoDB/Postgres</li>
+					<li>MongoDB/Postgres/Firebase</li>
+					<li>Agile/Scrum</li>
+
 
 				</ul>
 		<div class="link-container-wrapper">
