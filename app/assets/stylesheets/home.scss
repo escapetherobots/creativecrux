@@ -1,4 +1,4 @@
-/* 
+/*
 *= require md_simple_editor
 */
 /* Important */
@@ -13,7 +13,7 @@ $susy: (
   container: 1120px,
   gutters: 0,
   /* Tells Susy to use border-box */
-  global-box-sizing: border-box 
+  global-box-sizing: border-box
   );
 
 
@@ -44,7 +44,7 @@ $susy: (
 }
 
 .navbar-brand {
-	
+
 	font-family: "bebas_neuebold";
 	@include font-size(44px);
 	@include line-height(38px);
@@ -76,7 +76,7 @@ $susy: (
 	  top: 0;
 	  background-size: cover;
 	  animation: bg-reveal 6s;
-		
+
 		@media(min-width: 500px) {
 			background-image: url($aws + '_fullsize/crux-bg-scaffold.jpg');
 			height:500px;
@@ -116,7 +116,7 @@ $susy: (
 		transition: 1s all ease;
 		opacity: .5;
 
-		
+
 		path {
 			fill: #ffffff;
 		}
@@ -168,7 +168,7 @@ $susy: (
 	position: relative;
 	width: 80%;
 	margin: auto;
-	
+
 	@media(min-width: 768px) {
 		justify-items: center;
 		padding:0;
@@ -201,7 +201,7 @@ $susy: (
 			@include font-size(60px);
 			@include line-height(55px);
 		}
-		
+
 	}
 
 	#crux-logo-6 {
@@ -210,7 +210,7 @@ $susy: (
 		/*min-width: 320px;*/
 		transition: transform .3s ease-in;
 		width: 60%;
-		
+
 		@media(min-width: 768px) {
 			width: 100%;
 
@@ -263,7 +263,7 @@ $susy: (
 	background: linear-gradient(to bottom, rgba(0, 0, 0, .25) 0%, rgba(0, 0, 0, 0) 6%);
 	background-color: #00AFB7;
 
-	
+
 	.zQuote {
 		padding-top: 12px;
 		color: white;
@@ -274,13 +274,23 @@ $susy: (
 		font-style: italic;
 	}
 
+
+  .link-container-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 320px;
+  }
+
 	.link-container {
 		clear: both;
 		display: block;
 	}
 
+
+
 	.row {
-		
+
 	}
 
 	h2 {
@@ -417,7 +427,7 @@ $susy: (
 	max-width: 1200px;
 	margin: auto;
 	display: block;
-	
+
 
 	h2 {
 		width: 100%;
@@ -621,7 +631,7 @@ h1 {
 		stroke-dashoffset: 1200;
 		animation: dash 8s linear forwards;
 
-	
+
 }
 
 .svgbox, .svgout {
@@ -644,7 +654,7 @@ h1 {
   width:200px;
   height:100px;
   cursor:pointer;
-  
+
   svg {
     stroke-width:17;
     width:400px;
@@ -652,7 +662,7 @@ h1 {
     transition:transform .5s ease-out;
 
   }
-  
+
   &:not(.clicked):hover {
     svg {
       transform:scale(.9);
